@@ -13,6 +13,9 @@ function dafi:mechanics/piston_boost/load
 ## RAYCAST
 function dafi:mechanics/raycast/load
 
+## REGENERATION
+function dafi:mechanics/regeneration/load
+
 ## ROCKETS
 function dafi:mechanics/rockets/load
 

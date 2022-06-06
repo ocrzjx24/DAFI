@@ -1,0 +1,11 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:entity_hurt_player"
+      }
+    },
+    "rewards": {
+      "function": "dafi:mechanics/regeneration/hurt"
+    }
+  }
+  

@@ -16,6 +16,9 @@ function dafi:mechanics/piston_boost/main
 ## RAYCAST
 # none
 
+## REGENERATION
+function dafi:mechanics/regeneration/main
+
 ## ROCKETS
 function dafi:mechanics/rockets/main
 
