@@ -10,4 +10,3 @@ tp @e[type=armor_stand,tag=swampTP,tag=init,sort=nearest,limit=1] @s
 scoreboard players operation @p[tag=init] sbsid = .global sbsid
 tag @e remove init
 
-
