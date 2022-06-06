@@ -9,8 +9,8 @@ item replace entity @s[team=blue,scores={dropMCTNT=20}] weapon.offhand with cros
 item replace entity @s[team=red,scores={dropMCTNT=20}] hotbar.0 with crossbow{display:{Name:'[{"text":"JSN ","italic":false,"color":"yellow","bold":true},{"text":"X13","italic":false,"bold":true,"color":"gold"}]',Lore:['[{"text":"death.attack.firework.item","italic":false,"color":"dark_green"}]']},Enchantments:[{id:"quick_charge",lvl:5}],Unbreakable:1,ChargedProjectiles:[{id:"minecraft:firework_rocket",Count:1b,tag:{Fireworks:{Flight:2,Explosions:[{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]}]},HideFlags:63}}],Charged:1b,Unbreakable:1,HideFlags:36} 1
 item replace entity @s[team=red,scores={dropMCTNT=20}] weapon.offhand with crossbow{display:{Name:'[{"text":"JSN ","italic":false,"color":"yellow","bold":true},{"text":"X13","italic":false,"bold":true,"color":"gold"}]',Lore:['[{"text":"death.attack.firework.item","italic":false,"color":"dark_green"}]']},Enchantments:[{id:"quick_charge",lvl:5}],Unbreakable:1,ChargedProjectiles:[{id:"minecraft:firework_rocket",Count:1b,tag:{Fireworks:{Flight:2,Explosions:[{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;10227542]},{Type:4,Flicker:0,Trail:0,Colors:[I;11145604]},{Type:4,Flicker:0,Trail:0,Colors:[I;7476793]},{Type:4,Flicker:0,Trail:0,Colors:[I;10361108]},{Type:4,Flicker:0,Trail:0,Colors:[I;7473688]},{Type:4,Flicker:0,Trail:0,Colors:[I;7802930]},{Type:4,Flicker:0,Trail:0,Colors:[I;6098979]},{Type:4,Flicker:0,Trail:0,Colors:[I;8790816]},{Type:4,Flicker:0,Trail:0,Colors:[I;7343451]},{Type:4,Flicker:0,Trail:0,Colors:[I;8395029]},{Type:4,Flicker:0,Trail:0,Colors:[I;7802443]}]},HideFlags:63}}],Charged:1b,Unbreakable:1,HideFlags:36} 1
 execute at @s[scores={dropMCTNT=20}] run function dafi:class/slay/stand
-execute at @s[scores={dropMCTNT=20}] run playsound minecraft:item.firecharge.use master @a[distance=..10] ~ ~ ~ 10000 0.5 1
-execute at @s[scores={dropMCTNT=20}] run particle minecraft:crit ~ ~ ~ 0.1 0.1 0.1 2 100 normal
+execute at @s[scores={dropMCTNT=15}] run playsound minecraft:item.firecharge.use master @a[distance=..10] ~ ~ ~ 10000 0.7 1
+execute at @s[scores={dropMCTNT=25}] run particle minecraft:crit ~ ~ ~ 0.1 0.1 0.1 2 100 normal
 scoreboard players set @s[scores={dropMCTNT=20}] useCheck 2
 scoreboard players reset @s[scores={dropMCTNT=20}] dropMCTNT
 scoreboard players remove @s[scores={useCheck=1}] useCheck 1
@@ -31,8 +31,8 @@ scoreboard players set @s[scores={slayCD=1..,deathcheck=1}] slayCD 119
 execute at @s[scores={dropMCTNT=2}] run playsound minecraft:item.armor.equip_diamond master @a[distance=..10] ~ ~ ~ 10000 0.5 1
 
 ## EFFECT
-execute at @s[team=red,scores={dropMCTNT=18}] run effect give @a[team=blue,distance=..25] minecraft:glowing 2
-execute at @s[team=blue,scores={dropMCTNT=18}] run effect give @a[team=red,distance=..25] minecraft:glowing 2
+#execute at @s[team=red,scores={dropMCTNT=18}] run effect give @a[team=blue,distance=..25] minecraft:glowing 2
+#execute at @s[team=blue,scores={dropMCTNT=18}] run effect give @a[team=red,distance=..25] minecraft:glowing 2
 
 ## PARTICLES
 execute as @s[scores={useCheck=2}] at @s anchored eyes run particle minecraft:dust 10 0 0.3 0.7 ^-0.7 ^-1 ^ 0.1 0.1 0.1 0.000001 10 normal
