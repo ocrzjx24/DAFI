@@ -1,5 +1,5 @@
 ## DAMAGE
-function dafi:mechanics/damage/load
+function dafi:mechanics/cw_hp_control/init
 
 ## DEATHS
 function dafi:mechanics/deaths/load
@@ -11,13 +11,16 @@ function dafi:mechanics/kills/load
 function dafi:mechanics/piston_boost/load
 
 ## RAYCAST
-function dafi:mechanics/raycast/load
+function dafi:mechanics/raycast/init
 
 ## REGENERATION
 function dafi:mechanics/regeneration/load
 
 ## ROCKETS
 function dafi:mechanics/rockets/load
+
+## SLOWNESS
+function dafi:mechanics/slowness/load
 
 ## WALLRUN
 function dafi:mechanics/wallrun/load

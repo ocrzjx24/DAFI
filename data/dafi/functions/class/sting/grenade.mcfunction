@@ -44,8 +44,17 @@ execute as @a[nbt={ActiveEffects:[{Id:24b}]},scores={hunted=0}] unless entity @a
 
 
 ## STINGSHELL
-execute at @e[type=minecraft:egg] run particle minecraft:falling_dust orange_concrete_powder ~ ~0.2 ~ .1 .1 .1 0.001 1 force
-execute at @e[type=minecraft:egg] run particle minecraft:falling_dust red_concrete_powder ~ ~0.2 ~ .1 .1 .1 0.001 2 force
+# execute at @e[type=minecraft:egg,nbt={Item:{tag:{red:2}}}] run particle minecraft:falling_dust red_concrete_powder ~ ~0.2 ~ .1 .1 .1 0.001 1 force
+# execute at @e[type=minecraft:egg,nbt={Item:{tag:{red:2}}}] run particle minecraft:falling_dust orange_concrete_powder ~ ~0.2 ~ .1 .1 .1 0.001 2 force
+# execute at @e[type=minecraft:egg,nbt={Item:{tag:{blue:2}}}] run particle minecraft:falling_dust blue_concrete_powder ~ ~0.2 ~ .1 .1 .1 0.001 1 force
+# execute at @e[type=minecraft:egg,nbt={Item:{tag:{blue:2}}}] run particle minecraft:falling_dust lime_concrete_powder ~ ~0.2 ~ .1 .1 .1 0.001 2 force
+# execute at @e[type=minecraft:egg,nbt={Item:{tag:{red:2}}}] run particle dust 1 0.35 0 1 ~ ~ ~ 0.1 0.1 0.1 0.2 1 force
+# execute at @e[type=minecraft:egg,nbt={Item:{tag:{red:2}}}] run particle dust 1 0.65 0 1 ~ ~ ~ 0.1 0.1 0.1 0.2 1 force
+# execute at @e[type=minecraft:egg,nbt={Item:{tag:{blue:2}}}] run particle dust 0.247 0.949 1 1 ~ ~ ~ 0.1 0.1 0.1 0.2 1 force
+# execute at @e[type=minecraft:egg,nbt={Item:{tag:{blue:2}}}] run particle dust 0.396 1 0.898 1 ~ ~ ~ 0.1 0.1 0.1 0.2 1 force
+execute at @e[type=minecraft:egg,nbt={Item:{tag:{red:2}}}] run particle flame ~ ~ ~ 0.1 0.1 0.1 0.02 1 force
+execute at @e[type=minecraft:egg,nbt={Item:{tag:{blue:2}}}] run particle soul_fire_flame ~ ~ ~ 0.1 0.1 0.1 0.02 1 force
+
 #stingshell red throw
 execute at @e[type=minecraft:egg,nbt={Item:{tag:{red:2}}}] unless entity @e[tag=trackerRed2,distance=..2] run summon minecraft:marker ~ ~ ~ {Tags:["trackerRed2"]}
 execute as @e[tag=trackerRed2] at @s run tp @s @e[type=minecraft:egg,nbt={Item:{tag:{red:2}}},limit=1,sort=nearest,distance=..2]
@@ -60,21 +69,24 @@ execute as @e[tag=trackerBlue2] at @s unless entity @e[type=minecraft:egg,distan
 execute as @e[tag=trackerBlue2] at @s unless entity @e[type=minecraft:egg,distance=..2,nbt={Item:{tag:{blue:2}}}] run kill @s
 
 #molotv
-execute at @e[tag=redMolotov,scores={spectral=1..}] run effect give @e[distance=..1.5, team=blue] instant_damage 1 0 true
-execute at @e[tag=redMolotov,scores={spectral=1..}] run particle dust 1 0.35 0 2 ~ ~ ~ 0.3 0.1 0.3 0.2 1 force
-execute at @e[tag=redMolotov,scores={spectral=1..}] run particle smoke ~ ~ ~ 0.4 0 0.4 0.2 1 force
-execute at @e[tag=redMolotov,scores={spectral=1..}] run particle dust 1 0.65 0 2 ~ ~ ~ 0.5 0.2 0.5 0.5 1 force
-execute at @e[tag=redMolotov,scores={spectral=1..}] run particle small_flame ~ ~ ~ 0.4 0 0.4 0.1 1 force
+execute at @e[tag=redMolotov,scores={spectral=1..}] run effect give @e[distance=..1.5, team=!red] instant_damage 1 0 true
+execute at @e[tag=redMolotov,scores={spectral=1..}] run scoreboard players set @a[distance=..1.5, team=blue] slowCheck 1
+# execute at @e[tag=redMolotov,scores={spectral=1..}] run scoreboard players set @a[distance=..1.5] hp_dmg 1
+execute at @e[tag=redMolotov,scores={spectral=1..}] run particle dust 1 0.459 0.122 2 ~ ~ ~ 0.5 0.1 0.5 0.2 1 force
+# execute at @e[tag=redMolotov,scores={spectral=1..}] run particle smoke ~ ~ ~ 0.4 0 0.4 0.1 1 force
+execute at @e[tag=redMolotov,scores={spectral=1..}] run particle dust 1 0.847 0.227 2 ~ ~ ~ 0.7 0.2 0.7 0.5 1 force
+# execute at @e[tag=redMolotov,scores={spectral=1..}] run particle small_flame ~ ~ ~ 0.4 0 0.4 0.1 1 force
 execute at @e[tag=redMolotov,tag=centerMolotov,scores={spectral=1}] run playsound minecraft:block.fire.extinguish master @a[distance=..15] ~ ~ ~ 1 2 1
 execute at @e[tag=redMolotov,tag=centerMolotov,scores={spectral=6}] run function dafi:class/sting/molotov/redspread1 
 execute at @e[tag=redMolotov,tag=centerMolotov,scores={spectral=12}] run function dafi:class/sting/molotov/redspread2 
 execute as @e[tag=redMolotov,type=armor_stand, nbt={OnGround:1b}] run data modify entity @s Marker set value 1b 
 
-execute at @e[tag=blueMolotov,scores={spectral=1..}] run effect give @e[distance=..1.5, team=red] instant_damage 1 0 true
-execute at @e[tag=blueMolotov,scores={spectral=1..}] run particle dust 1 0.35 0 2 ~ ~ ~ 0.3 0.1 0.3 0.2 1 force
-execute at @e[tag=blueMolotov,scores={spectral=1..}] run particle smoke ~ ~ ~ 0.4 0 0.4 0.2 1 force
-execute at @e[tag=blueMolotov,scores={spectral=1..}] run particle dust 1 0.65 0 2 ~ ~ ~ 0.5 0.2 0.5 0.5 1 force
-execute at @e[tag=blueMolotov,scores={spectral=1..}] run particle small_flame ~ ~ ~ 0.4 0 0.4 0.1 1 force
+execute at @e[tag=blueMolotov,scores={spectral=1..}] run effect give @e[distance=..1.5, team=!blue] instant_damage 1 0 true
+execute at @e[tag=blueMolotov,scores={spectral=1..}] run scoreboard players set @a[distance=..1.5, team=red] slowCheck 1
+execute at @e[tag=blueMolotov,scores={spectral=1..}] run particle dust 0.247 0.949 1 2 ~ ~ ~ 0.5 0.1 0.5 0.2 1 force
+# execute at @e[tag=blueMolotov,scores={spectral=1..}] run particle smoke ~ ~ ~ 0.4 0 0.4 0.2 1 force
+execute at @e[tag=blueMolotov,scores={spectral=1..}] run particle dust 0.396 1 0.898 2 ~ ~ ~ 0.7 0.2 0.7 0.5 1 force
+# execute at @e[tag=blueMolotov,scores={spectral=1..}] run particle small_flame ~ ~ ~ 0.4 0 0.4 0.1 1 force
 execute at @e[tag=blueMolotov,tag=centerMolotov,scores={spectral=1}] run playsound minecraft:block.fire.extinguish master @a[distance=..15] ~ ~ ~ 1 2 1
 execute at @e[tag=blueMolotov,tag=centerMolotov,scores={spectral=6}] run function dafi:class/sting/molotov/bluespread1
 execute at @e[tag=blueMolotov,tag=centerMolotov,scores={spectral=12}] run function dafi:class/sting/molotov/bluespread2 
