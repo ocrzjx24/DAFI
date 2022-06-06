@@ -1,0 +1,4 @@
+execute as @s[predicate=dafi:is_sneaking] at @s unless block ~ ~-0.1 ~ minecraft:air run fill ~ ~0.25 ~ ~ ~0.25 ~ water[level=6] replace minecraft:air
+execute as @s[predicate=dafi:is_sneaking] at @s if block ~ ~-0.1 ~ #minecraft:slabs run fill ~ ~0.75 ~ ~ ~0.75 ~ water[level=6] replace minecraft:air
+execute as @s[predicate=dafi:is_sneaking] at @s unless block ~ ~-0.1 ~ minecraft:air run fill ~ ~0.25 ~ ~ ~0.25 ~ water[level=6] replace minecraft:water[level=6]
+execute as @s[predicate=dafi:is_sneaking] at @s if block ~ ~-0.1 ~ #minecraft:slabs run fill ~ ~0.75 ~ ~ ~0.75 ~ water[level=6] replace minecraft:water[level=6]

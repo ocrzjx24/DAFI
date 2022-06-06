@@ -1,0 +1,1 @@
+execute in minecraft:overworld run function dafi:mechanics/damage/calculate/dimension_correction
