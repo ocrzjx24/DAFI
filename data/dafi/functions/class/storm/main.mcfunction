@@ -28,12 +28,12 @@
 
 
 
-#item replace entity @s[scores={useTrident=60},team=red] weapon.offhand with minecraft:trident{tred:1}
-#item replace entity @s[scores={useTrident=60},team=blue] weapon.offhand with minecraft:trident{tblue:1}
+item replace entity @s[scores={useTrident=60},team=red] weapon.offhand with minecraft:trident{tred:1}
+item replace entity @s[scores={useTrident=60},team=blue] weapon.offhand with minecraft:trident{tblue:1}
 execute at @s[scores={useTrident=60}] run playsound minecraft:item.trident.return master @s ~ ~ ~ 1 1
 scoreboard players reset @s[scores={useTrident=60..}] useTrident
 scoreboard players add @s[scores={useTrident=1..}] useTrident 1
-#clear @s[scores={useTrident=1..60}] minecraft:trident
+clear @s[scores={useTrident=1..60}] minecraft:trident
 
 ## NEW ABILITY
 item replace entity @s[scores={dropWave=180..}] hotbar.1 with minecraft:diamond_axe{display:{Name:'[{"text":"Wavebreaker","italic":false,"bold":true,"color":"aqua"}]'},Enchantments:[{id:"channeling",lvl:1},{id:"sharpness",lvl:2}],Unbreakable:1,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Amount:10,Operation:0,UUID:[I;1028214595,1066950744,1016402789,1603413261]},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Slot:"mainhand",Amount:-0.4,Operation:2,UUID:[I;1028214595,1066950744,1016402789,1603413261]}],HideFlags:3} 1
