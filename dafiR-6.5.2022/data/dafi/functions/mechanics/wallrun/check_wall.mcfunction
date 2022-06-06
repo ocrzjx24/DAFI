@@ -1,0 +1,4 @@
+execute if block ~ ~ ~-0.8 #dafi:blocks_wallrun if block ~ ~-0.35 ~ minecraft:air positioned ~ ~ ~-1 align z positioned ~ ~-1 ~0.8 run function dafi:mechanics/wallrun/at_wall
+execute if block ~ ~ ~0.8 #dafi:blocks_wallrun if block ~ ~-0.35 ~ minecraft:air positioned ~ ~ ~1 align z positioned ~ ~-1 ~0.2 run function dafi:mechanics/wallrun/at_wall
+execute if block ~-0.8 ~ ~ #dafi:blocks_wallrun if block ~ ~-0.35 ~ minecraft:air positioned ~-1 ~ ~ align x positioned ~0.8 ~-1 ~ run function dafi:mechanics/wallrun/at_wall
+execute if block ~0.8 ~ ~ #dafi:blocks_wallrun if block ~ ~-0.35 ~ minecraft:air positioned ~1 ~ ~ align x positioned ~0.2 ~-1 ~ run function dafi:mechanics/wallrun/at_wall

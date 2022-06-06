@@ -1,0 +1,21 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:player_killed_entity",
+      "conditions": {
+        "player": {
+          "equipment": {
+            "mainhand": {
+              "items": [
+                "minecraft:diamond_sword"
+              ]
+            }
+          }
+        },
+        "entity": {
+          "type": "minecraft:pig"
+        }
+      }
+    }
+  }
+}
