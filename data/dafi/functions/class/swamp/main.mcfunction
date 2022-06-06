@@ -3,10 +3,11 @@ execute as @s[scores={dropNAxe=1}] at @s run function dafi:class/swamp/drop
 execute as @s[scores={dropNAxe=1}] at @s run playsound minecraft:entity.ravager.step master @a ~ ~ ~ 1 1
 execute as @s[scores={dropNAxe=30}] at @s run playsound minecraft:entity.ravager.step master @a ~ ~ ~ 1 2
 clear @s[scores={dropNAxe=30..}] wooden_axe
-item replace entity @s[scores={dropNAxe=30}] hotbar.1 with netherite_axe{display:{Name:'[{"text":"Maul","italic":false,"bold":true,"color":"dark_red"}]'},Unbreakable:1,HideFlags:3,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Amount:10,Operation:0,UUID:[I;1014886342,1084823496,1064780877,1393545524]},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Slot:"mainhand",Amount:-0.2,Operation:2,UUID:[I;1014886342,1084823496,1064780877,1393545524]}],Enchantments:[{id:"minecraft:thorns",lvl:1}]} 1
+item replace entity @s[scores={dropNAxe=30}] hotbar.1 with netherite_axe{display:{Name:'[{"text":"Maul","italic":false,"bold":true,"color":"dark_red"},{"text":"|","color":"dark_gray","bold":false},{"text":" ","color":"gray","bold":false},{"text":"[Q]","color":"white","bold":false},{"text":"/","color":"dark_gray","bold":false},{"text":"[RMB]","color":"white","bold":false}]',Lore:['[{"text":"It\'s maulin\' time.","italic":false,"color":"green"}]']},Unbreakable:1,HideFlags:3,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Amount:10,Operation:0,UUID:[I;1014886342,1084823496,1064780877,1393545524]},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Slot:"mainhand",Amount:-0.2,Operation:2,UUID:[I;1014886342,1084823496,1064780877,1393545524]}],Enchantments:[{id:"minecraft:thorns",lvl:1}]} 1
 scoreboard players reset @s[scores={dropNAxe=30..}] dropNAxe
 scoreboard players add @s[scores={dropNAxe=1..}] dropNAxe 1
 kill @e[type=item,nbt={Item:{id:"minecraft:netherite_axe"}}]
+
 
 ## TELEPORT
 execute at @s[scores={swampTPTrigger=1}] run function dafi:class/swamp/teleport
