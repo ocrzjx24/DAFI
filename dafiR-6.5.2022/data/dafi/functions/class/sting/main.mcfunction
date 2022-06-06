@@ -47,17 +47,17 @@ scoreboard players set @s[scores={g2=1..}] g2 0
 scoreboard players set @s[scores={g3=1..}] g3 0
 
 ## TEXT RANDOMIZER
-title @s[scores={gCD=2,gRandom=1}] actionbar {"text":"HEADS UP!","bold":true,"color":"gold"}
-title @s[scores={gCD=2,gRandom=2}] actionbar {"text":"FIRE IN THE HOLE!","bold":true,"color":"gold"}
-title @s[scores={gCD=2,gRandom=3}] actionbar {"text":"BUTTERFINGERS!","bold":true,"color":"gold"}
-title @s[scores={gCD=2,gRandom=4}] actionbar {"text":"TAKE THIS!","bold":true,"color":"gold"}
-title @s[scores={gCD=2,gRandom=5}] actionbar {"text":"GRENADE OUT!","bold":true,"color":"gold"}
-title @s[scores={gCD=2,gRandom=6}] actionbar {"text":"WHAT'S UP DOC?!","bold":true,"color":"gold"}
-title @s[scores={gCD=2,gRandom=7}] actionbar {"text":"YA WANT SOME?!","bold":true,"color":"gold"}
-title @s[scores={gCD=2,gRandom=8}] actionbar {"text":"BWAHAHA!","bold":true,"color":"gold"}
+title @s[scores={gCD=2,gRandom=1}] actionbar {"text":"手榴弹！!","bold":true,"color":"gold"}
+title @s[scores={gCD=2,gRandom=2}] actionbar {"text":"手榴弹！!","bold":true,"color":"gold"}
+title @s[scores={gCD=2,gRandom=3}] actionbar {"text":"手榴弹！!","bold":true,"color":"gold"}
+title @s[scores={gCD=2,gRandom=4}] actionbar {"text":"手榴弹！!","bold":true,"color":"gold"}
+title @s[scores={gCD=2,gRandom=5}] actionbar {"text":"手榴弹！!","bold":true,"color":"gold"}
+title @s[scores={gCD=2,gRandom=6}] actionbar {"text":"手榴弹！!","bold":true,"color":"gold"}
+title @s[scores={gCD=2,gRandom=7}] actionbar {"text":"手榴弹！!","bold":true,"color":"gold"}
 title @s[scores={gCD=2,gRandom=8}] actionbar {"text":"手榴弹！!","bold":true,"color":"gold"}
-title @s[scores={gCD=2,gRandom=10}] actionbar {"text":"EAT THIS!","bold":true,"color":"gold"}
-title @s[scores={gCD=2,gRandom=11}] actionbar {"text":"YEET!","bold":true,"color":"gold"}
+title @s[scores={gCD=2,gRandom=8}] actionbar {"text":"手榴弹！!","bold":true,"color":"gold"}
+title @s[scores={gCD=2,gRandom=10}] actionbar {"text":"手榴弹！!","bold":true,"color":"gold"}
+title @s[scores={gCD=2,gRandom=11}] actionbar {"text":"手榴弹！!","bold":true,"color":"gold"}
 
 ## SCOREBOARD RANDOMIZER
 scoreboard players set @s[scores={gRandom=11..}] gRandom 1
