@@ -13,6 +13,11 @@ kill @e[type=item,nbt={Item:{id:"minecraft:netherite_axe"}}]
 execute at @s[scores={swampTPTrigger=1}] run function dafi:class/swamp/teleport
 execute at @s[scores={swampTPTrigger=1}] run playsound minecraft:entity.ravager.step master @a ~ ~ ~ 1 1
 execute at @s[scores={swampTPTrigger=1}] run playsound minecraft:entity.elder_guardian.curse master @a ~ ~ ~ 0.5 1
+execute at @s[scores={swampTPTrigger=1}] run playsound minecraft:entity.zombie.converted_to_drowned master @a[distance=..10] ~ ~ ~ 1 0.7
+execute at @s[scores={swampTPTrigger=1}] run effect give @a[scores={swampTPTrigger=1}] minecraft:blindness 1 1 true
+execute at @s[scores={swampTPTrigger=1}] run effect give @a[scores={swampTPTrigger=1}] minecraft:slowness 1 1 true
+execute at @s[scores={swampTPTrigger=1}] run particle minecraft:block dirt ~ ~ ~ 0.5 0.5 0.5 1 200 force
+execute at @s[scores={swampTPTrigger=1}] run particle minecraft:block redstone_block ~ ~ ~ 0.5 0.5 0.5 1 100 force
 execute at @s[scores={swampTPTrigger=120}] run playsound minecraft:entity.ravager.step master @a ~ ~ ~ 1 2
 execute at @s[scores={swampTPTrigger=120}] run playsound minecraft:entity.evoker.prepare_attack master @a ~ ~ ~ 1 2
 item replace entity @s[scores={swampTPTrigger=120}] weapon.offhand with ender_pearl{display:{Name:'[{"text":"Mire","italic":false,"bold":true,"color":"dark_red"}]'},Enchantments:[{id:"minecraft:unbreaking",lvl:10}],HideFlags:1} 1
