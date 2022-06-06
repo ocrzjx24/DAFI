@@ -12,7 +12,7 @@ title @s[scores={dropReaver=1}] actionbar {"text":"WOOSH","bold":true,"color":"y
 title @s[scores={dropReaver=10}] actionbar {"text":"","bold":true,"color":"yellow"}
 execute at @s[scores={dropReaver=1..}] run scoreboard players add @s dropReaver 1
 execute at @s[scores={dropReaver=1..20}] run particle soul_fire_flame ~ ~ ~ 0.1 0.1 0.1 0.1 1 force
-execute at @s[scores={dropReaver=61}] run item replace entity @s hotbar.1 with golden_hoe{display:{Name:'[{"text":"Soul Reaver","italic":false,"bold":true,"color":"yellow"}]'},Enchantments:[{id:"unbreaking",lvl:1}],Unbreakable:1,AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Slot:"mainhand",Amount:100,Operation:0,UUID:[I;1022498064,1087262705,1008143892,1256304346]},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Amount:8,Operation:0,UUID:[I;1022498064,1087262705,1008143892,1256304346]}],HideFlags:3} 1
+execute at @s[scores={dropReaver=61}] run item replace entity @s hotbar.1 with golden_hoe{display:{Name:'[{"text":"Soul ","italic":false,"bold":true,"color":"yellow"},{"text":"Reaver ","italic":false,"bold":true,"color":"aqua"},{"text":"|","color":"gray","bold":false},{"text":" ","color":"gray","bold":false},{"text":"[Q]","color":"white","bold":false}]'},Enchantments:[{id:"unbreaking",lvl:1}],Unbreakable:1,AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Slot:"mainhand",Amount:100,Operation:0,UUID:[I;1022498064,1087262705,1008143892,1256304346]},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Amount:8,Operation:0,UUID:[I;1022498064,1087262705,1008143892,1256304346]}],HideFlags:3} 1
 scoreboard players reset @s[scores={dropReaver=61..}] dropReaver
 
 ## PARTICLES
