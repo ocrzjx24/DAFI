@@ -24,7 +24,8 @@ execute at @s[scores={swampTPTrigger=1}] run playsound minecraft:entity.ravager.
 execute at @s[scores={swampTPTrigger=1}] run playsound minecraft:entity.elder_guardian.curse master @a ~ ~ ~ 0.5 1
 execute at @s[scores={swampTPTrigger=1}] run playsound minecraft:entity.zombie.converted_to_drowned master @a[distance=..10] ~ ~ ~ 1 0.7
 execute at @s[scores={swampTPTrigger=1}] run effect give @a[scores={swampTPTrigger=1}] minecraft:blindness 1 1 true
-execute at @s[scores={swampTPTrigger=1}] run effect give @a[scores={swampTPTrigger=1}] minecraft:slowness 1 1 true
+execute at @s[scores={swampTPTrigger=1..20}] run scoreboard players set @s slowCheck 1
+execute at @s[scores={swampTPTrigger=1}] run scoreboard players set @s slow 20
 execute at @s[scores={swampTPTrigger=1}] run particle minecraft:block dirt ~ ~ ~ 0.5 0.5 0.5 1 200 force
 execute at @s[scores={swampTPTrigger=1}] run particle minecraft:block redstone_block ~ ~ ~ 0.5 0.5 0.5 1 100 force
 title @s[scores={swampTPTrigger=120}] actionbar {"text":"\u2605 FEAR ME. \u2605","bold":true,"color":"dark_red"}
