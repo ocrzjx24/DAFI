@@ -1,6 +1,6 @@
 ## ROTATE ITEM
-item replace entity @s[scores={gCD=0,rotate=4,rotateSound=1},team=red] weapon.offhand with minecraft:snowball{red:1,display:{Name:'[{"text":"Ponderous Orb","italic":false,"color":"yellow"}]'}}
-item replace entity @s[scores={gCD=0,rotate=4,rotateSound=1},team=blue] weapon.offhand with minecraft:snowball{blue:1,display:{Name:'[{"text":"Ponderous Orb","italic":false,"color":"yellow"}]'}}
+item replace entity @s[scores={gCD=0,rotate=4,rotateSound=1},team=red] weapon.offhand with minecraft:snowball{red:1,display:{Name:'[{"text":"Pondering Orb","italic":false,"color":"yellow"}]'}}
+item replace entity @s[scores={gCD=0,rotate=4,rotateSound=1},team=blue] weapon.offhand with minecraft:snowball{blue:1,display:{Name:'[{"text":"Pondering Orb","italic":false,"color":"yellow"}]'}}
 item replace entity @s[scores={gCD=0,rotate=2,rotateSound=1}] weapon.offhand with minecraft:splash_potion{CustomPotionEffects:[{Id:26,Amplifier:0,Duration:160,ShowParticles:0b}],CustomPotionColor:16300586,display:{Name:'[{"text":"Stim Splash","italic":false,"color":"green"}]'},HideFlags:63}
 item replace entity @s[scores={gCD=0,rotate=3,rotateSound=1},team=red] weapon.offhand with minecraft:egg{red:2,display:{Name:'[{"text":"Wyvern Egg","italic":false,"color":"red"}]'}}
 item replace entity @s[scores={gCD=0,rotate=3,rotateSound=1},team=blue] weapon.offhand with minecraft:egg{blue:2,display:{Name:'[{"text":"Wyvern Egg","italic":false,"color":"red"}]'}}
@@ -16,8 +16,8 @@ scoreboard players add @s[scores={g2=1}] gCD 1
 scoreboard players add @s[scores={g3=1}] gCD 1
 
 ## ITEM 2
-item replace entity @s[scores={gCD=120,rotate=1},team=red] weapon.offhand with minecraft:snowball{red:1,display:{Name:'[{"text":"Stellar Sonar","italic":false,"color":"yellow"}]'}}
-item replace entity @s[scores={gCD=120,rotate=1},team=blue] weapon.offhand with minecraft:snowball{blue:1,display:{Name:'[{"text":"Stellar Sonar","italic":false,"color":"yellow"}]'}}
+item replace entity @s[scores={gCD=120,rotate=1},team=red] weapon.offhand with minecraft:snowball{red:1,display:{Name:'[{"text":"Pondering Orb","italic":false,"color":"yellow"}]'}}
+item replace entity @s[scores={gCD=120,rotate=1},team=blue] weapon.offhand with minecraft:snowball{blue:1,display:{Name:'[{"text":"Pondering Orb","italic":false,"color":"yellow"}]'}}
 item replace entity @s[scores={gCD=120,rotate=2}] weapon.offhand with minecraft:splash_potion{CustomPotionEffects:[{Id:26,Amplifier:0,Duration:160,ShowParticles:0b}],CustomPotionColor:16300586,display:{Name:'[{"text":"Stim Splash","italic":false,"color":"green"}]'},HideFlags:63}
 item replace entity @s[scores={gCD=120,rotate=3},team=red] weapon.offhand with minecraft:egg{red:2,display:{Name:'[{"text":"Sting Shell","italic":false,"color":"red"}]'}}
 item replace entity @s[scores={gCD=120,rotate=3},team=blue] weapon.offhand with minecraft:egg{blue:2,display:{Name:'[{"text":"Sting Shell","italic":false,"color":"red"}]'}}
@@ -28,7 +28,7 @@ execute at @s[scores={gCD=120}] run playsound minecraft:entity.shulker.open mast
 ## SOUND
 ## TITLE
 title @s[scores={gCD=120}] actionbar  ["",{"text":"\u2605 LET'S ROLL \u2605","bold":true,"color":"gold"}]
-title @s[scores={rotate=4,rotateSound=1}] actionbar ["",{"text":"STELLAR SONAR","bold":true,"color":"yellow"}]
+title @s[scores={rotate=4,rotateSound=1}] actionbar ["",{"text":"PONDERING ORB","bold":true,"color":"yellow"}]
 title @s[scores={rotate=2,rotateSound=1}] actionbar ["",{"text":"STIM SPLASH","bold":true,"color":"green"}]
 title @s[scores={rotate=3,rotateSound=1}] actionbar ["",{"text":"WYVERN EGG","bold":true,"color":"red"}]
 
