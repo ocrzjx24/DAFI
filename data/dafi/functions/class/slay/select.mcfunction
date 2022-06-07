@@ -19,4 +19,5 @@ execute at @s run playsound minecraft:item.armor.equip_netherite master @s ~ ~ ~
 title @s reset
 
 ## SCOREBOARD
+scoreboard players set @s slayCD 0
 # scoreboard players reset @a[scores={red=1..}] red
