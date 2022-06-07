@@ -34,7 +34,8 @@ scoreboard players reset @s dropWave
 scoreboard players reset @s rotate
 scoreboard players reset @s gCD
 scoreboard players reset @s dropMCTNT
-scoreboard players reset @s slayCD
+scoreboard players set @s slayCD 0
+scoreboard players set @s slaySneak 0
 scoreboard players reset @s useCheck
 scoreboard players set @s bounds 0
 scoreboard players set @s hunted 0
