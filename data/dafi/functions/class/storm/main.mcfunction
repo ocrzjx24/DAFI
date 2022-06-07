@@ -36,7 +36,7 @@ scoreboard players add @s[scores={useTrident=1..}] useTrident 1
 clear @s[scores={useTrident=1..60}] minecraft:trident
 
 ## NEW ABILITY
-item replace entity @s[scores={dropWave=180..}] hotbar.1 with minecraft:diamond_axe{display:{Name:'[{"text":"Wavebreaker","italic":false,"bold":true,"color":"aqua"}]'},Enchantments:[{id:"channeling",lvl:1},{id:"sharpness",lvl:2}],Unbreakable:1,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Amount:10,Operation:0,UUID:[I;1028214595,1066950744,1016402789,1603413261]},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Slot:"mainhand",Amount:-0.4,Operation:2,UUID:[I;1028214595,1066950744,1016402789,1603413261]}],HideFlags:3} 1
+item replace entity @s[scores={dropWave=120..}] hotbar.1 with minecraft:diamond_axe{display:{Name:'[{"text":"Wavebreaker","italic":false,"bold":true,"color":"aqua"}]'},Enchantments:[{id:"channeling",lvl:1},{id:"sharpness",lvl:2}],Unbreakable:1,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Amount:10,Operation:0,UUID:[I;1028214595,1066950744,1016402789,1603413261]},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Slot:"mainhand",Amount:-0.4,Operation:2,UUID:[I;1028214595,1066950744,1016402789,1603413261]}],HideFlags:3} 1
 tag @s[scores={dropWave=1}] add strike
 execute at @s[scores={dropWave=1}] run playsound minecraft:entity.lightning_bolt.thunder master @s ~ ~100 ~ 100 2
 execute as @e[type=trident,nbt={inGround:1b}] run function dafi:class/storm/strike
@@ -51,9 +51,9 @@ execute at @s[scores={dropWave=1..60}] run particle minecraft:nautilus ~ ~ ~ 0 0
 execute at @s[scores={dropWave=1..60}] run particle minecraft:enchanted_hit ~ ~ ~ 1 1 1 0.1 5 force
 execute at @s[scores={dropWave=60}] run playsound minecraft:block.beacon.deactivate master @a[distance=..10] ~ ~ ~ 100 0.7 1
 tag @s[scores={dropWave=60..}] remove strike
-title @s[scores={dropWave=180}] actionbar {"text":"\u2605 THE STORM CALLS... \u2605","bold":true,"color":"aqua"}
-execute at @s[scores={dropWave=180}] run playsound minecraft:entity.illusioner.prepare_mirror master @a[distance=..10] ~ ~ ~ 100 0.4 1
-scoreboard players reset @s[scores={dropWave=180}] dropWave
+title @s[scores={dropWave=120}] actionbar {"text":"\u2605 THE STORM CALLS... \u2605","bold":true,"color":"aqua"}
+execute at @s[scores={dropWave=120}] run playsound minecraft:entity.illusioner.prepare_mirror master @a[distance=..10] ~ ~ ~ 100 0.4 1
+scoreboard players reset @s[scores={dropWave=120}] dropWave
 scoreboard players add @s[scores={dropWave=1..}] dropWave 1
 
 
@@ -61,10 +61,10 @@ scoreboard players add @s[scores={dropWave=1..}] dropWave 1
 
 
 
-effect clear @s minecraft:jump_boost
-execute as @s[tag=strike] if predicate dafi:is_sneaking run effect give @s minecraft:jump_boost 999999 5 true
-execute at @s[tag=strike] if predicate dafi:is_sneaking run playsound minecraft:entity.firework_rocket.twinkle_far master @s ~ ~-1 ~ 0.2 1
-execute as @s if predicate dafi:is_not_sneaking run effect give @s minecraft:jump_boost 999999 1 true
+# effect clear @s minecraft:jump_boost
+# execute as @s[tag=strike] if predicate dafi:is_sneaking run effect give @s minecraft:jump_boost 999999 5 true
+# execute at @s[tag=strike] if predicate dafi:is_sneaking run playsound minecraft:entity.firework_rocket.twinkle_far master @s ~ ~-1 ~ 0.2 1
+# execute as @s if predicate dafi:is_not_sneaking run effect give @s minecraft:jump_boost 999999 1 true
 
 execute as @s[tag=water] run function dafi:class/storm/water
 
