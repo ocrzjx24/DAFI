@@ -25,7 +25,7 @@ title @s[scores={slaySneak=9}] actionbar {"text":"LOCK 'N LOAD","bold":true,"col
 title @s[scores={slayCD=119}] actionbar {"text":"\u2605 TRIGGER FINGER TWITCHES \u2605","bold":true,"color":"red"}
 scoreboard players set @s[scores={slayCD=120..}] slayCD 0
 scoreboard players set @s[scores={slayCD=1..119}] slaySneak 0
-#scoreboard players set @s[scores={slayCD=..0}] slaySneak 1
+scoreboard players set @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:crossbow",tag:{Charged:1b}}]}] slayCD 1
 scoreboard players set @s[scores={useCheck=2..,deathcheck=1}] slayCD 119
 item replace entity @s[scores={useCheck=2..,deathcheck=1}] weapon.offhand with crossbow{display:{Name:'[{"text":"JSN ","italic":false,"color":"yellow","bold":true},{"text":"X13","italic":false,"bold":true,"color":"gold"}]',Lore:['[{"text":"death.attack.firework.item","italic":false,"color":"dark_green"}]']},Enchantments:[{id:"quick_charge",lvl:5}],Unbreakable:1,HideFlags:1} 1
 scoreboard players set @s[scores={useCheck=2..,deathcheck=1}] useCheck 0
@@ -42,5 +42,13 @@ execute at @s[scores={slaySneak=2}] run playsound minecraft:item.armor.equip_dia
 execute as @s[scores={useCheck=2}] at @s anchored eyes run particle minecraft:dust 10 0 0.3 0.7 ^-0.7 ^-1 ^ 0.1 0.1 0.1 0.000001 10 normal
 execute as @s[scores={useCheck=2..}] at @s anchored eyes run particle minecraft:dust 10 0 0.3 0.7 ^0.7 ^-1 ^ 0.1 0.1 0.1 0.000001 10 normal
 
+## RECON UPDATE
+scoreboard players add @s[scores={dropBlood=1..139}] dropBlood 1
+item replace entity @s[scores={dropBlood=140}] hotbar.1 with minecraft:iron_shovel{Enchantments:[{id:"minecraft:unbreaking",lvl:1}],AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Amount:10,Operation:0,UUID:[I;1021537433,1056320062,1069698063,1260727900]},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Slot:"mainhand",Amount:-0.4,Operation:2,UUID:[I;1021537433,1056320062,1069698063,1260727900]}],Unbreakable:1,display:{Name:'[{"text":"Requiem","italic":false,"bold":true,"color":"red"},{"text":" "},{"text":"|","color":"gray"},{"text":" ","color":"gray"},{"text":"[Q]/[SHIFT]","color":"white","bold":false}]',Lore:['[{"text":"In the hopelessly dark night, a pale moon shines.","italic":false}]']},HideFlags:3} 1
+scoreboard players reset @s[scores={dropBlood=140..}] dropBlood
+execute at @s[team=red,scores={dropBlood=18}] run effect give @a[team=blue,distance=..20] minecraft:glowing 2
+execute at @s[team=blue,scores={dropBlood=18}] run effect give @a[team=red,distance=..20] minecraft:glowing 2
+
 ## KILL
-kill @e[type=item,nbt={Item:{id:"minecraft:tnt_minecart"}}]
+#kill @e[type=item,nbt={Item:{id:"minecraft:tnt_minecart"}}]
+kill @e[type=item,nbt={Item:{id:"minecraft:iron_shovel"}}]
