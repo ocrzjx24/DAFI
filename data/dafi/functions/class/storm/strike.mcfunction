@@ -1,4 +1,4 @@
-execute at @s run particle minecraft:glow_squid_ink ~ ~ ~ 0 0 0 0.2 30 force
+execute at @s run particle minecraft:dust 0.2 1 1 3 ~ ~-0.1 ~ 1 1 1 1 40 force
 
 execute at @s[nbt={Trident:{tag:{tred:1}}}] if entity @a[team=red,tag=strike,distance=..5] run function dafi:class/storm/strike/redstrike
 execute at @s[nbt={Trident:{tag:{tblue:1}}}] if entity @a[team=blue,tag=strike,distance=..5] run function dafi:class/storm/strike/bluestrike
