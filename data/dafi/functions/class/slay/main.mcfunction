@@ -11,7 +11,9 @@ item replace entity @s[team=blue,scores={slaySneak=10}] weapon.offhand with cros
 #item replace entity @s[team=red,scores={dropMCTNT=20}] hotbar.0 with crossbow{display:{Name:'[{"text":"JSN ","italic":false,"color":"yellow","bold":true},{"text":"X13","italic":false,"bold":true,"color":"gold"}]',Lore:['[{"text":"death.attack.firework.item","italic":false,"color":"dark_green"}]']},Enchantments:[{id:"quick_charge",lvl:5}],Unbreakable:1,ChargedProjectiles:[{id:"minecraft:firework_rocket",Count:1b,tag:{Fireworks:{Flight:2,Explosions:[{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]}]},HideFlags:63}}],Charged:1b,Unbreakable:1,HideFlags:36} 1
 item replace entity @s[team=red,scores={slaySneak=10}] weapon.offhand with crossbow{display:{Name:'[{"text":"JSN ","italic":false,"color":"yellow","bold":true},{"text":"X13","italic":false,"bold":true,"color":"gold"}]',Lore:['[{"text":"death.attack.firework.item","italic":false,"color":"dark_green"}]']},Enchantments:[{id:"quick_charge",lvl:5}],Unbreakable:1,ChargedProjectiles:[{id:"minecraft:firework_rocket",Count:1b,tag:{Fireworks:{Flight:2,Explosions:[{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;10227542]},{Type:4,Flicker:0,Trail:0,Colors:[I;11145604]},{Type:4,Flicker:0,Trail:0,Colors:[I;7476793]},{Type:4,Flicker:0,Trail:0,Colors:[I;10361108]},{Type:4,Flicker:0,Trail:0,Colors:[I;7473688]},{Type:4,Flicker:0,Trail:0,Colors:[I;7802930]},{Type:4,Flicker:0,Trail:0,Colors:[I;6098979]},{Type:4,Flicker:0,Trail:0,Colors:[I;8790816]},{Type:4,Flicker:0,Trail:0,Colors:[I;7343451]},{Type:4,Flicker:0,Trail:0,Colors:[I;8395029]},{Type:4,Flicker:0,Trail:0,Colors:[I;7802443]}]},HideFlags:63}}],Charged:1b,Unbreakable:1,HideFlags:36} 1
 execute at @s[scores={slaySneak=10}] run function dafi:class/slay/stand
-execute at @s[scores={slaySneak=10}] run playsound minecraft:item.shield.break master @a[distance=..10] ~ ~ ~ 10000 0.5 1
+execute at @s[scores={slaySneak=10}] run playsound minecraft:block.piston.contract master @a[distance=..10] ~ ~ ~ 1 1.5 1
+execute at @s[scores={slaySneak=10}] run playsound minecraft:block.iron_trapdoor.close master @a[distance=..10] ~ ~ ~ 10000 0.7 1
+execute at @s[scores={slaySneak=10}] run playsound minecraft:block.bell.use master @a[distance=..10] ~ ~ ~ 1 2 1
 #execute at @s[scores={dropMCTNT=25}] run particle minecraft:crit ~ ~ ~ 0.1 0.1 0.1 2 100 normal
 scoreboard players set @s[scores={slaySneak=10}] useCheck 2
 scoreboard players set @s[scores={slaySneak=10..}] slaySneak 0
@@ -44,10 +46,11 @@ execute as @s[scores={useCheck=2..}] at @s anchored eyes run particle minecraft:
 
 ## RECON UPDATE
 scoreboard players add @s[scores={dropBlood=1..139}] dropBlood 1
-execute at @s[scores={dropBlood=20}] run playsound minecraft:item.firecharge.use master @a[distance=..10] ~ ~ ~ 10000 0.7 1
+execute at @s[scores={dropBlood=2}] run playsound minecraft:entity.wither.ambient master @a[distance=..4] ~ ~ ~ 0.4 2 1
+execute at @s[scores={dropBlood=20}] run playsound minecraft:item.firecharge.use master @a[distance=..20] ~ ~ ~ 10000 0.7 1
 execute at @s[team=red,scores={dropBlood=20}] run effect give @a[team=blue,distance=..20] minecraft:glowing 2
 execute at @s[team=blue,scores={dropBlood=20}] run effect give @a[team=red,distance=..20] minecraft:glowing 2
-execute at @s[scores={dropBlood=140}] run playsound minecraft:item.armor.equip_gold master @p ~ ~ ~ 1 1
+execute at @s[scores={dropBlood=140}] run playsound minecraft:entity.vex.ambient master @a[distance=..10] ~ ~ ~ 10000 1 1
 item replace entity @s[scores={dropBlood=140}] hotbar.1 with minecraft:iron_shovel{Enchantments:[{id:"minecraft:unbreaking",lvl:1}],AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Amount:10,Operation:0,UUID:[I;1021537433,1056320062,1069698063,1260727900]},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Slot:"mainhand",Amount:-0.4,Operation:2,UUID:[I;1021537433,1056320062,1069698063,1260727900]}],Unbreakable:1,display:{Name:'[{"text":"Requiem","italic":false,"bold":true,"color":"red"},{"text":" "},{"text":"|","color":"gray"},{"text":" ","color":"gray"},{"text":"[Q]/[SHIFT]","color":"white","bold":false}]',Lore:['[{"text":"In the hopelessly dark night, a pale moon shines.","italic":false}]']},HideFlags:3} 1
 scoreboard players reset @s[scores={dropBlood=140..}] dropBlood
 scoreboard players reset @s[scores={dropBlood=1..,deathcheck=1}] dropBlood
