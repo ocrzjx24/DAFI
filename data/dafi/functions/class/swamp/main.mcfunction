@@ -19,13 +19,15 @@ scoreboard players set @s[scores={swampRandom=4..}] swampRandom 1
 scoreboard players add @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:ender_pearl"}]}] swampRandom 1
 
 ## TELEPORT
-execute at @s[scores={swampTPTrigger=1}] run playsound minecraft:block.portal.trigger master @a[distance=..10] ~ ~ ~ 0.4 2 1
+execute at @s[scores={swampTPTrigger=1}] run playsound minecraft:entity.skeleton.converted_to_stray master @a[distance=..10] ~ ~ ~ 100 1 1
 execute at @s[scores={swampTPTrigger=10}] run function dafi:class/swamp/teleport
 execute at @s[scores={swampTPTrigger=10}] run playsound minecraft:entity.ravager.step master @a ~ ~ ~ 1 1
 execute at @s[scores={swampTPTrigger=10}] run playsound minecraft:entity.elder_guardian.curse master @a ~ ~ ~ 0.5 1
 execute at @s[scores={swampTPTrigger=10}] run playsound minecraft:entity.zombie.converted_to_drowned master @a[distance=..10] ~ ~ ~ 1 0.7
-execute at @s[scores={swampTPTrigger=5}] run effect give @a[scores={swampTPTrigger=5}] minecraft:blindness 2 1 true
-execute at @s[scores={swampTPTrigger=20}] run effect clear @a[scores={swampTPTrigger=20}]
+execute at @s[scores={swampTPTrigger=1}] run effect give @a[scores={swampTPTrigger=1}] minecraft:darkness 2 1 true
+execute at @s[scores={swampTPTrigger=10}] run effect give @a[scores={swampTPTrigger=10}] minecraft:blindness 2 1 true
+execute at @s[scores={swampTPTrigger=17}] run effect clear @a[scores={swampTPTrigger=17}] blindness
+execute at @s[scores={swampTPTrigger=20}] run effect clear @a[scores={swampTPTrigger=20}] slowness
 execute at @s[scores={swampTPTrigger=1..30}] run scoreboard players set @s slowCheck 1
 execute at @s[scores={swampTPTrigger=5}] run scoreboard players set @s slow 25
 execute at @s[scores={swampTPTrigger=10}] run particle minecraft:block dirt ~ ~ ~ 0.5 0.5 0.5 1 200 force
