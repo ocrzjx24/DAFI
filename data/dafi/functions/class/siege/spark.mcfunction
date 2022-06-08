@@ -1,0 +1,1 @@
+execute anchored eyes run particle angry_villager ^-0.2 ^-0.5 ^1 0.2 0.2 0.2 1 1 force 

@@ -6,8 +6,7 @@ scoreboard players set .itt raycast 200
 ## temporary tag to remember who fired the raycast
 tag @s add this
 ## anchors raycast starting position to the eyes
-execute anchored eyes positioned ^ ^ ^ as @e[type=marker,tag=raycaster] run function dafi:mechanics/raycast/raycast
+execute anchored eyes positioned ^ ^ ^ as @e[type=marker,tag=raycaster] run function dafi:class/siege/raycast/raycast
 tag @s remove this
 
 kill @e[type=marker,tag=raycaster]
-

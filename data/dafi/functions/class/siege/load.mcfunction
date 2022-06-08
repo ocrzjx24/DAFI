@@ -1,10 +1,3 @@
-scoreboard objectives add use minecraft.used:minecraft.crossbow
-scoreboard objectives add useSentry dummy
-scoreboard objectives add dropCrossbow minecraft.dropped:minecraft.crossbow
-scoreboard objectives add sentryOn minecraft.dropped:minecraft.gunpowder
-scoreboard objectives add sentryOff minecraft.dropped:minecraft.redstone
-scoreboard objectives add sentryLimiter minecraft.used:minecraft.crossbow
-scoreboard objectives add arrowLife dummy
-scoreboard objectives add siegeRandom dummy
-scoreboard objectives add redstoneLife dummy
-scoreboard objectives add dropTripwire minecraft.dropped:minecraft.tripwire_hook
+scoreboard objectives add dropSpyglass minecraft.dropped:spyglass
+scoreboard objectives add spyglassCheck dummy
+scoreboard objectives add spyglass dummy
