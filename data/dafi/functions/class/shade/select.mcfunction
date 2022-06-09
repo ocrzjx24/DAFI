@@ -3,6 +3,7 @@ execute at @s run function dafi:game/select/reset
 
 ## TAG
 tag @s add shade
+scoreboard players set @s checkIn 0
 
 ## ITEM
 item replace entity @s hotbar.0 with crossbow{display:{Name:'[{"text":"JSN ","italic":false,"color":"yellow","bold":true},{"text":"X13","italic":false,"bold":true,"color":"gold"}]',Lore:['[{"text":"death.attack.firework.item","italic":false,"color":"dark_green"}]']},Enchantments:[{id:"quick_charge",lvl:5}],Unbreakable:1,HideFlags:1} 1
