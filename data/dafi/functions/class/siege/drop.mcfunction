@@ -1,0 +1,1 @@
+execute anchored eyes run particle campfire_signal_smoke ^-0.2 ^-0.5 ^1 0.2 0.2 0.2 0 1 force 
