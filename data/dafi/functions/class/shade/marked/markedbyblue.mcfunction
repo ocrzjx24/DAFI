@@ -1,7 +1,7 @@
 ##### !RED
 
 ## INITIAL INSTANCE
-#effect give @s[scores={castTagged=1}] blindness 1 0 true
+effect give @s[scores={castTagged=1}] blindness 1 0 true
 #effect give @s[scores={castTagged=1}] glowing 1 0 true
 
 execute at @s[scores={castTagged=1}] run playsound minecraft:entity.allay.item_taken master @a[tag=shade,team=blue] ~ ~ ~ 1 1.5
