@@ -27,14 +27,19 @@ execute if score @s spyglass matches 20.. run title @s actionbar {"text":"■■
 execute if score @s spyglass matches 1.. if score @s spyglassCheck matches 0 run title @s actionbar ""
 
 ## SCOREBOARD
-scoreboard players add @s[scores={spyglassCheck=1}] spyglass 1
-scoreboard players set @s[scores={spyglassCheck=0,spyglass=1..}] spyglass 0
-scoreboard players set @s[scores={spyglassCheck=1}] spyglassCheck 0
+execute if score @s spyglassCheck matches 1 run scoreboard players add @s spyglass 1
+execute if score @s spyglassCheck matches 0 if score @s spyglass matches 1.. run scoreboard players set @s spyglass 0
+execute if score @s spyglassCheck matches 1 run scoreboard players set @s spyglassCheck 0
+# scoreboard players add @s[scores={spyglassCheck=1}] spyglass 1
+# scoreboard players set @s[scores={spyglassCheck=0,spyglass=1..}] spyglass 0
+# scoreboard players set @s[scores={spyglassCheck=1}] spyglassCheck 0
 
 ## DROP SPYGLASS
-scoreboard players add @s[scores={dropSpyglass=1..}] dropSpyglass 1
+execute if score @s dropSpyglass matches 1.. run scoreboard players add @s dropSpyglass 1
 execute if score @s dropSpyglass matches 81.. run give @s minecraft:spyglass
-scoreboard players set @s[scores={dropSpyglass=81..}] dropSpyglass 0
+execute if score @s dropSpyglass matches 81.. run scoreboard players set @s dropSpyglass 0
+# scoreboard players add @s[scores={dropSpyglass=1..}] dropSpyglass 1
+# scoreboard players set @s[scores={dropSpyglass=81..}] dropSpyglass 0
 
 ## DEATHCHECK
 # to do
