@@ -1,0 +1,1 @@
+execute if score #weapon weapon matches 1 run kill @e[type=arrow,nbt={inGround:1b}]

@@ -6,3 +6,4 @@ function dafi:mechanics/cw_hp_control/set_hp
 
 playsound entity.player.hurt master @s ~ ~ ~
 effect give @s minecraft:instant_health 1 100
+advancement grant @s only dafi:hurt
