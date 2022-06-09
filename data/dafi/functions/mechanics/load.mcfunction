@@ -25,5 +25,8 @@ function dafi:mechanics/slowness/load
 ## WALLRUN
 function dafi:mechanics/wallrun/load
 
+## WEAPON
+function dafi:mechanics/weapon/load
+
 ## UUID STORE
 function dafi:mechanics/uuid/load
