@@ -4,7 +4,7 @@ execute at @s[team=!red] if entity @e[team=!blue,scores={castTagged=1..},distanc
 
 ## SWORD SWITCHING
 item replace entity @s[scores={checkIn=1},tag=!processedDSword] hotbar.1 with minecraft:diamond_sword{display:{Name:'[{"text":"Oni","italic":false,"bold":true,"color":"aqua"},{"text":"kiri","color":"dark_aqua"},{"text":" | ","color":"dark_gray","bold":false},{"text":"[","color":"white","bold":false},{"text":"⌛","color":"gray","bold":false},{"text":"]","color":"white","bold":false},{"text":"/","color":"dark_gray","bold":false},{"text":"[","color":"white","bold":false},{"text":"⌛","color":"gray","bold":false},{"text":"]","color":"white","bold":false}]',Lore:['[{"text":"Type: 🧪 ","italic":false,"color":"green"},{"text":"/","color":"dark_green"},{"text":" 🔥"}]']},Unbreakable:1,Enchantments:[{id:"minecraft:unbreaking",lvl:1}],AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Slot:"mainhand",Amount:5,Operation:2,UUID:[I;1060846863,1081870173,1010577874,1859017242]},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Amount:20,Operation:0,UUID:[I;1060846863,1081870173,1010577874,1859017242]}],HideFlags:7} 1
-execute at @s[scores={checkIn=1},tag=!processedDSword] run playsound minecraft:entity.allay.item_thrown master @s ~ ~ ~ 1 1.5
+execute at @s[scores={checkIn=1},tag=!processedDSword] run playsound minecraft:entity.allay.item_thrown master @a[distance=..7] ~ ~ ~ 1 1.5
 clear @s[scores={checkIn=0},tag=!processedDSword] diamond_sword
 tag @s[scores={checkIn=0},tag=processedDSword] remove processedDSword
 tag @s[scores={checkIn=1},tag=!processedDSword] add processedDSword

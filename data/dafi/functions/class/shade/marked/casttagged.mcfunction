@@ -7,8 +7,8 @@ execute at @s[scores={castTagged=1..},team=!blue] run particle minecraft:witch ~
 execute at @s[scores={castTagged=1..},team=!red] run particle minecraft:witch ~ ~ ~ 0.1 0.1 0.1 2 3 force @a[tag=shade,team=red]
 execute at @s[scores={castTagged=1..},team=!blue] run particle minecraft:enchanted_hit ~ ~1 ~ 0.1 0.1 0.1 0.5 2 force @a[tag=shade,team=blue]
 execute at @s[scores={castTagged=1..},team=!red] run particle minecraft:enchanted_hit ~ ~1 ~ 0.1 0.1 0.1 0.5 2 force @a[tag=shade,team=red]
-effect give @s[scores={castTagged=1}] blindness 1 0 true
-effect give @s[scores={castTagged=1}] glowing 1 0 true
+#effect give @s[scores={castTagged=1}] blindness 1 0 true
+#effect give @s[scores={castTagged=1}] glowing 1 0 true
 
 tag @s[scores={castTagged=1}] remove recur
 execute at @s[scores={castTagged=1},team=!blue] run tag @e[distance=..10,team=!red,tag=!swordCast,tag=!recur] add markedByBlue

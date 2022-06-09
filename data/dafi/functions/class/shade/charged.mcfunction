@@ -15,6 +15,7 @@ item replace entity @s[scores={charge=14}] armor.head with minecraft:air
 ## CHARGE DURATION
 #execute at @s[scores={charge=14..74}] run particle minecraft:witch ~ ~ ~ 0 0 0 0.001 2
 execute at @s[scores={charge=14..74}] run particle minecraft:squid_ink ~ ~ ~ 0.2 0.2 0.2 0.01 1 force
+execute at @s[scores={charge=14..74}] run particle minecraft:dust 1 0 0.8 0.8 ~ ~ ~ 0.5 0.5 0.5 0.00000001 3 normal
 item replace entity @s[scores={charge=74}] armor.feet with minecraft:leather_boots{Enchantments:[{id:"binding_curse",lvl:1},{id:"depth_strider",lvl:3}],Unbreakable:1,display:{color:4980889}} 1
 item replace entity @s[scores={charge=74}] armor.head with minecraft:conduit{display:{Name:'[{"text":"Brain","italic":false,"color":"light_purple"}]'}} 1
 tag @s[scores={charge=74}] remove wallrunP
