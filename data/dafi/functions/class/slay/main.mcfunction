@@ -22,7 +22,7 @@ scoreboard players add @s[scores={slayCD=1..}] slayCD 1
 scoreboard players set @s[scores={slayCD=2}] useCheck 0
 #item replace entity @s[scores={slayCD=120}] hotbar.1 with tnt_minecart{display:{Name:'[{"text":"Load","italic":false,"bold":true,"color":"red"}]',color:11546150}} 1
 execute at @s[scores={slayCD=71}] run playsound minecraft:item.lodestone_compass.lock master @a[distance=..10] ~ ~ ~ 10000 0.5 1
-title @s[scores={slaySneak=9}] actionbar {"text":"LOCK 'N LOAD","bold":true,"color":"red"}
+title @s[scores={slaySneak=9}] actionbar {"text":"LOCK AND LOAD","bold":true,"color":"red"}
 title @s[scores={slayCD=70}] actionbar {"text":"\u2605 TRIGGER FINGER TWITCHES \u2605","bold":true,"color":"red"}
 scoreboard players set @s[scores={slayCD=71..}] slayCD 0
 scoreboard players set @s[scores={slayCD=1..70}] slaySneak 0
@@ -46,7 +46,7 @@ execute as @s[scores={slayCD=1}] at @s anchored eyes run particle minecraft:dust
 ## RECON UPDATE
 scoreboard players add @s[scores={dropBlood=1..139}] dropBlood 1
 execute at @s[scores={dropBlood=2}] run playsound minecraft:item.armor.equip_iron master @s ~ ~ ~ 1 1 1
-execute at @s[scores={dropBlood=2}] run function dafi:class/slay/stand
+execute at @s[scores={dropBlood=20}] run function dafi:class/slay/stand
 execute at @s[scores={dropBlood=20}] run playsound minecraft:item.trident.thunder master @a[distance=..10] ~ ~ ~ 0.7 2 1
 execute at @s[scores={dropBlood=20}] run playsound minecraft:block.bell.resonate master @a[distance=..10] ~ ~ ~ 1 2 1
 execute at @s[team=red,scores={dropBlood=20}] run effect give @a[team=blue,distance=..20] minecraft:glowing 2
