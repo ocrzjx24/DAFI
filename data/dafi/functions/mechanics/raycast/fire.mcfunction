@@ -10,4 +10,3 @@ execute anchored eyes positioned ^ ^ ^ as @e[type=marker,tag=raycaster] run func
 tag @s remove this
 
 kill @e[type=marker,tag=raycaster]
-

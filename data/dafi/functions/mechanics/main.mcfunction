@@ -7,6 +7,9 @@ function dafi:mechanics/cw_hp_control/main
 ## DEATHS
 function dafi:mechanics/deaths/main
 
+## KILL ENTITIES
+function dafi:mechanics/kill_entities/main
+
 ## KILLS
 function dafi:mechanics/kills/main
 
