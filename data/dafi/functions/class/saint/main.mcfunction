@@ -17,7 +17,7 @@ execute at @s run function dafi:class/saint/sneak
 execute if score @s feather matches 1..100 at @s run function dafi:class/saint/hitbox
 
 ## PARTICLES
-execute at @s[tag=saint] run particle minecraft:enchant ~ ~0.2 ~ 0.4 0.1 0.4 0.001 1 normal
+execute at @s run particle minecraft:enchant ~ ~0.2 ~ 0.4 0.1 0.4 0.001 1 normal
 
 ## TEXT
 execute if score @s feather matches 199 run title @s actionbar {"text":"\u2605 PREPARE TO ASCEND \u2605","bold":true}

@@ -1,3 +1,5 @@
+## IM NOT OPTIMIZING THIS SHIT
+
 ## ROTATE ITEM
 item replace entity @s[scores={gCD=0,rotate=3,rotateSound=1},team=red] weapon.offhand with minecraft:snowball{red:1,display:{Name:'[{"text":"Pondering Orb","italic":false,"color":"yellow"}]'}}
 item replace entity @s[scores={gCD=0,rotate=3,rotateSound=1},team=blue] weapon.offhand with minecraft:snowball{blue:1,display:{Name:'[{"text":"Pondering Orb","italic":false,"color":"yellow"}]'}}

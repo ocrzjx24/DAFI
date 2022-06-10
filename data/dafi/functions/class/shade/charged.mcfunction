@@ -9,8 +9,8 @@ execute if score @s charge matches 14 run effect give @s minecraft:speed 3 7 tru
 execute if score @s charge matches 14 run effect give @s minecraft:invisibility 3 0 true
 execute if score @s charge matches 14 at @s run playsound minecraft:block.chorus_flower.grow master @s[distance=..10] ~ ~ ~ 1 1.7
 execute if score @s charge matches 14 at @s run playsound minecraft:entity.wither.ambient master @a[distance=..10] ~ ~ ~ 0.4 2 1
-execute if score @s charge matches 14 run item replace entity @s[scores={charge=14}] armor.feet with minecraft:air
-execute if score @s charge matches 14 run item replace entity @s[scores={charge=14}] armor.head with minecraft:air
+execute if score @s charge matches 14 run item replace entity @s armor.feet with minecraft:air
+execute if score @s charge matches 14 run item replace entity @s armor.head with minecraft:air
 
 ## CHARGE DURATION
 #execute at @s[scores={charge=14..74}] run particle minecraft:witch ~ ~ ~ 0 0 0 0.001 2
