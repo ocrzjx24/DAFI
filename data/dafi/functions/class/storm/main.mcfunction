@@ -37,32 +37,40 @@ execute if score @s useTrident matches 1..60 run clear @s minecraft:trident
 execute if score @s dropWave matches 120.. run item replace entity @s hotbar.1 with minecraft:diamond_axe{display:{Name:'[{"text":"Wavebreaker","italic":false,"bold":true,"color":"aqua"}]'},Enchantments:[{id:"channeling",lvl:1},{id:"sharpness",lvl:2}],Unbreakable:1,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Amount:10,Operation:0,UUID:[I;1028214595,1066950744,1016402789,1603413261]},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Slot:"mainhand",Amount:-0.4,Operation:2,UUID:[I;1028214595,1066950744,1016402789,1603413261]}],HideFlags:3} 1
 execute if score @s dropWave matches 1 run tag @s add strike
 execute if score @s dropWave matches 1 at @s run playsound minecraft:entity.lightning_bolt.thunder master @s ~ ~100 ~ 100 2
-execute if score @s dropWave matches 1..30 run scoreboard players set @s CD 2
 execute if score @s dropWave matches 1 run clear @s crossbow{display:{Name:"[{\"text\":\"JSN \",\"italic\":false,\"color\":\"yellow\",\"bold\":true},{\"text\":\"X13\",\"italic\":false,\"bold\":true,\"color\":\"gold\"}]",Lore:["[{\"text\":\"death.attack.firework.item\",\"italic\":false,\"color\":\"dark_green\"}]"]},Enchantments:[{id:"quick_charge",lvl:5}],Unbreakable:1,HideFlags:1}
 execute if score @s dropWave matches 1 run item replace entity @s hotbar.0 with crossbow{display:{Name:"[{\"text\":\"JSN \",\"italic\":false,\"color\":\"yellow\",\"bold\":true},{\"text\":\"X13\",\"italic\":false,\"bold\":true,\"color\":\"gold\"}]",Lore:["[{\"text\":\"death.attack.firework.item\",\"italic\":false,\"color\":\"dark_green\"}]"]},Enchantments:[{id:"quick_charge",lvl:5}],Unbreakable:1,HideFlags:1}
 execute if score @s dropWave matches 1 run scoreboard players reset @s useTrident
+execute if score @s dropWave matches 1..60 run scoreboard players set @s CD 2
 execute if score @s[team=red] dropWave matches 1 run item replace entity @s weapon.offhand with minecraft:trident{tred:1}
 execute if score @s[team=blue] dropWave matches 1 run item replace entity @s weapon.offhand with minecraft:trident{tblue:1}
 execute if score @s dropWave matches 1 run effect give @s minecraft:speed 3 2
-execute if score @s dropWave matches 1..60 at @s run particle minecraft:nautilus ~ ~ ~ 0 0 0 2 1 force
-execute if score @s dropWave matches 1..60 at @s run particle minecraft:enchanted_hit ~ ~ ~ 1 1 1 0.1 5 force
+execute if score @s[tag=!garden] dropWave matches 1..60 at @s run particle minecraft:nautilus ~ ~ ~ 0 0 0 2 1 force
+execute if score @s[tag=!garden] dropWave matches 1..60 at @s run particle minecraft:enchanted_hit ~ ~ ~ 1 1 1 0.1 5 force
 execute if score @s dropWave matches 60 at @s run playsound minecraft:block.beacon.deactivate master @a[distance=..10] ~ ~ ~ 100 0.7 1
+execute if score @s dropwave matches 60 run playsound minecraft:entity.lightning_bolt.thunder master @s ~ ~100 ~ 100 2
 execute if score @s dropWave matches 60.. run tag @s remove strike
 execute if score @s dropWave matches 120 run title @s actionbar {"text":"\u2605 THE STORM CALLS... \u2605","bold":true,"color":"aqua"}
 execute if score @s dropWave matches 120 at @s run playsound minecraft:entity.illusioner.prepare_mirror master @a[distance=..10] ~ ~ ~ 100 0.4 1
+
+## ITERATION AND RESET
 execute if score @s dropWave matches 120 run scoreboard players reset @s dropWave
-execute if score @s dropWave matches 1.. run scoreboard players add @s dropWave 1
+execute if score @s[tag=!garden] dropWave matches 1.. run scoreboard players add @s dropWave 1
+
+## MARKET GARDENER TIME BITCH!!!!!!!!!!!!!!!
+execute if entity @s[tag=garden] run function dafi:class/storm/garden
+execute if score @s shovel matches 120.. run scoreboard players set @s shovel 0
+
+
+## TARGET TRIDENT
 execute as @e[type=trident,nbt={inGround:1b}] run function dafi:class/storm/strike
 
-# effect clear @s minecraft:jump_boost
-# execute as @s[tag=strike] if predicate dafi:is_sneaking run effect give @s minecraft:jump_boost 999999 5 true
-# execute at @s[tag=strike] if predicate dafi:is_sneaking run playsound minecraft:entity.firework_rocket.twinkle_far master @s ~ ~-1 ~ 0.2 1
-# execute as @s if predicate dafi:is_not_sneaking run effect give @s minecraft:jump_boost 999999 1 true
 
+## WATER
 execute as @s[tag=water] run function dafi:class/storm/water
 
 
 ## DEATHCHECK
+scoreboard players set @s[scores={deathCheck=1..,dropWave=1..}] dropWave 119
 scoreboard players set @s[scores={deathCheck=1..,dropWave=1..}] dropWave 119
 
 ## KILL
