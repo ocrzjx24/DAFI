@@ -7,6 +7,9 @@ function dafi:mechanics/deaths/load
 ## KILLS
 function dafi:mechanics/kills/load
 
+## GLOW
+function dafi:mechanics/glowing/load
+
 ## BOOST
 function dafi:mechanics/piston_boost/load
 

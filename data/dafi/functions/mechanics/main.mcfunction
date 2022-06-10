@@ -7,10 +7,13 @@ function dafi:mechanics/cw_hp_control/main
 ## DEATHS
 function dafi:mechanics/deaths/main
 
+## GLOWING
+function dafi:mechanics/glowing/main
+
 ## KILLS
 function dafi:mechanics/kills/main
 
-## KILLS
+## KILL
 function dafi:mechanics/kill_entities/main
 
 ## BOOST
