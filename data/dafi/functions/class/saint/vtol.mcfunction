@@ -1,3 +1,5 @@
+## SHIT FUCKING CODE
+
 ## is_not_sneaking
 execute as @s at @s unless score @s feather matches 1..40 if predicate dafi:is_not_sneaking run effect clear @s levitation
 execute as @s at @s unless score @s feather matches 1..40 if predicate dafi:is_not_sneaking run scoreboard players add @s[scores={vtol=0..40}] vtol 1

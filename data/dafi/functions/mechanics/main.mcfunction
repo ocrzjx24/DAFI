@@ -10,6 +10,9 @@ function dafi:mechanics/deaths/main
 ## KILLS
 function dafi:mechanics/kills/main
 
+## KILLS
+function dafi:mechanics/kill_entities/main
+
 ## BOOST
 function dafi:mechanics/piston_boost/main
 
@@ -27,6 +30,7 @@ function dafi:mechanics/slowness/main
 
 ## WALLRUN
 function dafi:mechanics/wallrun/main
+
 
 ## UUID STORE
 execute as @a[tag=!DoNotRemove_UUIDstore] run function dafi:mechanics/uuid/main

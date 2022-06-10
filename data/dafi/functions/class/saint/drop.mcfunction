@@ -16,7 +16,7 @@ playsound minecraft:block.beacon.power_select master @a[distance=..10] ~ ~ ~ 1 1
 
 ## TEXT
 # self
-title @s[scores={feather=1}] actionbar {"text":"ASCENSION","bold":true}
+execute if score @s feather matches 1 run title @s actionbar {"text":"ASCENSION","bold":true}
 # others
 execute at @s[team=blue] run title @a[distance=..10,team=!blue] actionbar {"text":"! UPDRAFT !","bold":true}
 execute at @s[team=red] run title @a[distance=..10,team=!red] actionbar {"text":"! UPDRAFT !","bold":true}
