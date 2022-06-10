@@ -51,10 +51,10 @@ title @s[scores={rotate=1,gCD=2,gRandom=1}] actionbar {"text":"LIGHT 'EM UP! (LI
 title @s[scores={rotate=1,gCD=2,gRandom=2}] actionbar {"text":"闪耀!","bold":true,"color":"gold"}
 title @s[scores={rotate=1,gCD=2,gRandom=3}] actionbar {"text":"I'VE GOT WALLS!","bold":true,"color":"gold"}
 title @s[scores={rotate=1,gCD=2,gRandom=4}] actionbar {"text":"WHERE'S THE PARTY?","bold":true,"color":"gold"}
-title @s[scores={rotate=3,gCD=2,gRandom=1}] actionbar {"text":"MOLLY!","bold":true,"color":"gold"}
-title @s[scores={rotate=3,gCD=2,gRandom=2}] actionbar {"text":"莫洛托夫!","bold":true,"color":"gold"}
-title @s[scores={rotate=3,gCD=2,gRandom=3}] actionbar {"text":"COMING IN HOT!","bold":true,"color":"gold"}
-title @s[scores={rotate=3,gCD=2,gRandom=4}] actionbar {"text":"WHAT'S UP, DOC?","bold":true,"color":"gold"}
+title @s[scores={rotate=2,gCD=2,gRandom=1}] actionbar {"text":"MOLLY!","bold":true,"color":"gold"}
+title @s[scores={rotate=2,gCD=2,gRandom=2}] actionbar {"text":"莫洛托夫!","bold":true,"color":"gold"}
+title @s[scores={rotate=2,gCD=2,gRandom=3}] actionbar {"text":"COMING IN HOT!","bold":true,"color":"gold"}
+title @s[scores={rotate=2,gCD=2,gRandom=4}] actionbar {"text":"WHAT'S UP, DOC?","bold":true,"color":"gold"}
 
 ## SCOREBOARD RANDOMIZER
 scoreboard players set @s[scores={gRandom=4..}] gRandom 0
