@@ -13,4 +13,4 @@ execute as @a[tag=swamp] run function dafi:class/swamp/main
 function dafi:class/sting/grenade
 function dafi:class/soul/lifetime
 function dafi:class/steel/lifetime
-function dafi:class/siege/lifetime
+# function dafi:class/siege/lifetime
