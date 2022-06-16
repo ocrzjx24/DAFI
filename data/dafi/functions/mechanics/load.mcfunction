@@ -10,6 +10,9 @@ function dafi:mechanics/kills/load
 ## GLOW
 function dafi:mechanics/glowing/load
 
+## NO GRAVITY
+function dafi:mechanics/no_gravity/load
+
 ## BOOST
 function dafi:mechanics/piston_boost/load
 

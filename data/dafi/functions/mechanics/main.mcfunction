@@ -19,6 +19,9 @@ function dafi:mechanics/kills/main
 ## KILL
 function dafi:mechanics/kill_entities/main
 
+## NO GRAVITY
+function dafi:mechanics/no_gravity/main
+
 ## BOOST
 function dafi:mechanics/piston_boost/main
 
