@@ -1,14 +1,17 @@
 {
-    "criteria": {
-      "requirement": {
-        "trigger": "minecraft:using_item",
-        "conditions": {
-         "items": ["minecraft:spyglass"]
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:using_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:spyglass"
+          ]
         }
       }
-    }, 
-    "rewards": {
-        "function": "dafi:class/siege/scoping"
-      }
+    }
+  },
+  "rewards": {
+    "function": "dafi:class/siege/scoping"
   }
-  
+}
