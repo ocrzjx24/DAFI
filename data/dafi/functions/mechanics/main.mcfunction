@@ -1,6 +1,9 @@
 ## ANTIDROP
 function dafi:mechanics/antidrop/main
 
+## ARROW
+function dafi:mechanics/arrow/main
+
 ## DAMAGE
 function dafi:mechanics/cw_hp_control/main
 
