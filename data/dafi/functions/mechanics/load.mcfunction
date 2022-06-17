@@ -1,3 +1,6 @@
+## ARROW
+function dafi:mechanics/arrow/load
+
 ## DAMAGE
 function dafi:mechanics/cw_hp_control/init
 
