@@ -17,7 +17,7 @@ execute if score @s charge matches 14 run item replace entity @s armor.head with
 execute if score @s charge matches 14..74 at @s run particle minecraft:squid_ink ~ ~ ~ 0.2 0.2 0.2 0.01 1 force
 execute if score @s charge matches 14..74 at @s run particle minecraft:dust 1 0 0.8 0.8 ~ ~ ~ 0.5 0.5 0.5 0.00000001 3 normal
 execute if score @s charge matches 74 run item replace entity @s armor.feet with minecraft:leather_boots{Enchantments:[{id:"binding_curse",lvl:1},{id:"depth_strider",lvl:3}],Unbreakable:1,display:{color:4980889}} 1
-execute if score @s charge matches 74 run item replace entity @s armor.head with minecraft:conduit{display:{Name:'[{"text":"Brain","italic":false,"color":"light_purple"}]'}} 1
+execute if score @s charge matches 74 run function dafi:mechanics/hat_system/hat
 execute if score @s charge matches 74 run tag @s remove wallrunP
 
 

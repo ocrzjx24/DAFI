@@ -5,4 +5,4 @@ execute if score #weapon weapon matches 1 run item replace entity @a[scores={arr
 scoreboard players reset @a[scores={arrowCD=20..}] arrowCD
 scoreboard players add @a[scores={arrowCD=1..}] arrowCD 1
 
-execute at @e[type=minecraft:arrow] run playsound minecraft:entity.firework_rocket.blast master @a ~ ~ ~ 1 1.7 0
+#execute at @e[type=minecraft:arrow] run playsound minecraft:entity.firework_rocket.blast master @a ~ ~ ~ 1 1.7 0

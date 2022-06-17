@@ -13,6 +13,9 @@ function dafi:mechanics/deaths/main
 ## GLOWING
 function dafi:mechanics/glowing/main
 
+## HAT SYSTEM
+function dafi:mechanics/hat_system/main
+
 ## KILLS
 function dafi:mechanics/kills/main
 

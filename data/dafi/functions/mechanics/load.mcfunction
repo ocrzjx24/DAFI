@@ -13,6 +13,9 @@ function dafi:mechanics/kills/load
 ## GLOW
 function dafi:mechanics/glowing/load
 
+## HAT SYSTEM
+function dafi:mechanics/hat_system/load
+
 ## NO GRAVITY
 function dafi:mechanics/no_gravity/load
 
