@@ -10,7 +10,9 @@ execute as @a[tag=shade] run function dafi:class/shade/main
 execute as @a[tag=swamp] run function dafi:class/swamp/main
 
 ## OTHER FUNCTIONS
+function dafi:class/shade/cast
 function dafi:class/sting/grenade
 function dafi:class/soul/lifetime
 function dafi:class/steel/lifetime
+function dafi:class/swamp/cast
 # function dafi:class/siege/lifetime

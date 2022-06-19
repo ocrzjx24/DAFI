@@ -2,7 +2,7 @@
 function dafi:class/shade/close
 
 ## CAST
-function dafi:class/shade/cast
+# function dafi:class/shade/cast
 
 ## THROW SWORD
 execute if score @s dropNSword matches 1 at @s run function dafi:class/shade/summon

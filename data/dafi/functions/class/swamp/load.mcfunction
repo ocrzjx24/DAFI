@@ -1,4 +1,10 @@
 scoreboard objectives add dropNAxe minecraft.dropped:minecraft.netherite_axe
 scoreboard objectives add swampTPLife dummy
-scoreboard objectives add swampTPTrigger minecraft.used:minecraft.ender_pearl
+scoreboard objectives add useEPearl minecraft.used:minecraft.ender_pearl
+scoreboard objectives add swampTPTrigger dummy
+scoreboard objectives add swampRoarTrigger dummy
 scoreboard objectives add swampRandom dummy
+scoreboard objectives add roarLife dummy
+scoreboard objectives add swamp_x dummy
+scoreboard objectives add swamp_y dummy
+scoreboard objectives add swamp_z dummy
