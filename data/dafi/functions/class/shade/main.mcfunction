@@ -29,7 +29,7 @@ function dafi:class/shade/charged
 function dafi:class/shade/offhand
 
 ## DEATHCHECK
-execute if score @s deathcheck matches 1.. if score @s charge matches 1.. run scoreboard players set @s step 193
+execute if score @s deathcheck matches 1.. if score @s charge matches 1.. run scoreboard players set @s step 190
 execute if score @s deathcheck matches 1.. if score @s charge matches 1.. run tag @s remove wallrunP
 
 ## KILL SWORD
