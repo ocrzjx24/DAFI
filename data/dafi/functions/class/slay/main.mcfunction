@@ -65,10 +65,10 @@ execute if score @s dropBlood matches 20 at @s run playsound minecraft:block.bel
 
 # execute if score @s[team=red] dropBlood matches 20 at @s run effect give @a[team=blue,distance=..20] minecraft:glowing 2
 # execute if score @s[team=blue] dropBlood matches 20 at @s run effect give @a[team=red,distance=..20] minecraft:glowing 2
-execute if score @s[team=red] dropBlood matches 20 at @s run tag @a[team=blue,distance=..20] add glow
-execute if score @s[team=red] dropBlood matches 20 at @s run title @a[team=blue,distance=..20] actionbar {"text":"! MARKED !","bold":true,"color":"red"}
-execute if score @s[team=blue] dropBlood matches 20 at @s run tag @a[team=red,distance=..20] add glow
-execute if score @s[team=blue] dropBlood matches 20 at @s run title @a[team=red,distance=..20] actionbar {"text":"! MARKED !","bold":true,"color":"red"}
+execute if score @s[team=red] dropBlood matches 20 at @s run tag @a[team=blue,distance=..25] add glow
+execute if score @s[team=red] dropBlood matches 20 at @s run title @a[team=blue,distance=..25] actionbar {"text":"! MARKED !","bold":true,"color":"red"}
+execute if score @s[team=blue] dropBlood matches 20 at @s run tag @a[team=red,distance=..25] add glow
+execute if score @s[team=blue] dropBlood matches 20 at @s run title @a[team=red,distance=..25] actionbar {"text":"! MARKED !","bold":true,"color":"red"}
 execute if score @s dropBlood matches 140 at @s run playsound minecraft:item.axe.scrape master @s ~ ~ ~ 10000 1 1
 execute if score @s dropBlood matches 140 run item replace entity @s hotbar.1 with minecraft:iron_shovel{Enchantments:[{id:"minecraft:unbreaking",lvl:1}],AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Amount:10,Operation:0,UUID:[I;1021537433,1056320062,1069698063,1260727900]},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Slot:"mainhand",Amount:-0.4,Operation:2,UUID:[I;1021537433,1056320062,1069698063,1260727900]}],Unbreakable:1,display:{Name:'[{"text":"Requiem","italic":false,"bold":true,"color":"red"},{"text":" "},{"text":"|","color":"gray"},{"text":" ","color":"gray"},{"text":"[Q]/[SHIFT]","color":"white","bold":false}]',Lore:['[{"text":"In the hopelessly dark night, a pale moon shines.","italic":false}]']},HideFlags:3} 1
 

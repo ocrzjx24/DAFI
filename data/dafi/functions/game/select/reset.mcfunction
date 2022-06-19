@@ -20,6 +20,8 @@ tag @s remove wallrunP
 execute as @e[type=armor_stand,tag=swampTP] if score @s sbsid = @a[scores={class=1},limit=1] sbsid run kill @s
 
 ## SCOREBOARDS (incomplete)
+scoreboard players set @s offhandReady 1
+scoreboard players reset @s swampTPTrigger
 scoreboard players set @s damage 0
 scoreboard players reset @s dropScrap
 scoreboard players reset @s vtol

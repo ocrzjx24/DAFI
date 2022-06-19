@@ -1,6 +1,9 @@
 ## ARROW
 function dafi:mechanics/arrow/load
 
+## CROSSBOW MAINHAND
+function dafi:mechanics/crossbow_mainhand/load
+
 ## DAMAGE
 function dafi:mechanics/cw_hp_control/init
 

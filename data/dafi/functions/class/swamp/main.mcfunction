@@ -8,10 +8,10 @@ execute if score @s dropNAxe matches 30.. run scoreboard players reset @s dropNA
 execute if score @s dropNAxe matches 1.. run scoreboard players add @s dropNAxe 1
 
 ## TEXT RANDOMIZER
-execute if score @s swampTPTrigger matches 10 if score @s swampRandom matches 1 run title @s actionbar {"text":"RUN.","bold":true,"color":"dark_red"}
-execute if score @s swampTPTrigger matches 10 if score @s swampRandom matches 2 run title @s actionbar {"text":"FLEE.","bold":true,"color":"dark_red"}
-execute if score @s swampTPTrigger matches 10 if score @s swampRandom matches 3 run title @s actionbar {"text":"HIDE.","bold":true,"color":"dark_red"}
-execute if score @s swampTPTrigger matches 10 if score @s swampRandom matches 4 run title @s actionbar {"text":"DIE.","bold":true,"color":"dark_red"}
+execute if score @s swampTPTrigger matches 10 if score @s swampRandom matches 1 run tellraw @s {"text":"RUN.","bold":true,"color":"dark_red"}
+execute if score @s swampTPTrigger matches 10 if score @s swampRandom matches 2 run tellraw @s {"text":"FLEE.","bold":true,"color":"dark_red"}
+execute if score @s swampTPTrigger matches 10 if score @s swampRandom matches 3 run tellraw @s {"text":"HIDE.","bold":true,"color":"dark_red"}
+execute if score @s swampTPTrigger matches 10 if score @s swampRandom matches 4 run tellraw @s {"text":"DIE.","bold":true,"color":"dark_red"}
 
 ## SCOREBOARD RANDOMIZER
 execute if score @s swampRandom matches 4.. run scoreboard players set @s swampRandom 1
@@ -20,6 +20,7 @@ scoreboard players add @s swampRandom 1
 # scoreboard players add @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:ender_pearl"}]}] swampRandom 1
 
 ## TELEPORT
+execute if score @s swampTPTrigger matches 1 run scoreboard players reset @s offhandReady
 execute if score @s swampTPTrigger matches 1 at @s run playsound minecraft:entity.skeleton.converted_to_stray master @a[distance=..10] ~ ~ ~ 100 1 1
 execute if score @s swampTPTrigger matches 1 at @s run effect give @a[scores={swampTPTrigger=1}] minecraft:darkness 2 1 true
 execute if score @s swampTPTrigger matches 10 at @s run function dafi:class/swamp/teleport
@@ -33,15 +34,20 @@ execute if score @s swampTPTrigger matches 1..30 run scoreboard players set @s s
 execute if score @s swampTPTrigger matches 5 run scoreboard players set @s slow 25
 execute if score @s swampTPTrigger matches 10 at @s run particle minecraft:block dirt ~ ~ ~ 0.5 0.5 0.5 1 200 force
 execute if score @s swampTPTrigger matches 10 at @s run particle minecraft:block redstone_block ~ ~ ~ 0.5 0.5 0.5 1 100 force
-execute if score @s swampTPTrigger matches 130 run title @s actionbar {"text":"\u2605 FEAR ME. \u2605","bold":true,"color":"dark_red"}
+execute if score @s swampTPTrigger matches 130 run tellraw @s {"text":"\u2605 FEAR ME. \u2605","bold":true,"color":"dark_red"}
 execute if score @s swampTPTrigger matches 130 at @s run playsound minecraft:entity.ravager.step master @a ~ ~ ~ 1 2
 execute if score @s swampTPTrigger matches 130 at @s run playsound minecraft:entity.evoker.prepare_attack master @a ~ ~ ~ 1 2
-execute if score @s swampTPTrigger matches 130 run item replace entity @s weapon.offhand with ender_pearl{display:{Name:'[{"text":"Mire","italic":false,"bold":true,"color":"dark_red"}]'},Enchantments:[{id:"minecraft:unbreaking",lvl:10}],HideFlags:1} 1
+execute if score @s swampTPTrigger matches 130 run title @s actionbar ["",{"text":"[RMB] ","bold":true,"color":"gold"},{"text":"READY","color":"green"}]
+execute if score @s swampTPTrigger matches 130 run scoreboard players set @s offhandReady 1
+execute if score @s swampTPTrigger matches 130 run tag @s remove offhandProcessed
 execute if score @s swampTPTrigger matches 130.. run scoreboard players reset @s swampTPTrigger
 execute if score @s swampTPTrigger matches 1.. run scoreboard players add @s swampTPTrigger 1
 
 ## MIRE
 execute as @s[predicate=dafi:is_sneaking] at @s run function dafi:class/swamp/particles
+
+## OFFHAND READY
+function dafi:class/swamp/offhand
 
 ## KILL 
 execute as @e[type=armor_stand,tag=swampTP] if score @s sbsid = @a[scores={deathcheck=1},limit=1] sbsid run kill @s

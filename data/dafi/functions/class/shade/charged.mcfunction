@@ -1,4 +1,5 @@
 ## CHARGE INITIALIZE
+execute if score @s charge matches 1 run scoreboard players reset @s offhandReady
 execute if score @s charge matches 1 at @s run playsound minecraft:entity.ender_eye.death master @s ~ ~ ~ 1 0.75
 execute if score @s charge matches 7 at @s run execute at @s run playsound minecraft:entity.ender_eye.death master @s ~ ~ ~ 1 0.9
 execute if score @s charge matches 14 at @s run execute at @s run playsound minecraft:entity.ender_eye.death master @s ~ ~ ~ 1 1
@@ -22,9 +23,12 @@ execute if score @s charge matches 74 run tag @s remove wallrunP
 
 
 ## CHARGE END
+execute if score @s charge matches 194 run title @s actionbar ["",{"text":"[RMB] ","bold":true,"color":"gold"},{"text":"READY","color":"green"}]
+execute if score @s charge matches 194 run scoreboard players set @s offhandReady 1
+execute if score @s charge matches 194 run tag @s remove offhandProcessed
 execute if score @s charge matches 194 at @s run playsound minecraft:item.armor.equip_elytra master @s ~ ~ ~ 0.6 1
 execute if score @s charge matches 194 at @s run playsound minecraft:block.chorus_flower.grow master @s ~ ~ ~ 1 1.3
-execute if score @s charge matches 194 run item replace entity @s weapon.offhand with ender_eye{display:{Name:'[{"text":"Fa","italic":false,"bold":true,"color":"light_purple"},{"text":"de ","color":"dark_purple"},{"text":"| ","color":"white","bold":false},{"text":"[RMB]","color":"white","bold":false}]'}} 1
+#execute if score @s charge matches 194 run item replace entity @s weapon.offhand with ender_eye{display:{Name:'[{"text":"Fa","italic":false,"bold":true,"color":"light_purple"},{"text":"de ","color":"dark_purple"},{"text":"| ","color":"white","bold":false},{"text":"[RMB]","color":"white","bold":false}]'}} 1
 
 ## CHARGE TICK UP
 execute if score @s charge matches 194.. run scoreboard players reset @s charge

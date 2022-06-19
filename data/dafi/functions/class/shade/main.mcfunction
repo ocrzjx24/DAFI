@@ -25,6 +25,9 @@ function dafi:class/shade/chargecheck
 advancement revoke @s only dafi:eye
 function dafi:class/shade/charged
 
+## OFFHAND READY
+function dafi:class/shade/offhand
+
 ## DEATHCHECK
 execute if score @s deathcheck matches 1.. if score @s charge matches 1.. run scoreboard players set @s step 193
 execute if score @s deathcheck matches 1.. if score @s charge matches 1.. run tag @s remove wallrunP

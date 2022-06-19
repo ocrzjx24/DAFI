@@ -1,0 +1,2 @@
+execute as @a unless predicate dafi:crossbow_mainhand run scoreboard players set @s crossbowMainhand 0
+execute as @a if predicate dafi:crossbow_mainhand run scoreboard players set @s crossbowMainhand 1

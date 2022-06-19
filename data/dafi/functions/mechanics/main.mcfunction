@@ -4,6 +4,9 @@ function dafi:mechanics/antidrop/main
 ## ARROW
 function dafi:mechanics/arrow/main
 
+## CROSSBOW MAINHAND
+function dafi:mechanics/crossbow_mainhand/main
+
 ## DAMAGE
 function dafi:mechanics/cw_hp_control/main
 
