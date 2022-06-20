@@ -5,6 +5,9 @@ scoreboard objectives add swampTPTrigger dummy
 scoreboard objectives add swampRoarTrigger dummy
 scoreboard objectives add swampRandom dummy
 scoreboard objectives add roarLife dummy
-scoreboard objectives add swamp_x dummy
-scoreboard objectives add swamp_y dummy
-scoreboard objectives add swamp_z dummy
+scoreboard objectives add swamp_x1 dummy
+scoreboard objectives add swamp_y1 dummy
+scoreboard objectives add swamp_z1 dummy
+scoreboard objectives add swamp_x2 dummy
+scoreboard objectives add swamp_y2 dummy
+scoreboard objectives add swamp_z2 dummy

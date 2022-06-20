@@ -3,7 +3,7 @@ item replace entity @s hotbar.1 with wooden_axe{display:{Name:'[{"text":"Maul","
 
 ## SET AND PAIR GLOBAL ID
 tag @s add init
-function dafi:class/swamp/summon
+execute at @s run function dafi:class/swamp/summon
 scoreboard players add .global sbsid 1
 scoreboard players operation @e[type=armor_stand,tag=swampTP,limit=1,tag=init] sbsid = .global sbsid
 tp @e[type=armor_stand,tag=swampTP,tag=init,sort=nearest,limit=1] @s

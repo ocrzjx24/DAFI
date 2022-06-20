@@ -30,6 +30,7 @@ execute if score @s swampRoarTrigger matches 1 at @s run function dafi:class/swa
 
 execute if score @s swampRoarTrigger matches 130 run title @s actionbar ["",{"text":"[RMB] ","bold":true,"color":"gold"},{"text":"READY","color":"green"}]
 execute if score @s swampRoarTrigger matches 130 run scoreboard players set @s offhandReady 1
+execute if score @s swampRoarTrigger matches 130 run tag @s remove offhandProcessed
 #scoreboard formalities
 execute if score @s swampRoarTrigger matches 130.. run scoreboard players reset @s swampRoarTrigger
 execute if score @s swampRoarTrigger matches 1.. run scoreboard players add @s swampRoarTrigger 1
