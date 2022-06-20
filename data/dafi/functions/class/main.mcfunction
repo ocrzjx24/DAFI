@@ -15,4 +15,5 @@ function dafi:class/sting/grenade
 function dafi:class/soul/lifetime
 function dafi:class/steel/lifetime
 function dafi:class/swamp/cast
+execute as @e[type=item,tag=C4] at @s run function dafi:class/sting/c4/c4lifetime
 # function dafi:class/siege/lifetime

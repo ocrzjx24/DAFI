@@ -8,3 +8,13 @@
 #scoreboard objectives add spectral dummy
 #scoreboard objectives add stingCrouch dummy
 #scoreboard objectives add stingCrouchCheck dummy
+
+scoreboard objectives add useSnowballCheck minecraft.used:minecraft.snowball
+scoreboard objectives add useEggCheck minecraft.used:minecraft.egg
+scoreboard objectives add gCD dummy
+scoreboard objectives add gType dummy
+scoreboard objectives add dropBlazeRod minecraft.dropped:minecraft.blaze_rod
+scoreboard objectives add dropStick minecraft.dropped:minecraft.stick
+scoreboard objectives add stingRandom dummy
+scoreboard objectives add c4CD dummy
+scoreboard objectives add c4Life dummy

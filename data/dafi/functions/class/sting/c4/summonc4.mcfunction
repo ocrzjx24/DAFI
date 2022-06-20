@@ -1,0 +1,2 @@
+scoreboard players set @s c4CD 1 
+summon item ~ ~ ~ {Item:{id:"minecraft:redstone_torch",Count:1b},PickupDelay:32767s,Age:-32768s,Tags:["C4"],CustomName:'{"text":"C4","color":"red"}',CustomNameVisible:1b}
