@@ -2,9 +2,9 @@
 execute if predicate dafi:is_sneaking if score @s dropBlazeRod matches 1 run scoreboard players set @s c4CD 1
 execute if score @s c4CD matches 1 at @s run function dafi:class/sting/c4/summonc4
 execute if score @s c4CD matches 1 run item replace entity @s hotbar.1 with stick{display:{Name:'[{"text":"Wizard\'s","italic":false,"color":"#ff9900","bold":true},{"text":" ","color":"gold"},{"text":"Wand","color":"#ffcc00"}]',Lore:['[{"text":"please change this later","italic":false,"color":"dark_gray"}]']},Enchantments:[{id:fire_aspect,lvl:5}]} 1
-execute if score @s c4CD matches 180.. run clear @s stick{Enchantments:[{id:fire_aspect,lvl:5}]} 1
-execute if score @s c4CD matches 180.. run item replace entity @s hotbar.1 with blaze_rod{display:{Name:'[{"text":"Wizard\'s","italic":false,"color":"#ff9900","bold":true},{"text":" ","color":"gold"},{"text":"Wand","color":"#ffcc00"}]',Lore:['[{"text":"please change this later","italic":false,"color":"dark_gray"}]']},Enchantments:[{id:fire_aspect,lvl:5}]} 1
-execute if score @s c4CD matches 180.. run scoreboard players reset @s c4CD
+execute if score @s c4CD matches 120.. run clear @s stick{Enchantments:[{id:fire_aspect,lvl:5}]} 1
+execute if score @s c4CD matches 120.. run item replace entity @s hotbar.1 with blaze_rod{display:{Name:'[{"text":"Wizard\'s","italic":false,"color":"#ff9900","bold":true},{"text":" ","color":"gold"},{"text":"Wand","color":"#ffcc00"}]',Lore:['[{"text":"please change this later","italic":false,"color":"dark_gray"}]']},Enchantments:[{id:fire_aspect,lvl:5}]} 1
+execute if score @s c4CD matches 120.. run scoreboard players reset @s c4CD
 execute if score @s c4CD matches 1.. run scoreboard players add @s c4CD 1
 
 ## ROTATE GRENADES
