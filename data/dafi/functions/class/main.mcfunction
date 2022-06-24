@@ -8,7 +8,7 @@ execute as @a[tag=steel] run function dafi:class/steel/main
 execute as @a[tag=storm] run function dafi:class/storm/main
 execute as @a[tag=shade] run function dafi:class/shade/main
 execute as @a[tag=swamp] run function dafi:class/swamp/main
-
+execute as @a[tag=sculk] run function dafi:class/sculk/main
 ## OTHER FUNCTIONS
 function dafi:class/shade/cast
 function dafi:class/sting/grenade
@@ -17,4 +17,5 @@ function dafi:class/steel/lifetime
 function dafi:class/swamp/cast
 execute as @e[tag=rawr] run function dafi:class/swamp/rawr
 execute as @e[type=item,tag=C4] at @s run function dafi:class/sting/c4/c4lifetime
+execute as @e[tag=wardenLife] at @s run function dafi:class/sculk/lifetime
 # function dafi:class/siege/lifetime

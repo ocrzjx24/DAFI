@@ -8,3 +8,4 @@ scoreboard objectives add lime minecraft.dropped:minecraft.lime_dye
 scoreboard objectives add light_blue minecraft.dropped:minecraft.light_blue_dye
 scoreboard objectives add magenta minecraft.dropped:minecraft.magenta_dye
 scoreboard objectives add brown minecraft.dropped:minecraft.brown_dye
+scoreboard objectives add cyan minecraft.dropped:minecraft.cyan_dye

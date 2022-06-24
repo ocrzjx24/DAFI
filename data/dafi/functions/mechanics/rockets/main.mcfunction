@@ -15,7 +15,7 @@ execute at @a[scores={CD=2}] run playsound minecraft:entity.generic.explode mast
 execute at @a[scores={CD=30}] run playsound minecraft:item.crossbow.loading_end master @s
 
 ## PARTICLE
-execute at @a[scores={CD=1}] run particle minecraft:lava ~ ~-0.5 ~ 0.5 0.5 0.5 0.0001 5
+#execute at @a[scores={CD=1}] run particle minecraft:lava ~ ~-0.5 ~ 0.5 0.5 0.5 0.0001 5
 
 ## ITEM
 # rockets

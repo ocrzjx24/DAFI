@@ -9,6 +9,7 @@ item replace entity @s container.5 with lime_dye{display:{Name:'[{"text":"Steel"
 item replace entity @s container.6 with light_blue_dye{display:{Name:'[{"text":"Storm","italic":false,"color":"aqua","bold":true}]'}} 1
 item replace entity @s container.7 with magenta_dye{display:{Name:'[{"text":"Shade","italic":false,"color":"light_purple","bold":true}]'}} 1
 item replace entity @s container.8 with brown_dye{display:{Name:'[{"text":"Swamp","italic":false,"bold":true,"color":"dark_red"}]',color:8606770},HideFlags:5} 1
+item replace entity @s armor.head with cyan_dye{display:{Name:'[{"text":"Sculk","italic":false,"bold":true,"color":"cyan"}]'}} 1
 effect give @s minecraft:jump_boost 100000 250 true
 effect give @s minecraft:slowness 100000 255 true
 effect give @s minecraft:blindness 100000 255 true

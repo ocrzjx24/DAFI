@@ -56,3 +56,4 @@ scoreboard players reset @s lime
 scoreboard players reset @s light_blue
 scoreboard players reset @s magenta
 scoreboard players reset @s brown
+scoreboard players reset @s cyan

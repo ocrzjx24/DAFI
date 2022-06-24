@@ -8,3 +8,4 @@ function dafi:class/steel/load
 function dafi:class/storm/load
 function dafi:class/shade/load
 function dafi:class/swamp/load
+function dafi:class/sculk/load

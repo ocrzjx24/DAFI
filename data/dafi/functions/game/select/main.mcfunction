@@ -8,6 +8,7 @@ execute as @a[scores={lime=1}] run function dafi:class/steel/select
 execute as @a[scores={light_blue=1}] run function dafi:class/storm/select
 execute as @a[scores={magenta=1}] run function dafi:class/shade/select
 execute as @a[scores={brown=1}] run function dafi:class/swamp/select
+execute as @a[scores={cyan=1}] run function dafi:class/sculk/select
 
 kill @e[type=item,nbt={Item:{id:"minecraft:gray_dye"}}]
 kill @e[type=item,nbt={Item:{id:"minecraft:white_dye"}}]
@@ -18,3 +19,4 @@ kill @e[type=item,nbt={Item:{id:"minecraft:lime_dye"}}]
 kill @e[type=item,nbt={Item:{id:"minecraft:light_blue_dye"}}]
 kill @e[type=item,nbt={Item:{id:"minecraft:magenta_dye"}}]
 kill @e[type=item,nbt={Item:{id:"minecraft:brown_dye"}}]
+kill @e[type=item,nbt={Item:{id:"minecraft:cyan_dye"}}]

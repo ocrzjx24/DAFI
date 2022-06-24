@@ -29,7 +29,7 @@ execute if score @s useTrident matches 1 run scoreboard players reset @s offhand
 execute if score @s useTrident matches 60 run title @s actionbar ["",{"text":"[RMB] ","bold":true,"color":"gold"},{"text":"READY","color":"green"}]
 execute if score @s useTrident matches 60 run scoreboard players set @s offhandReady 1
 execute if score @s useTrident matches 60 run tag @s remove offhandProcessed
-execute if score @s useTrident matches 60 at @s run playsound minecraft:item.trident.return master @s ~ ~ ~ 1 1
+execute if score @s useTrident matches 60 at @s run playsound minecraft:item.trident.return master @s ~ ~100000000 ~ 100000000 1
 execute if score @s useTrident matches 60.. run scoreboard players reset @s useTrident
 execute if score @s useTrident matches 1.. run scoreboard players add @s useTrident 1
 execute if score @s useTrident matches 1..60 run clear @s minecraft:trident
@@ -49,13 +49,13 @@ execute if score @s dropWave matches 1 run tag @s remove offhandProcessed
 execute if score @s dropWave matches 1 run effect give @s minecraft:speed 3 2
 execute if score @s[tag=!garden] dropWave matches 1..60 at @s run particle minecraft:nautilus ~ ~ ~ 0 0 0 2 1 force
 execute if score @s[tag=!garden] dropWave matches 1..60 at @s run particle minecraft:enchanted_hit ~ ~ ~ 1 1 1 0.1 5 force
-execute if score @s dropWave matches 60 at @s run playsound minecraft:block.beacon.deactivate master @a[distance=..10] ~ ~ ~ 100 0.7 1
-execute if score @s dropwave matches 60 run playsound minecraft:entity.lightning_bolt.thunder master @s ~ ~100 ~ 100 2
+execute if score @s dropWave matches 60 at @s run playsound minecraft:block.beacon.deactivate master @s ~ ~100000000 ~ 100000000 0.7 1
+execute if score @s dropwave matches 60 run playsound minecraft:entity.lightning_bolt.thunder master @s ~ ~100000000 ~ 100000000 2
 execute if score @s dropWave matches 60 run item replace entity @s hotbar.0 with crossbow{display:{Name:'[{"text":"JSN ","italic":false,"color":"yellow","bold":true},{"text":"X13","italic":false,"bold":true,"color":"gold"}]',Lore:['[{"text":"death.attack.firework.item","italic":false,"color":"dark_green"}]']},Enchantments:[{id:"quick_charge",lvl:5},{id:"knockback",lvl:1}],Unbreakable:1,ChargedProjectiles:[{id:"minecraft:tipped_arrow",Count:1b,tag:{CustomPotionColor:16711680,CustomPotionEffects:[{Id:7,Duration:1,Amplifier:4,ShowParticles:0b,ShowIcon:0b}]}}],Charged:1b,Unbreakable:1,HideFlags:36} 1
 execute if score @s dropWave matches 60 run item replace entity @s hotbar.0 with crossbow{display:{Name:'[{"text":"JSN ","italic":false,"color":"yellow","bold":true},{"text":"X13","italic":false,"bold":true,"color":"gold"}]',Lore:['[{"text":"death.attack.firework.item","italic":false,"color":"dark_green"}]']},Enchantments:[{id:"quick_charge",lvl:5},{id:"knockback",lvl:1}],Unbreakable:1,ChargedProjectiles:[{id:"minecraft:tipped_arrow",Count:1b,tag:{CustomPotionColor:255,CustomPotionEffects:[{Id:7,Duration:1,Amplifier:4,ShowParticles:0b,ShowIcon:0b}]}}],Charged:1b,Unbreakable:1,HideFlags:36} 1
 execute if score @s dropWave matches 60.. run tag @s remove strike
 execute if score @s dropWave matches 120 run tellraw @s {"text":"\u2605 THE STORM CALLS... \u2605","bold":true,"color":"aqua"}
-execute if score @s dropWave matches 120 at @s run playsound minecraft:entity.illusioner.prepare_mirror master @a[distance=..10] ~ ~ ~ 100 0.4 1
+execute if score @s dropWave matches 120 at @s run playsound minecraft:entity.illusioner.prepare_mirror master @a[distance=..10] ~ ~100000000 ~ 100000000 0.4 1
 
 ## ITERATION AND RESET
 execute if score @s dropWave matches 120 run scoreboard players reset @s dropWave
