@@ -12,7 +12,7 @@ execute if score @s dropSAxe matches 160.. run scoreboard players reset @s dropS
 execute if score @s dropSAxe matches 1.. run scoreboard players add @s dropSAxe 1
 
 ## PARTICLE
-execute as @s run function dafi:class/steel/particle
+execute at @s run function dafi:class/steel/particle1
 #execute as @s[nbt={SelectedItem:{id:"minecraft:shield"}}] run function dafi:class/steel/particle
 #execute as @s[nbt={Inventory:[{id:"minecraft:shield",Slot:-106b}]}] run function dafi:class/steel/particle
 

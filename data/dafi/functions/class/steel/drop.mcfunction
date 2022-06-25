@@ -30,7 +30,7 @@ playsound minecraft:entity.iron_golem.hurt master @a[distance=..10] ~ ~ ~ 100 1 
 playsound minecraft:entity.player.attack.crit master @a[distance=..10] ~ ~ ~ 100 0.6 1
 
 ## PARTICLE
-particle minecraft:totem_of_undying ^ ^ ^1 1 1 1 1 300
+execute at @s positioned ~ ~1 ~ run function dafi:class/steel/particle2
 particle minecraft:smoke ^ ^ ^1 0 0 0 0.5 300
 
 ## TITLE
