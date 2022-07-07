@@ -49,7 +49,7 @@ execute if score @s doubleJumpTime matches 0 at @s run function dafi:class/saint
 execute if score @s doubleJumpTime matches 0 run effect give @s levitation 1 30 true
 execute if score @s doubleJumpTime matches 0 run tag @s add elytraProcessed
 execute if score @s doubleJumpTime matches 2 run clear @s elytra
-execute if score @s doubleJumpTime matches 3.. run effect clear @s levitation
-execute if score @s doubleJumpTime matches 3.. run scoreboard players reset @s doubleJumpTime
+execute if score @s doubleJumpTime matches 4.. run effect clear @s levitation
+execute if score @s doubleJumpTime matches 4.. run scoreboard players reset @s doubleJumpTime
 execute if score @s doubleJumpTime matches 0.. run scoreboard players add @s doubleJumpTime 1
 

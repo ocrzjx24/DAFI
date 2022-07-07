@@ -1,4 +1,4 @@
-#particle end_rod ~ ~ ~ 0 0 0 0 1
+particle end_rod ~ ~ ~ 0 0 0 0 1
 
 execute if block ~ ~ ~ #dafi:partial run function dafi:mechanics/raycast/partial
 
@@ -6,4 +6,4 @@ scoreboard players remove .abfeitt raycast 1
 
 execute if score .abfeitt raycast matches 1.. if block ~ ~ ~ #dafi:air positioned ^ ^ ^0.1 run function dafi:mechanics/arrowaoe/blue/far/eyes/raycast
 
-execute positioned ~ ~ ~ as @e[type=#dafi:entities_raycast,team=!red,tag=!this,dx=0] run function dafi:mechanics/arrowaoe/blue/far/eyes/checkhitentity
+execute positioned ~ ~ ~ as @e[type=#dafi:entities_raycast,team=!blue,tag=!this,dx=0] run function dafi:mechanics/arrowaoe/blue/far/eyes/checkhitentity

@@ -1,4 +1,4 @@
-#particle composter ~ ~ ~ 0 0 0 0 1
+particle composter ~ ~ ~ 0 0 0 0 1
 
 execute if block ~ ~ ~ #dafi:partial run function dafi:mechanics/raycast/partial
 

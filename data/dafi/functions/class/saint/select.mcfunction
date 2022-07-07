@@ -17,6 +17,8 @@ give @s minecraft:iron_axe{Enchantments:[{id:"minecraft:unbreaking",lvl:1}],Attr
 function dafi:mechanics/hat_system/hat
 item replace entity @s inventory.0 with skull_banner_pattern{display:{Name:'[{"text":"SAINT","italic":false,"color":"white","bold":true},{"text":" "},{"text":"| ","color":"white"},{"text":"Heavenly Courier","bold":false,"color":"white"}]',Lore:['[{"text":"\\"Be not afraid.\\"","italic":false}]','[{"text":"The archangels rarely ever touched","italic":false,"color":"dark_green"}]','[{"text":"foot upon the earth, in worry of","italic":false,"color":"dark_green"}]','[{"text":"obliterating humanity with their","italic":false,"color":"dark_green"}]','[{"text":"incomprehensible presence. Except","italic":false,"color":"dark_green"}]','[{"text":"for this one.","italic":false,"color":"dark_green"}]']}} 1 
 
+scoreboard players set @s onGroundCheck 1
+
 ## SOUND
 execute at @s run playsound minecraft:item.armor.equip_netherite master @s ~ ~ ~ 1 1 1
 

@@ -1,4 +1,4 @@
-#particle end_rod ~ ~ ~ 0 0 0 0 1
+particle end_rod ~ ~ ~ 0 0 0 0 1
 
 execute if block ~ ~ ~ #dafi:partial run function dafi:mechanics/raycast/partial
 
