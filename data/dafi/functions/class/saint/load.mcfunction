@@ -1,2 +1,3 @@
-scoreboard objectives add feather minecraft.dropped:minecraft.feather
-scoreboard objectives add vtol dummy
+scoreboard objectives add dropFeather minecraft.dropped:minecraft.feather
+scoreboard objectives add doubleJumpTime dummy
+scoreboard objectives add onGroundCheck dummy
