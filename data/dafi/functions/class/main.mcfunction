@@ -18,4 +18,5 @@ function dafi:class/swamp/cast
 execute as @e[tag=rawr] run function dafi:class/swamp/rawr
 execute as @e[type=item,tag=C4] at @s run function dafi:class/sting/c4/c4lifetime
 execute as @e[tag=wardenLife] at @s run function dafi:class/sculk/lifetime
+execute at @e[type=trident] run function dafi:class/storm/particle/particle5
 # function dafi:class/siege/lifetime

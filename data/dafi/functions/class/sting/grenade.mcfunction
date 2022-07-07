@@ -33,13 +33,13 @@ execute as @e[tag=trackerBlue] at @s unless entity @e[type=minecraft:snowball,di
 execute at @e[tag=redGlow,scores={spectral=2}] run tag @a[distance=..10,gamemode=!spectator,team=blue] add glow
 execute at @e[tag=redGlow,scores={spectral=2}] run function dafi:class/sting/recon/stand
 execute at @e[tag=redGlow,scores={spectral=2}] run particle minecraft:wax_off ~ ~0.5 ~ 0.1 0.06 0.1 30 30 force
-execute at @e[tag=redGlow,scores={spectral=1}] run playsound minecraft:block.amethyst_block.hit master @a[distance=..10] ~ ~ ~ 2 1.5 1
+execute at @e[tag=redGlow,scores={spectral=1}] run playsound minecraft:block.amethyst_block.hit master @a[] ~ ~ ~ 1 1.5
 #stellar sonar blue particles and effects
 # execute at @e[tag=blueGlow,scores={spectral=2}] run effect give @a[distance=..10,gamemode=!spectator,team=red] minecraft:glowing 2 0 true
 execute at @e[tag=blueGlow,scores={spectral=2}] run tag @a[distance=..10,gamemode=!spectator,team=red] add glow
 execute at @e[tag=blueGlow,scores={spectral=2}] run function dafi:class/sting/recon/stand
 execute at @e[tag=blueGlow,scores={spectral=2}] run particle minecraft:wax_off ~ ~0.5 ~ 0.1 0.06 0.1 30 30 force
-execute at @e[tag=blueGlow,scores={spectral=1}] run playsound minecraft:block.amethyst_block.hit master @a[distance=..10] ~ ~ ~ 2 1.5 1
+execute at @e[tag=blueGlow,scores={spectral=1}] run playsound minecraft:block.amethyst_block.hit master @a[] ~ ~ ~ 1 1.5
 
 # sonar titles
 # title @a[nbt={ActiveEffects:[{Id:2b,Amplifier:2b}]},scores={hunted=0}] actionbar {"text":"! REVEALED !","bold":true,"color":"gold"}

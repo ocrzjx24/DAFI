@@ -9,9 +9,11 @@ execute if score @s reaver matches 1.. run scoreboard players reset @s reaver
 ## DASH
 execute if score @s dropReaver matches 1 at @s run function dafi:class/soul/drop
 execute if score @s dropReaver matches 1 run title @s actionbar {"text":"WOOSH","bold":true,"color":"#ffd814"}
+#execute if score @s dropReaver matches 3 run effect clear @s levitation
 execute if score @s dropReaver matches 10 run title @s actionbar {"text":"","bold":true,"color":"yellow"}
 execute if score @s dropReaver matches 1.. run scoreboard players add @s dropReaver 1
 execute if score @s dropReaver matches 1..20 at @s run particle soul_fire_flame ~ ~ ~ 0 0 0 0.1 1 force
+execute if score @s dropReaver matches 61 at @s run playsound entity.blaze.shoot master @s ~ ~ ~ 2 2 0.5
 execute if score @s dropReaver matches 61 at @s run item replace entity @s hotbar.1 with golden_hoe{display:{Name:'[{"text":"Soul ","italic":false,"color":"#ffd814","bold":true},{"text":"Reaver","color":"aqua"},{"text":" "},{"text":"| ","color":"gray"},{"text":"[Q]","color":"white","bold":false}]',Lore:['[{"text":"For millennia, all they could do was run. Even in death, they run.","italic":false}]']},Enchantments:[{id:"unbreaking",lvl:1}],Unbreakable:1,AttributeModifiers:[{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Slot:"mainhand",Amount:100,Operation:0,UUID:[I;1022498064,1087262705,1008143892,1256304346]},{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Amount:8,Operation:0,UUID:[I;1022498064,1087262705,1008143892,1256304346]}],HideFlags:3} 1
 execute if score @s dropReaver matches 61 run scoreboard players reset @s dropReaver
 

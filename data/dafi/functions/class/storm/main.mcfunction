@@ -26,6 +26,9 @@
 #scoreboard players reset @s[scores={dropShell=40..}] dropShell
 #scoreboard players add @s[scores={dropShell=1..}] dropShell 1
 execute if score @s useTrident matches 1 run scoreboard players reset @s offhandReady
+execute if score @s useTrident matches 1 at @s anchored eyes positioned ^ ^ ^6 run function dafi:class/storm/particle/particle1
+execute if score @s useTrident matches 1 at @s anchored eyes positioned ^ ^ ^6.5 run function dafi:class/storm/particle/particle2
+execute if score @s useTrident matches 1 at @s anchored eyes positioned ^ ^ ^8 run function dafi:class/storm/particle/particle3
 execute if score @s useTrident matches 60 run title @s actionbar ["",{"text":"[RMB] ","bold":true,"color":"gold"},{"text":"READY","color":"green"}]
 execute if score @s useTrident matches 60 run scoreboard players set @s offhandReady 1
 execute if score @s useTrident matches 60 run tag @s remove offhandProcessed

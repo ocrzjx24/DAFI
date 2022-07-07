@@ -23,7 +23,7 @@ function dafi:mechanics/hat_system/main
 function dafi:mechanics/kills/main
 
 ## KILL
-function dafi:mechanics/kill_entities/main
+function dafi:mechanics/arrow_inground/main
 
 ## NO GRAVITY
 function dafi:mechanics/no_gravity/main

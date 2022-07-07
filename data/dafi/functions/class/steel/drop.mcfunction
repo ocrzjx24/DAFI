@@ -17,7 +17,7 @@
 
 tag @s add init
 
-function dafi:class/steel/summon
+execute at @s positioned ^ ^ ^4 run function dafi:class/steel/summon
 
 scoreboard players add .global sbsid 1
 scoreboard players operation @e[type=armor_stand,tag=shulkerLife,limit=25,tag=init] sbsid = .global sbsid
