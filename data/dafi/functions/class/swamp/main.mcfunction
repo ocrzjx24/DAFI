@@ -43,8 +43,9 @@ execute if score @s swampTPTrigger matches 10 at @s run function dafi:class/swam
 execute if score @s swampTPTrigger matches 10 at @s run playsound minecraft:entity.ravager.step master @a ~ ~ ~ 1 1
 execute if score @s swampTPTrigger matches 10 at @s run playsound minecraft:entity.elder_guardian.curse master @a ~ ~ ~ 0.5 1
 execute if score @s swampTPTrigger matches 10 at @s run playsound minecraft:entity.zombie.converted_to_drowned master @a[distance=..10] ~ ~ ~ 1 0.7
-# execute if score @s swampTPTrigger matches 10 at @s run effect give @s minecraft:blindness 2 1 true
-# execute if score @s swampTPTrigger matches 15 at @s run effect clear @s blindness
+execute if score @s swampTPTrigger matches 1 at @s run effect give @s minecraft:darkness 2 1 true
+execute if score @s swampTPTrigger matches 10 at @s run effect clear @s darkness
+execute if score @s swampTPTrigger matches 11 at @s run effect give @s minecraft:night_vision 1 1 true
 # execute if score @s swampTPTrigger matches 20 at @s run effect clear @s[scores={swampTPTrigger=20}] slowness
 # execute if score @s swampTPTrigger matches 1..30 run scoreboard players set @s slowCheck 1
 # execute if score @s swampTPTrigger matches 5 run scoreboard players set @s slow 25
