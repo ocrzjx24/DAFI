@@ -4,7 +4,7 @@ summon armor_stand ~ ~ ~ {Invisible:1b,NoBasePlate:1b,ShowArms:1b,Tags:["swampTP
 scoreboard players add .global sbsid 1
 scoreboard players operation @e[type=armor_stand,tag=swampTP,limit=1,tag=init] sbsid = .global sbsid
 tp @e[type=armor_stand,tag=swampTP,tag=init,sort=nearest,limit=1] @s
-execute as @e[type=armor_stand,tag=swampTP] if score @s sbsid = @a[scores={swampTPTrigger=10},limit=1] sbsid run tp @a[scores={swampTPTrigger=10}] @s
+execute as @e[type=armor_stand,tag=swampTP] at @s if score @s sbsid = @a[scores={swampTPTrigger=10},limit=1] sbsid run tp @a[scores={swampTPTrigger=10}] ~ ~ ~
 execute as @e[type=armor_stand,tag=swampTP] if score @s sbsid = @a[scores={swampTPTrigger=10},limit=1] sbsid run kill @s
 scoreboard players operation @p[tag=init] sbsid = .global sbsid
 tag @e remove init
