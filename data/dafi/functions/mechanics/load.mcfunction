@@ -10,6 +10,9 @@ function dafi:mechanics/cw_hp_control/init
 ## DEATHS
 function dafi:mechanics/deaths/load
 
+## DELTA
+function dafi:mechanics/bigpapi_delta/internal/load
+
 ## KILLS
 function dafi:mechanics/kills/load
 
