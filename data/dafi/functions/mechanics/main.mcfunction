@@ -13,6 +13,9 @@ function dafi:mechanics/cw_hp_control/main
 ## DEATHS
 function dafi:mechanics/deaths/main
 
+## DOUBLE JUMP
+function dafi:mechanics/doublejump/main
+
 ## GLOWING
 function dafi:mechanics/glowing/main
 

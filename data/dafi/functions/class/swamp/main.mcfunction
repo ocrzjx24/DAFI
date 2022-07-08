@@ -45,7 +45,7 @@ execute if score @s swampTPTrigger matches 10 at @s run playsound minecraft:enti
 execute if score @s swampTPTrigger matches 10 at @s run playsound minecraft:entity.zombie.converted_to_drowned master @a[distance=..10] ~ ~ ~ 1 0.7
 execute if score @s swampTPTrigger matches 1 at @s run effect give @s minecraft:darkness 2 1 true
 execute if score @s swampTPTrigger matches 10 at @s run effect clear @s darkness
-execute if score @s swampTPTrigger matches 11 at @s run effect give @s minecraft:night_vision 1 1 true
+# execute if score @s swampTPTrigger matches 11 at @s run effect give @s minecraft:night_vision 1 1 true
 # execute if score @s swampTPTrigger matches 20 at @s run effect clear @s[scores={swampTPTrigger=20}] slowness
 # execute if score @s swampTPTrigger matches 1..30 run scoreboard players set @s slowCheck 1
 # execute if score @s swampTPTrigger matches 5 run scoreboard players set @s slow 25
