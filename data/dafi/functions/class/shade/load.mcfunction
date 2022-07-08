@@ -4,3 +4,4 @@ scoreboard objectives add castTagged dummy
 scoreboard objectives add checkIn dummy
 scoreboard objectives add charge dummy
 scoreboard objectives add chargeCheck dummy
+scoreboard objectives add chargeAlt dummy

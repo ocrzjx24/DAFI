@@ -23,6 +23,7 @@ scoreboard players set @s[advancements={dafi:eye=true}] chargeCheck 1
 execute if score @s chargeCheck matches 1 at @s run particle minecraft:portal ~ ~1 ~ 0 0 0 1 20
 function dafi:class/shade/chargecheck
 advancement revoke @s only dafi:eye
+function dafi:class/shade/chargealt
 function dafi:class/shade/charged
 
 ## OFFHAND READY

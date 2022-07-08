@@ -1,7 +1,7 @@
 summon marker ~ ~ ~ {Tags:["arrowRaycaster","arrowFarFeet"]}
 
 ## distance = #itt * step_size = 80 * 0.25 = 20 blocks
-scoreboard players set .arffitt raycast 50
+scoreboard players set .itt raycast 50
 
 ## temporary tag to remember who fired the raycast
 tag @s add this
