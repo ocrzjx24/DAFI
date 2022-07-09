@@ -13,6 +13,9 @@ function dafi:mechanics/deaths/load
 ## DELTA
 function dafi:mechanics/bigpapi_delta/internal/load
 
+## DOUBLE JUMP
+function dafi:mechanics/doublejump/load
+
 ## KILLS
 function dafi:mechanics/kills/load
 
