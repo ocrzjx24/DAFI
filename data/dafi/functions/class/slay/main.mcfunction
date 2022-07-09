@@ -3,7 +3,7 @@
 #clear @s[scores={dropMCTNT=2}] minecraft:crossbow
 execute if score @s slayCD matches ..0 if predicate dafi:is_sneaking run scoreboard players add @s[scores={slaySneak=0..9}] slaySneak 1
 execute if score @s slayCD matches ..0 if predicate dafi:is_not_sneaking run scoreboard players set @s[scores={slaySneak=0..9}] slaySneak 0
-execute if score @s slaySneak matches 1..10 run function dafi:class/slay/stand2
+execute if score @s slaySneak matches 1..10 at @s run function dafi:class/slay/stand2
 
 # FOR FIREWORKS
 # execute unless score #weapon weapon matches 1 if score @s slaySneak matches 10 run item replace entity @s[team=blue] hotbar.0 with crossbow{display:{Name:'[{"text":"JSN ","italic":false,"color":"yellow","bold":true},{"text":"X13","italic":false,"bold":true,"color":"gold"}]',Lore:['[{"text":"death.attack.firework.item","italic":false,"color":"dark_green"}]']},Enchantments:[{id:"quick_charge",lvl:5}],Unbreakable:1,ChargedProjectiles:[{id:"minecraft:firework_rocket",Count:1b,tag:{Fireworks:{Flight:2,Explosions:[{Type:4,Flicker:0,Trail:0,Colors:[I;2437522]},{Type:4,Flicker:0,Trail:0,Colors:[I;2437522]},{Type:4,Flicker:0,Trail:0,Colors:[I;2437522]},{Type:4,Flicker:0,Trail:0,Colors:[I;2437522]},{Type:4,Flicker:0,Trail:0,Colors:[I;2437522]},{Type:4,Flicker:0,Trail:0,Colors:[I;2437522]},{Type:4,Flicker:0,Trail:0,Colors:[I;2437522]},{Type:4,Flicker:0,Trail:0,Colors:[I;2437522]},{Type:4,Flicker:0,Trail:0,Colors:[I;2437522]},{Type:4,Flicker:0,Trail:0,Colors:[I;2437522]},{Type:4,Flicker:0,Trail:0,Colors:[I;2437522]},{Type:4,Flicker:0,Trail:0,Colors:[I;2437522]}]},HideFlags:63}}],Charged:1b,Unbreakable:1,HideFlags:36} 1

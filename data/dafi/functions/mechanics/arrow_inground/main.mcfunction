@@ -4,6 +4,6 @@
 #execute if score #weapon weapon matches 1 at @e[type=arrow,nbt={inGround:1b,Color:16711680}] as @e[type=!marker,type=!arrow,team=!red,distance=..4.83] run function dafi:mechanics/arrow_inground/summon
 execute if score #weapon weapon matches 1 at @e[type=arrow,nbt={inGround:1b,Color:255}] as @e[type=!marker,type=!arrow,team=!blue,distance=..6.83] run function dafi:mechanics/arrow_inground/bluesummon
 execute if score #weapon weapon matches 1 at @e[type=arrow,nbt={inGround:1b,Color:16711680}] as @e[type=!marker,type=!arrow,team=!red,distance=..6.83] run function dafi:mechanics/arrow_inground/redsummon
-execute if score #weapon weapon matches 1 at @e[type=arrow,nbt={inGround:1b}] run particle wax_on ~ ~ ~ 0 0 0 15 10
-execute if score #weapon weapon matches 1 at @e[type=arrow,nbt={inGround:1b}] run playsound entity.zombie.break_wooden_door master @a ~ ~ ~ 1 2
+execute if score #weapon weapon matches 1 at @e[type=arrow,nbt={inGround:1b}] run particle minecraft:firework ~ ~ ~ 0 0 0 0.3 30 force
+execute if score #weapon weapon matches 1 at @e[type=arrow,nbt={inGround:1b}] run playsound entity.firework_rocket.large_blast master @a ~ ~ ~ 1 1.4
 execute if score #weapon weapon matches 1 run kill @e[type=arrow,nbt={inGround:1b}]
