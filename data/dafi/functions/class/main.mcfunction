@@ -13,7 +13,8 @@ execute as @a[tag=sculk] run function dafi:class/sculk/main
 function dafi:class/shade/cast
 function dafi:class/sting/grenade
 function dafi:class/soul/lifetime
-function dafi:class/steel/lifetime
+function dafi:class/steel/lifetime1
+function dafi:class/steel/summon2/lifetime2
 function dafi:class/swamp/cast
 execute as @e[tag=rawr] run function dafi:class/swamp/rawr
 execute as @e[type=item,tag=C4] at @s run function dafi:class/sting/c4/c4lifetime

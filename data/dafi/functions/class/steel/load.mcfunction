@@ -1,5 +1,5 @@
 scoreboard objectives add dropSAxe minecraft.dropped:minecraft.stone_axe
-scoreboard objectives add dropCap minecraft.dropped:minecraft.leather_helmet
+scoreboard objectives add shieldCheck dummy
 scoreboard objectives add shulkerLife dummy
 scoreboard objectives add sbsid dummy
 team add shulker

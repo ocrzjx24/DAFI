@@ -1,5 +1,10 @@
+## SHIELD CHECK
+function dafi:class/steel/shieldcheck
 ## EMPODIO
-execute if score @s dropSAxe matches 1 at @s run function dafi:class/steel/drop
+execute if score @s dropSAxe matches 1 if predicate dafi:is_sneaking at @s run function dafi:class/steel/drop
+execute if score @s[team=blue] dropSAxe matches 1 unless predicate dafi:is_sneaking at @s anchored eyes positioned ^-3 ^-3 ^1 run function dafi:class/steel/summon2/bluesummon2
+execute if score @s[team=red] dropSAxe matches 1 unless predicate dafi:is_sneaking at @s anchored eyes positioned ^-3 ^-3 ^1 run function dafi:class/steel/summon2/redsummon2 
+
 #execute as @s[predicate=dafi:is_sneaking] at @s anchored eyes run function dafi:class/steel/reposition
 execute at @e[type=shulker,tag=blockRockets] run function dafi:class/steel/blockrockets
 # cooldown end
@@ -12,7 +17,7 @@ execute if score @s dropSAxe matches 60.. run scoreboard players reset @s dropSA
 execute if score @s dropSAxe matches 1.. run scoreboard players add @s dropSAxe 1
 
 ## PARTICLE
-execute at @s run function dafi:class/steel/particle1
+#execute at @s run function dafi:class/steel/particle1
 #execute as @s[nbt={SelectedItem:{id:"minecraft:shield"}}] run function dafi:class/steel/particle
 #execute as @s[nbt={Inventory:[{id:"minecraft:shield",Slot:-106b}]}] run function dafi:class/steel/particle
 

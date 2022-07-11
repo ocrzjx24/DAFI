@@ -52,3 +52,6 @@ function dafi:mechanics/wallrun/main
 
 ## UUID STORE
 execute as @a[tag=!DoNotRemove_UUIDstore] run function dafi:mechanics/uuid/main
+
+## THIS NEEDS TO BE LAST
+execute as @a[advancements={dafi:shield=true}] run advancement revoke @s only dafi:shield
