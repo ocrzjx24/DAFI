@@ -1,9 +1,10 @@
 ## SHIELD CHECK
 function dafi:class/steel/shieldcheck
 ## EMPODIO
-execute if score @s dropSAxe matches 1 if predicate dafi:is_sneaking at @s run function dafi:class/steel/drop
-execute if score @s[team=blue] dropSAxe matches 1 unless predicate dafi:is_sneaking at @s anchored eyes positioned ^-3 ^-3 ^1 run function dafi:class/steel/summon2/bluesummon2
-execute if score @s[team=red] dropSAxe matches 1 unless predicate dafi:is_sneaking at @s anchored eyes positioned ^-3 ^-3 ^1 run function dafi:class/steel/summon2/redsummon2 
+execute if score @s dropSAxe matches 1 unless predicate dafi:is_sneaking at @s run function dafi:class/steel/drop
+execute if score @s dropSAxe matches 1 if predicate dafi:is_sneaking at @s run playsound minecraft:entity.iron_golem.damage master @a ~ ~ ~ 1 1
+execute if score @s[team=blue] dropSAxe matches 1 if predicate dafi:is_sneaking at @s anchored eyes positioned ^-3 ^-3 ^1 run function dafi:class/steel/summon2/bluesummon2
+execute if score @s[team=red] dropSAxe matches 1 if predicate dafi:is_sneaking at @s anchored eyes positioned ^-3 ^-3 ^1 run function dafi:class/steel/summon2/redsummon2 
 
 #execute as @s[predicate=dafi:is_sneaking] at @s anchored eyes run function dafi:class/steel/reposition
 execute at @e[type=shulker,tag=blockRockets] run function dafi:class/steel/blockrockets

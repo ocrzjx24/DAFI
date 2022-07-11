@@ -64,7 +64,7 @@ xp set @a[scores={dashCD=1..40}] 0 levels
 xp set @a[scores={dashCD=0}] 0 points
 xp set @a[scores={dashCD=0}] 1 levels
 
-title @a[scores={dashCD=1}] actionbar ["",{"text":">>>","bold":true,"color":"gray"},{"text":" DASH READY","bold":true},{"text":"<<<","bold":true,"color":"gray"}]
+title @a[scores={dashCD=1}] actionbar ["",{"text":">>>","bold":true,"color":"gray"},{"text":" DASH READY","bold":true},{"text":" <<<","bold":true,"color":"gray"}]
 
 # scoreboard players reset @a[scores={dashCD=0}] dashCD
 
