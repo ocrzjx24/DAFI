@@ -1,5 +1,7 @@
 scoreboard players add @s c4Life 1
+
 execute if score @s c4Life matches 1 at @s run function dafi:class/sting/c4/applymotion
+
 execute if score @s c4Life matches 1 run playsound minecraft:block.chest.close master @a ~ ~ ~ 0.8 1.6
 execute if score @s c4Life matches 2 run data modify entity @s anger set value 1
 # execute if score @s c4Life matches 2 run data modify entity @s CustomName set value '{"text":"C4","color":"red"}'

@@ -60,6 +60,14 @@ execute if score @s dropWave matches 60.. run tag @s remove strike
 execute if score @s dropWave matches 120 run tellraw @s {"text":"\u2605 THE STORM CALLS... \u2605","bold":true,"color":"aqua"}
 execute if score @s dropWave matches 120 at @s run playsound minecraft:entity.illusioner.prepare_mirror master @a[distance=..10] ~ ~100000000 ~ 100000000 0.4 1
 
+execute if score @s dropDShovel matches 1 run scoreboard players set $strength delta.api.launch 12500
+execute if score @s dropDShovel matches 1 at @s run summon marker ~ ~ ~ {Rotation:[0.0f,90.0f],Tags:["swag"]}
+execute if score @s dropDShovel matches 1 at @s rotated as @e[type=marker,tag=swag,limit=1,sort=nearest] run function dafi:mechanics/bigpapi_delta/api/launch_looking
+execute if score @s dropDShovel matches 1 at @s run kill @e[type=marker,tag=swag,limit=1,sort=nearest]
+execute if score @s dropDShovel matches 1 run scoreboard players reset $strength delta.api.launch
+execute if score @s dropDShovel matches 1 run kill @e[type=item,nbt={Item:{id:"minecraft:diamond_shovel"}}]
+execute if score @s dropDShovel matches 1.. run scoreboard players reset @s dropDShovel
+
 ## ITERATION AND RESET
 execute if score @s dropWave matches 120 run scoreboard players reset @s dropWave
 execute if score @s[tag=!garden] dropWave matches 1.. run scoreboard players add @s dropWave 1

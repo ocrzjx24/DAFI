@@ -1,19 +1,3 @@
-## real code
-execute as @a[scores={onGroundCheck=1..}] run scoreboard players set @s onGroundCheck 0
-
-execute as @a[scores={onGroundCheck=0}] run scoreboard players set @s[nbt={OnGround:1b}] onGroundCheck 1
-execute as @a[scores={onGroundCheck=1}] run clear @s[tag=elytraProcessed] elytra 
-execute as @a[scores={onGroundCheck=1}] run tag @s[tag=elytraProcessed] remove elytraProcessed
-
-execute as @a[scores={onGroundCheck=0}] run item replace entity @s[tag=!elytraProcessed,scores={dashCD=0}] armor.chest with elytra
-execute as @a[scores={onGroundCheck=0}] run stopsound @s[tag=!elytraProcessed,scores={dashCD=0}] * item.armor.equip_elytra
-execute as @a[scores={onGroundCheck=0}] run tag @s[tag=!elytraProcessed] add elytraProcessed
-
-execute as @a run scoreboard players set @a[nbt={FallFlying:1b}] doubleJumpTime 0 
-execute as @a[scores={doubleJumpTime=0}] run scoreboard players set @s dashCD 40
-
-title @a[scores={dashCD=40}] actionbar ["",{"text":">>>","bold":true,"color":"gold"},{"text":" DASH","bold":true,"color":"green"},{"text":" <<<","bold":true,"color":"gold"}]
-
 ## i want to get railed by blaidd please please please (this code is so bad)
 
 xp set @a[scores={dashCD=1..40}] 62 levels
@@ -64,6 +48,22 @@ xp set @a[scores={dashCD=1..40}] 0 levels
 xp set @a[scores={dashCD=0}] 0 points
 xp set @a[scores={dashCD=0}] 1 levels
 
+## real code
+execute as @a[scores={onGroundCheck=1..}] run scoreboard players set @s onGroundCheck 0
+
+execute as @a[scores={onGroundCheck=0}] run scoreboard players set @s[nbt={OnGround:1b}] onGroundCheck 1
+execute as @a[scores={onGroundCheck=1}] run clear @s[tag=elytraProcessed] elytra 
+execute as @a[scores={onGroundCheck=1}] run tag @s[tag=elytraProcessed] remove elytraProcessed
+
+execute as @a[scores={onGroundCheck=0}] run item replace entity @s[scores={dashCD=0}] armor.chest with elytra
+execute as @a[scores={onGroundCheck=0}] run stopsound @s[scores={dashCD=0}] * item.armor.equip_elytra
+execute as @a[scores={onGroundCheck=0}] run tag @s[tag=!elytraProcessed] add elytraProcessed
+
+execute as @a run scoreboard players set @a[nbt={FallFlying:1b}] doubleJumpTime 0 
+execute as @a[scores={doubleJumpTime=0}] run scoreboard players set @s dashCD 40
+
+title @a[scores={dashCD=40}] actionbar ["",{"text":">>>","bold":true,"color":"gold"},{"text":" DASH","bold":true,"color":"green"},{"text":" <<<","bold":true,"color":"gold"}]
+
 title @a[scores={dashCD=1}] actionbar ["",{"text":">>>","bold":true,"color":"gray"},{"text":" DASH READY","bold":true},{"text":" <<<","bold":true,"color":"gray"}]
 
 # scoreboard players reset @a[scores={dashCD=0}] dashCD
@@ -74,7 +74,7 @@ execute as @a[scores={dashCD=1..}] run scoreboard players remove @s dashCD 1
 
 execute as @a[scores={doubleJumpTime=0}] at @s run playsound minecraft:entity.ender_dragon.flap master @s ~ ~1000 ~ 1000 1.5
 execute as @a[scores={doubleJumpTime=0}] at @s run function dafi:class/saint/particle1
-execute as @a[scores={doubleJumpTime=0}] at @s if predicate dafi:is_sneaking run scoreboard players set @s sneakbullshit 1
+execute as @a[scores={doubleJumpTime=0},tag=saint] at @s if predicate dafi:is_sneaking run scoreboard players set @s sneakbullshit 1
 
 execute as @a[scores={doubleJumpTime=0}] unless score @s sneakbullshit matches 1 run scoreboard players set $strength delta.api.launch 5000
 execute as @a[scores={doubleJumpTime=0}] unless score @s sneakbullshit matches 1 at @s run function dafi:mechanics/bigpapi_delta/api/launch_looking

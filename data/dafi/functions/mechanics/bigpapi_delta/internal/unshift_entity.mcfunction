@@ -1,4 +1,4 @@
-#> delta:internal/unshift_entity
+## > delta:internal/unshift_entity
 #   Returns entities to their normal position
 #
 # Callers:

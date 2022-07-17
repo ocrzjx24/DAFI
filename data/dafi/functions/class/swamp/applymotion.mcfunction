@@ -12,8 +12,10 @@ execute store result score @s swamp_y2 run data get entity @s Pos[1] 1000
 execute store result score @s swamp_z2 run data get entity @s Pos[2] 1000
 
 execute store result entity @s Motion[0] double 0.015 run scoreboard players operation @s swamp_x2 -= @s swamp_x1
-execute store result entity @s Motion[1] double 0.01 run scoreboard players operation @s swamp_y2 -= @s swamp_y1
+execute store result entity @s Motion[1] double 0.015 run scoreboard players operation @s swamp_y2 -= @s swamp_y1
 # execute store result entity @s Motion[1] double 0.01 run scoreboard players set @s swamp_y1 1000
 execute store result entity @s Motion[2] double 0.015 run scoreboard players operation @s swamp_z2 -= @s swamp_z1
+
+data modify entity @s Motion[1] set value 10d
 
 tag @s add swamp_motion_added

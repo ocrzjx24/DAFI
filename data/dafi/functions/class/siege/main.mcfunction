@@ -1,48 +1,39 @@
-## DROPPED SHOT
-execute at @s if score @s dropSpyglass matches 1 if score @s spyglassCheck matches 0 run function dafi:class/siege/drop
+tag @s add dafi.siege.main
+## main function for players tagged with siege
 
-## CHARGED SHOT
-execute at @s if score @s spyglass matches 1..20 if score @s spyglassCheck matches 0 run function dafi:class/siege/spark
+# fishing rod garbage
+execute at @s as @e[type=fishing_bobber,distance=30..] if score @s sbsid = @a[tag=dafi.siege.main,limit=1] sbsid run say out of range
+execute at @s as @e[type=fishing_bobber,distance=30..] if score @s sbsid = @a[tag=dafi.siege.main,limit=1] sbsid run tag @a[tag=dafi.siege.main] remove dafi.siege.fishing
+execute at @s as @e[type=fishing_bobber,distance=30..] if score @s sbsid = @a[tag=dafi.siege.main,limit=1] sbsid run kill @s
 
-# eye particles
-execute anchored eyes at @s[team=red] if score @s spyglass matches 1.. if score @s spyglassCheck matches 1 run particle dust 1 0 0 1.5 ^-0.1 ^ ^1.1 0.02 0.02 0.02 0.1 1 force @a[team=!red]
-execute anchored eyes at @s[team=blue] if score @s spyglass matches 1.. if score @s spyglassCheck matches 1 run particle dust 1 0 0 1.5 ^-0.1 ^ ^1.1 0.02 0.02 0.02 0.1 1 force @a[team=!blue]
+# execute at @s as @e[type=fishing_bobber,distance=30..] if score @s sbsid = @a[tag=dafi.siege.main,limit=1] sbsid run data modify entity @s Motion[0] set value 0.0
+# execute at @s as @e[type=fishing_bobber,distance=30..] if score @s sbsid = @a[tag=dafi.siege.main,limit=1] sbsid run data modify entity @s Motion[1] set value 0.0
+# execute at @s as @e[type=fishing_bobber,distance=30..] if score @s sbsid = @a[tag=dafi.siege.main,limit=1] sbsid run data modify entity @s Motion[2] set value 0.0
+# execute at @s as @e[type=fishing_bobber,distance=30..] if score @s sbsid = @a[tag=dafi.siege.main,limit=1] sbsid run data merge entity @s {NoGravity:1b}
 
+# execute at @s as @e[type=fishing_bobber,distance=..30] if score @s sbsid = @a[tag=dafi.siege.main,limit=1] sbsid run say in range
+execute at @s as @e[type=fishing_bobber,distance=..30] if score @s sbsid = @a[tag=dafi.siege.main,limit=1] sbsid run tag @s add dafi.siege.bobberinrange
+execute at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] run say im going to bob
+execute at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] as @e[type=marker,tag=dafi.siege.bobbercheck] if score @s sbsid = @a[tag=dafi.siege.main,limit=1] sbsid run tag @s add dafi.siege.targetmarker
+execute at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] run scoreboard players set $strength delta.api.launch 20000
+execute at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] facing entity @e[type=marker,tag=dafi.siege.targetmarker,limit=1] feet run function dafi:mechanics/bigpapi_delta/api/launch_looking
+execute at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] run scoreboard players reset $strength delta.api.launch
+execute at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] run kill @e[type=marker,tag=dafi.siege.targetmarker]
+execute at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] run tag @s remove dafi.siege.fishing
 
-execute at @s[team=red] if score @s spyglass matches 20.. if score @s spyglassCheck matches 0 run function dafi:class/siege/raycast/redfire
-execute at @s[team=blue] if score @s spyglass matches 20.. if score @s spyglassCheck matches 0 run function dafi:class/siege/raycast/bluefire
+# useFishingRod
+execute if score @s useFishingRod matches 1.. run scoreboard players add .global sbsid 1
+execute if score @s useFishingRod matches 1.. run execute store result score @s sbsid run scoreboard players get .global sbsid
+execute if score @s useFishingRod matches 1.. run tag @s add dafi.siege.fishing
+execute if score @s useFishingRod matches 1.. run scoreboard players reset @s useFishingRod
 
-## ACTIONBAR
-execute if score @s spyglass matches 0 if score @s spyglassCheck matches 1 run title @s actionbar {"text":"■■■■■■■■■■","color":"dark_red"}
-execute if score @s spyglass matches 2 run title @s actionbar ["",{"text":"■","color":"red"},{"text":"■■■■■■■■■","color":"dark_red"}]
-execute if score @s spyglass matches 4 run title @s actionbar ["",{"text":"■■","color":"red"},{"text":"■■■■■■■■","color":"dark_red"}]
-execute if score @s spyglass matches 6 run title @s actionbar ["",{"text":"■■■","color":"gold"},{"text":"■■■■■■■","color":"dark_red"}]
-execute if score @s spyglass matches 8 run title @s actionbar ["",{"text":"■■■■","color":"gold"},{"text":"■■■■■■","color":"dark_red"}]
-execute if score @s spyglass matches 10 run title @s actionbar ["",{"text":"■■■■■","color":"gold"},{"text":"■■■■■","color":"dark_red"}]
-execute if score @s spyglass matches 12 run title @s actionbar ["",{"text":"■■■■■■","color":"yellow"},{"text":"■■■■","color":"dark_red"}]
-execute if score @s spyglass matches 14 run title @s actionbar ["",{"text":"■■■■■■■","color":"yellow"},{"text":"■■■","color":"dark_red"}]
-execute if score @s spyglass matches 16 run title @s actionbar ["",{"text":"■■■■■■■■","color":"yellow"},{"text":"■■","color":"dark_red"}]
-execute if score @s spyglass matches 18 run title @s actionbar ["",{"text":"■■■■■■■■■","color":"dark_green"},{"text":"■","color":"dark_red"}]
-execute if score @s spyglass matches 20.. run title @s actionbar {"text":"■■■■■■■■■■","color":"dark_green"}
-execute if score @s spyglass matches 1.. if score @s spyglassCheck matches 0 run title @s actionbar ""
+# useCrossbow
+execute if score @s useCrossbow matches 1 if score @s siegeMode matches 1 run function dafi:class/siege/shotgun_recoil
+execute if score @s useCrossbow matches 1.. run scoreboard players set @s useCrossbow 0
 
-## SCOREBOARD
-execute if score @s spyglassCheck matches 1 run scoreboard players add @s spyglass 1
-execute if score @s spyglassCheck matches 0 if score @s spyglass matches 1.. run scoreboard players set @s spyglass 0
-execute if score @s spyglassCheck matches 1 run scoreboard players set @s spyglassCheck 0
-# scoreboard players add @s[scores={spyglassCheck=1}] spyglass 1
-# scoreboard players set @s[scores={spyglassCheck=0,spyglass=1..}] spyglass 0
-# scoreboard players set @s[scores={spyglassCheck=1}] spyglassCheck 0
+# shotgunCD
+scoreboard players remove @s[scores={shotgunCD=1..}] shotgunCD 1
+execute if score @s[scores={siegeMode=1}] shotgunCD matches 0 run item replace entity @s hotbar.0 with crossbow{display:{Name:'[{"text":"shotty ","italic":false,"color":"yellow","bold":true},{"text":"X13","italic":false,"bold":true,"color":"gold"}]',Lore:['[{"text":"death.attack.firework.item","italic":false,"color":"dark_green"}]']},Enchantments:[{id:"quick_charge",lvl:5},{id:"knockback",lvl:1}],Unbreakable:1,ChargedProjectiles:[{id:"minecraft:tipped_arrow",Count:1b,tag:{CustomPotionColor:0,CustomPotionEffects:[{Id:7,Duration:1,Amplifier:4,ShowParticles:0b,ShowIcon:0b}]}}],Charged:1b,HideFlags:36} 1
+scoreboard players reset @s[scores={siegeMode=1,shotgunCD=0}] shotgunCD
 
-## DROP SPYGLASS
-execute if score @s dropSpyglass matches 1.. run scoreboard players add @s dropSpyglass 1
-execute if score @s dropSpyglass matches 81.. run give @s minecraft:spyglass
-execute if score @s dropSpyglass matches 81.. run scoreboard players set @s dropSpyglass 0
-# scoreboard players add @s[scores={dropSpyglass=1..}] dropSpyglass 1
-# scoreboard players set @s[scores={dropSpyglass=81..}] dropSpyglass 0
-
-## DEATHCHECK
-# to do
-
-## KILL
-kill @e[type=item, nbt={Item:{id:"minecraft:spyglass"}}]
+tag @s remove dafi.siege.main

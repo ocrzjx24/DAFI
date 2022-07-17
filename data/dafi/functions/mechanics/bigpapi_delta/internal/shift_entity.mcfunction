@@ -1,4 +1,4 @@
-#> delta:internal/shift_entity
+##> delta:internal/shift_entity
 #   Temporarily moves an entity out of the way so it isn't affected by the explosion
 #
 # Callers:

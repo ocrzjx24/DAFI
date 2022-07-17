@@ -17,7 +17,10 @@ function dafi:class/steel/lifetime1
 function dafi:class/steel/summon2/lifetime2
 function dafi:class/swamp/cast
 execute as @e[tag=rawr] run function dafi:class/swamp/rawr
-execute as @e[type=item,tag=C4] at @s run function dafi:class/sting/c4/c4lifetime
+execute as @e[type=magma_cube,tag=C4] at @s run function dafi:class/sting/c4/c4lifetime
 execute as @e[tag=wardenLife] at @s run function dafi:class/sculk/lifetime
 execute at @e[type=trident] run function dafi:class/storm/particle/particle5
+execute as @e[type=fishing_bobber,tag=!dafi.siege.processed] run function dafi:class/siege/bobber/bobberprocess
+execute as @e[type=fishing_bobber,tag=dafi.siege.processed] run function dafi:class/siege/bobber/bobber
+execute as @e[type=marker,tag=dafi.siege.bobbercheck] run function dafi:class/siege/bobber/bobbercheck
 # function dafi:class/siege/lifetime
