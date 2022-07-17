@@ -1,5 +1,5 @@
 ## BOBBER
-say rod cast
+# say rod cast
 execute at @s store result score @s sbsid run scoreboard players get @a[tag=siege,sort=nearest,limit=1] sbsid
 # data modify entity @s Motion[1] merge from entity @s Motion[1]
 # data modify entity @s Motion[0] set value 0.0

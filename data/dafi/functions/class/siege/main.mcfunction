@@ -13,7 +13,7 @@ execute at @s as @e[type=fishing_bobber,distance=30..] if score @s sbsid = @a[ta
 
 # execute at @s as @e[type=fishing_bobber,distance=..30] if score @s sbsid = @a[tag=dafi.siege.main,limit=1] sbsid run say in range
 execute at @s as @e[type=fishing_bobber,distance=..30] if score @s sbsid = @a[tag=dafi.siege.main,limit=1] sbsid run tag @s add dafi.siege.bobberinrange
-execute at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] run say im going to bob
+# execute at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] run say im going to bob
 execute at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] as @e[type=marker,tag=dafi.siege.bobbercheck] if score @s sbsid = @a[tag=dafi.siege.main,limit=1] sbsid run tag @s add dafi.siege.targetmarker
 execute at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] run scoreboard players set $strength delta.api.launch 20000
 execute at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] facing entity @e[type=marker,tag=dafi.siege.targetmarker,limit=1] feet run function dafi:mechanics/bigpapi_delta/api/launch_looking
