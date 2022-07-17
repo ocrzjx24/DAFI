@@ -20,7 +20,6 @@ execute at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=d
 execute at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] run scoreboard players reset $strength delta.api.launch
 execute at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] run kill @e[type=marker,tag=dafi.siege.targetmarker]
 execute at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] run tag @s remove dafi.siege.fishing
-
 tag @e[tag=dafi.siege.bobberinrange] remove dafi.siege.bobberinrange
 
 # useFishingRod
