@@ -21,6 +21,8 @@ execute at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=d
 execute at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] run kill @e[type=marker,tag=dafi.siege.targetmarker]
 execute at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] run tag @s remove dafi.siege.fishing
 
+tag @e[tag=dafi.siege.bobberinrange] remove dafi.siege.bobberinrange
+
 # useFishingRod
 execute if score @s useFishingRod matches 1.. run scoreboard players add .global sbsid 1
 execute if score @s useFishingRod matches 1.. run execute store result score @s sbsid run scoreboard players get .global sbsid
