@@ -1,4 +1,5 @@
 tag @s add dafi.siege.bobbing
+execute at @s run particle smoke ~ ~ ~ 0.05 0.05 0.05 0.1 3 force
 execute at @s run summon marker ~ ~ ~ {Tags:["dafi.siege.bobbercheck","dafi.siege.markerunprocessed"]}
 execute at @s as @e[type=marker,tag=dafi.siege.bobbercheck,tag=dafi.siege.markerunprocessed,sort=nearest] store result score @s sbsid run scoreboard players get @e[type=fishing_bobber,tag=dafi.siege.bobbing,limit=1] sbsid 
 execute at @s as @e[type=marker,tag=dafi.siege.bobbercheck,tag=dafi.siege.markerunprocessed,sort=nearest,limit=1] run tag @s remove dafi.siege.markerunprocessed

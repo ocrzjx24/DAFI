@@ -5,3 +5,6 @@ scoreboard objectives add hitcount dummy
 scoreboard objectives add useCrossbow minecraft.used:crossbow
 scoreboard objectives add bobberCheckLifetime dummy
 scoreboard objectives add dropIronPickaxe minecraft.dropped:iron_pickaxe
+scoreboard objectives add fishingRodCD dummy
+scoreboard objectives add shotgunShots dummy
+scoreboard objectives add inventoryChangedFishingBypass dummy

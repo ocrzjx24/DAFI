@@ -1,4 +1,4 @@
-particle dust 0.7 0 0 0.25 ~ ~ ~ 0.05 0.05 0.05 0 1
+particle dust 0.7 0 0 0.5 ~ ~ ~ 0.05 0.05 0.05 0 1
 
 execute if block ~ ~ ~ #dafi:partial run function dafi:mechanics/raycast/partial
 
