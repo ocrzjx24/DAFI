@@ -34,7 +34,7 @@ execute anchored eyes facing ^0.882 ^0.809 ^6 run function dafi:class/siege/rayc
 # <-0.588,-0.809>
 
 ## deal damage that scales with hitcount
-execute as @e[scores={hitcount=1..}] run effect give @s absorption 1 0 true
+# execute as @e[scores={hitcount=1..}] run effect give @s absorption 1 0 true
 execute as @e[scores={hitcount=1..}] run effect give @s instant_damage 1 0 true
 execute as @a[scores={hitcount=2}] run scoreboard players set @s hp_dmg 1
 execute as @a[scores={hitcount=3}] run scoreboard players set @s hp_dmg 2
