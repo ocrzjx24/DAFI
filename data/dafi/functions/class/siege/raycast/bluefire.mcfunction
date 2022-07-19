@@ -1,7 +1,7 @@
 summon marker ~ ~ ~ {Tags:["raycaster"]}
 
 ## distance = #itt * step_size = 80 * 0.25 = 20 blocks
-scoreboard players set .itt raycast 80
+scoreboard players set .itt raycast 100
 
 ## temporary tag to remember who fired the raycast
 tag @s add this

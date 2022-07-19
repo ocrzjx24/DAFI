@@ -67,8 +67,7 @@ execute if score @s[scores={siegeMode=1,shotgunShots=1}] shotgunCD matches 59 ru
 
 #> fishingRodCD
 scoreboard players remove @s[scores={fishingRodCD=1..}] fishingRodCD 1
-execute if score @s fishingRodCD matches 0 run item replace entity @s hotbar.1 with fishing_rod 
-
+execute if score @s fishingRodCD matches 0 run item replace entity @s hotbar.1 with fishing_rod{Unbreakable:1,display:{Name:'[{"text":"MEAT","italic":false,"color":"dark_red","bold":true},{"text":"HOOK","color":"dark_gray"}]',Lore:['[{"text":"ror2 reference","italic":false}]']},Enchantments:[{id:sharpness,lvl:5}],HideFlags:101} 1
 #> offhandCheck
 function dafi:class/siege/offhand
 

@@ -13,17 +13,17 @@ execute rotated ~ ~ run function dafi:class/siege/raycast/bluefire
 # execute anchored eyes facing ^0.588 ^0.809 ^4 run function dafi:class/siege/raycast/blue
 
 
-execute anchored eyes facing ^0 ^1 ^4 run function dafi:class/siege/raycast/bluefire
-execute anchored eyes facing ^1.4265 ^0.309 ^4 run function dafi:class/siege/raycast/bluefire
-execute anchored eyes facing ^-1.4265 ^0.309 ^4 run function dafi:class/siege/raycast/bluefire
-execute anchored eyes facing ^0.882 ^-0.809 ^4 run function dafi:class/siege/raycast/bluefire
-execute anchored eyes facing ^-0.882 ^-0.809 ^4 run function dafi:class/siege/raycast/bluefire
+execute anchored eyes facing ^0 ^1 ^12 run function dafi:class/siege/raycast/bluefire
+execute anchored eyes facing ^0.951 ^0.309 ^12 run function dafi:class/siege/raycast/bluefire
+execute anchored eyes facing ^-0.951 ^0.309 ^12 run function dafi:class/siege/raycast/bluefire
+execute anchored eyes facing ^0.588 ^-0.809 ^12 run function dafi:class/siege/raycast/bluefire
+execute anchored eyes facing ^-0.588 ^-0.809 ^12 run function dafi:class/siege/raycast/bluefire
 
-execute anchored eyes facing ^0 ^-1 ^6 run function dafi:class/siege/raycast/bluefire
-execute anchored eyes facing ^-1.4265 ^-0.309 ^6 run function dafi:class/siege/raycast/bluefire
-execute anchored eyes facing ^1.4265 ^-0.309 ^6 run function dafi:class/siege/raycast/bluefire
-execute anchored eyes facing ^-0.882 ^0.809 ^6 run function dafi:class/siege/raycast/bluefire
-execute anchored eyes facing ^0.882 ^0.809 ^6 run function dafi:class/siege/raycast/bluefire
+execute anchored eyes facing ^0 ^-1 ^8 run function dafi:class/siege/raycast/bluefire
+execute anchored eyes facing ^-0.951 ^-0.309 ^8 run function dafi:class/siege/raycast/bluefire
+execute anchored eyes facing ^0.951 ^-0.309 ^8 run function dafi:class/siege/raycast/bluefire
+execute anchored eyes facing ^-0.588 ^0.809 ^8 run function dafi:class/siege/raycast/bluefire
+execute anchored eyes facing ^0.588 ^0.809 ^8 run function dafi:class/siege/raycast/bluefire
 
 
 ## unit vectors facing vertices of a regular pentagon
