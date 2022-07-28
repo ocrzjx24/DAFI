@@ -29,13 +29,13 @@ execute if score @s useTrident matches 1 run scoreboard players reset @s offhand
 execute if score @s useTrident matches 1 at @s anchored eyes positioned ^ ^ ^6 run function dafi:class/storm/particle/particle1
 execute if score @s useTrident matches 1 at @s anchored eyes positioned ^ ^ ^6.5 run function dafi:class/storm/particle/particle2
 execute if score @s useTrident matches 1 at @s anchored eyes positioned ^ ^ ^8 run function dafi:class/storm/particle/particle3
-execute if score @s useTrident matches 60 run title @s actionbar ["",{"text":"[RMB] ","bold":true,"color":"gold"},{"text":"READY","color":"green"}]
-execute if score @s useTrident matches 60 run scoreboard players set @s offhandReady 1
-execute if score @s useTrident matches 60 run tag @s remove offhandProcessed
-execute if score @s useTrident matches 60 at @s run playsound minecraft:item.trident.return master @s ~ ~100000000 ~ 100000000 1
-execute if score @s useTrident matches 60.. run scoreboard players reset @s useTrident
+execute if score @s useTrident matches 4 run title @s actionbar ["",{"text":"[RMB] ","bold":true,"color":"gold"},{"text":"READY","color":"green"}]
+execute if score @s useTrident matches 4 run scoreboard players set @s offhandReady 1
+execute if score @s useTrident matches 4 run tag @s remove offhandProcessed
+# execute if score @s useTrident matches 4 at @s run playsound minecraft:item.trident.return master @s ~ ~100000000 ~ 100000000 1 
+execute if score @s useTrident matches 4.. run scoreboard players reset @s useTrident
 execute if score @s useTrident matches 1.. run scoreboard players add @s useTrident 1
-execute if score @s useTrident matches 1..60 run clear @s minecraft:trident
+execute if score @s useTrident matches 1..4 run clear @s minecraft:trident
 
 ## NEW ABILITY
 execute if score @s dropWave matches 120.. run item replace entity @s hotbar.1 with minecraft:diamond_axe{display:{Name:'[{"text":"Wavebreaker","italic":false,"bold":true,"color":"aqua"}]'},Enchantments:[{id:"channeling",lvl:1},{id:"sharpness",lvl:2}],Unbreakable:1,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Amount:10,Operation:0,UUID:[I;1028214595,1066950744,1016402789,1603413261]},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Slot:"mainhand",Amount:-0.4,Operation:2,UUID:[I;1028214595,1066950744,1016402789,1603413261]}],HideFlags:3} 1
@@ -60,11 +60,8 @@ execute if score @s dropWave matches 60.. run tag @s remove strike
 execute if score @s dropWave matches 120 run tellraw @s {"text":"\u2605 THE STORM CALLS... \u2605","bold":true,"color":"aqua"}
 execute if score @s dropWave matches 120 at @s run playsound minecraft:entity.illusioner.prepare_mirror master @a[distance=..10] ~ ~100000000 ~ 100000000 0.4 1
 
-execute if score @s dropDShovel matches 1 run scoreboard players set $strength delta.api.launch 12500
-execute if score @s dropDShovel matches 1 at @s run summon marker ~ ~ ~ {Rotation:[0.0f,90.0f],Tags:["swag"]}
-execute if score @s dropDShovel matches 1 at @s rotated as @e[type=marker,tag=swag,limit=1,sort=nearest] run function dafi:mechanics/bigpapi_delta/api/launch_looking
-execute if score @s dropDShovel matches 1 at @s run kill @e[type=marker,tag=swag,limit=1,sort=nearest]
-execute if score @s dropDShovel matches 1 run scoreboard players reset $strength delta.api.launch
+execute if score @s dropDShovel matches 1 run scoreboard players set @s delta.addition.magnitude 12500
+execute if score @s dropDShovel matches 1 at @s rotated 0 90 run function dafi:mechanics/bigpapi_delta/addition/add_motion
 execute if score @s dropDShovel matches 1 run kill @e[type=item,nbt={Item:{id:"minecraft:diamond_shovel"}}]
 execute if score @s dropDShovel matches 1.. run scoreboard players reset @s dropDShovel
 
@@ -78,6 +75,8 @@ execute if score @s shovel matches 120.. run scoreboard players set @s shovel 0
 
 
 ## TARGET TRIDENT
+# execute as @e[type=trident] run data modify entity @s NoGravity set value true
+execute as @e[type=trident] run data modify entity @s DealtDamage set value 0
 execute as @e[type=trident,nbt={inGround:1b}] run function dafi:class/storm/strike
 
 

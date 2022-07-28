@@ -13,6 +13,9 @@ function dafi:mechanics/deaths/load
 ## DELTA
 function dafi:mechanics/bigpapi_delta/internal/load
 
+## DELTA ADDITION
+function dafi:mechanics/bigpapi_delta/addition/load
+
 ## DOUBLE JUMP
 function dafi:mechanics/doublejump/load
 
@@ -24,6 +27,9 @@ function dafi:mechanics/glowing/load
 
 ## HAT SYSTEM
 function dafi:mechanics/hat_system/load
+
+## MATH
+function dafi:mechanics/math/load
 
 ## NO GRAVITY
 function dafi:mechanics/no_gravity/load

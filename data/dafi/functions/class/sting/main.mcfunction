@@ -129,5 +129,8 @@ execute if score @s deathcheck matches 1 if score @s gCD matches 1.. run scorebo
 ## DEATHCHECK
 #scoreboard players set @s[scores={deathcheck=1..,gCD=1..}] gCD 119
 
+advancement revoke @s only dafi:inventory_changed
+
+
 
 

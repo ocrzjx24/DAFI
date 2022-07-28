@@ -16,8 +16,10 @@ scoreboard objectives add gType dummy
 scoreboard objectives add dropBlazeRod minecraft.dropped:minecraft.blaze_rod
 scoreboard objectives add dropStick minecraft.dropped:minecraft.stick
 scoreboard objectives add stingRandom dummy
+scoreboard objectives add GLCD dummy
 scoreboard objectives add c4CD dummy
 scoreboard objectives add c4Life dummy
+scoreboard objectives add stingMode dummy
 scoreboard objectives add sting_x1 dummy
 scoreboard objectives add sting_y1 dummy
 scoreboard objectives add sting_z1 dummy

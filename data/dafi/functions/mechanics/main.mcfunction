@@ -46,12 +46,17 @@ function dafi:mechanics/rockets/main
 ## SLOWNESS
 function dafi:mechanics/slowness/main
 
+## SPRINT
+function dafi:mechanics/sprint/main
+
 ## WALLRUN
 function dafi:mechanics/wallrun/main
 
-
 ## UUID STORE
 execute as @a[tag=!DoNotRemove_UUIDstore] run function dafi:mechanics/uuid/main
+
+## DELTA ADDITION (SHOULD BE NEAR LAST)
+function dafi:mechanics/bigpapi_delta/addition/main
 
 ## THIS NEEDS TO BE LAST
 execute as @a[advancements={dafi:shield=true}] run advancement revoke @s only dafi:shield

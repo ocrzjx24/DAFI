@@ -23,7 +23,7 @@ execute at @s run playsound minecraft:item.armor.equip_netherite master @s ~ ~ ~
 title @s reset
 
 ## SCOREBOARD
-scoreboard players set @s shotgunShots 2
+scoreboard players set @s shotgunShots 5
 scoreboard players reset @s siegeMode
 scoreboard players reset @s shotgunCD 
 # scoreboard players reset @a[scores={gray=1..}] gray

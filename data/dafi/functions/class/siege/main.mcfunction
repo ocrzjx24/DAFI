@@ -13,14 +13,15 @@ execute at @s as @e[type=fishing_bobber,distance=..30] if score @s sbsid = @a[ta
 
 execute at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] as @e[type=marker,tag=dafi.siege.bobbercheck] if score @s sbsid = @a[tag=dafi.siege.main,limit=1] sbsid run tag @s add dafi.siege.targetmarker
 
-execute if predicate dafi:is_not_sneaking at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] run scoreboard players set $strength delta.api.launch 10000
-execute if predicate dafi:is_not_sneaking at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] facing entity @e[type=marker,tag=dafi.siege.targetmarker,limit=1] feet run function dafi:mechanics/bigpapi_delta/api/launch_looking
-execute if predicate dafi:is_not_sneaking at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] run scoreboard players reset $strength delta.api.launch
+execute if predicate dafi:is_not_sneaking at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] run scoreboard players set @s delta.addition.magnitude 10000
+execute if predicate dafi:is_not_sneaking at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] facing entity @e[type=marker,tag=dafi.siege.targetmarker,limit=1] feet run function dafi:mechanics/bigpapi_delta/addition/add_motion
 
 execute if predicate dafi:is_sneaking at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] run scoreboard players set $strength delta.api.launch 10000
-execute if predicate dafi:is_sneaking at @s[team=red,tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] as @e[type=marker,tag=dafi.siege.targetmarker] at @s as @a[distance=..5,team=!red] at @s facing entity @e[type=marker,tag=dafi.siege.targetmarker] eyes run function dafi:mechanics/bigpapi_delta/api/launch_looking
-execute if predicate dafi:is_sneaking at @s[team=blue,tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] as @e[type=marker,tag=dafi.siege.targetmarker] at @s as @a[distance=..5,team=!blue] at @s facing entity @e[type=marker,tag=dafi.siege.targetmarker] eyes run function dafi:mechanics/bigpapi_delta/api/launch_looking
-execute if predicate dafi:is_sneaking at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] run scoreboard players reset $strength delta.api.launch
+
+execute if predicate dafi:is_sneaking at @s[team=red,tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] as @e[type=marker,tag=dafi.siege.targetmarker] at @s run scoreboard players set @a[distance=..5,team=!red] delta.addition.magnitude 10000
+execute if predicate dafi:is_sneaking at @s[team=blue,tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] as @e[type=marker,tag=dafi.siege.targetmarker] at @s run scoreboard players set @a[distance=..5,team=!blue] delta.addition.magnitude 10000
+execute if predicate dafi:is_sneaking at @s[team=red,tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] as @e[type=marker,tag=dafi.siege.targetmarker] at @s as @a[distance=..5,team=!red] at @s facing entity @e[type=marker,tag=dafi.siege.targetmarker] eyes run function dafi:mechanics/bigpapi_delta/addition/add_motion
+execute if predicate dafi:is_sneaking at @s[team=blue,tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] as @e[type=marker,tag=dafi.siege.targetmarker] at @s as @a[distance=..5,team=!blue] at @s facing entity @e[type=marker,tag=dafi.siege.targetmarker] eyes run function dafi:mechanics/bigpapi_delta/addition/add_motion
 execute if predicate dafi:is_sneaking at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] at @s run scoreboard players set @a[distance=..5] slow 20
 
 execute if predicate dafi:is_sneaking at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] as @e[type=fishing_bobber,tag=dafi.siege.bobberinrange] at @s run playsound minecraft:block.chain.break master @a[distance=..5,team=!red] ~ ~ ~ 1 0.75
@@ -62,8 +63,8 @@ execute if score @s useCrossbow matches 1 if score @s siegeMode matches 1 run fu
 #> shotgunCD
 scoreboard players remove @s[scores={shotgunCD=1..}] shotgunCD 1
 execute if score @s[scores={siegeMode=1}] shotgunCD matches 0 run item replace entity @s hotbar.0 with crossbow{display:{Name:'[{"text":".EXE","italic":false,"color":"gray","bold":true},{"text":"CUTIONER","italic":false,"bold":true,"color":"dark_gray"}]',Lore:['[{"text":"death.attack.firework.item","italic":false,"color":"dark_green"}]']},Enchantments:[{id:"quick_charge",lvl:5},{id:"knockback",lvl:1}],Unbreakable:1,ChargedProjectiles:[{id:"minecraft:tipped_arrow",Count:1b,tag:{CustomPotionColor:0,CustomPotionEffects:[{Id:7,Duration:1,Amplifier:4,ShowParticles:0b,ShowIcon:0b}]}}],Charged:1b,HideFlags:36} 1
-execute if score @s[scores={siegeMode=1}] shotgunCD matches 0 run scoreboard players set @s shotgunShots 2
-execute if score @s[scores={siegeMode=1,shotgunShots=1}] shotgunCD matches 59 run item replace entity @s hotbar.0 with crossbow{display:{Name:'[{"text":".EXE","italic":false,"color":"gray","bold":true},{"text":"CUTIONER","italic":false,"bold":true,"color":"dark_gray"}]',Lore:['[{"text":"death.attack.firework.item","italic":false,"color":"dark_green"}]']},Enchantments:[{id:"quick_charge",lvl:5},{id:"knockback",lvl:1}],Unbreakable:1,ChargedProjectiles:[{id:"minecraft:tipped_arrow",Count:1b,tag:{CustomPotionColor:0,CustomPotionEffects:[{Id:7,Duration:1,Amplifier:4,ShowParticles:0b,ShowIcon:0b}]}}],Charged:1b,HideFlags:36} 1
+execute if score @s[scores={siegeMode=1}] shotgunCD matches 0 run scoreboard players set @s shotgunShots 5
+execute if score @s[scores={siegeMode=1,shotgunShots=1..5}] shotgunCD matches 48 run item replace entity @s hotbar.0 with crossbow{display:{Name:'[{"text":".EXE","italic":false,"color":"gray","bold":true},{"text":"CUTIONER","italic":false,"bold":true,"color":"dark_gray"}]',Lore:['[{"text":"death.attack.firework.item","italic":false,"color":"dark_green"}]']},Enchantments:[{id:"quick_charge",lvl:5},{id:"knockback",lvl:1}],Unbreakable:1,ChargedProjectiles:[{id:"minecraft:tipped_arrow",Count:1b,tag:{CustomPotionColor:0,CustomPotionEffects:[{Id:7,Duration:1,Amplifier:4,ShowParticles:0b,ShowIcon:0b}]}}],Charged:1b,HideFlags:36} 1
 
 #> fishingRodCD
 scoreboard players remove @s[scores={fishingRodCD=1..}] fishingRodCD 1
@@ -78,6 +79,8 @@ execute if score @s useCrossbow matches 1.. run scoreboard players reset @s useC
 scoreboard players reset @s[scores={siegeMode=1,shotgunCD=0}] shotgunCD
 scoreboard players reset @s inventoryChangedFishingBypass
 scoreboard players reset @s[scores={fishingRodCD=0}] fishingRodCD
+
+advancement revoke @s only dafi:inventory_changed
 
 #> main.mcfunction specific tags 
 tag @e[tag=dafi.siege.bobberinrange] remove dafi.siege.bobberinrange

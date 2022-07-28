@@ -1,4 +1,4 @@
-execute if score .itt raycast matches ..95 run particle dust 0 0 1 0.25 ~ ~ ~ 0 0 0 0 1
+execute if score .itt raycast matches ..95 run particle dust 0 0 0 0.25 ~ ~ ~ 0 0 0 0 1
 
 execute if block ~ ~ ~ #dafi:partial run function dafi:mechanics/raycast/partial
 
