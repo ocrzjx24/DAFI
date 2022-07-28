@@ -9,3 +9,4 @@ function dafi:class/storm/load
 function dafi:class/shade/load
 function dafi:class/swamp/load
 function dafi:class/sculk/load
+function dafi:class/siao/load

@@ -9,6 +9,7 @@ execute as @a[tag=storm] run function dafi:class/storm/main
 execute as @a[tag=shade] run function dafi:class/shade/main
 execute as @a[tag=swamp] run function dafi:class/swamp/main
 execute as @a[tag=sculk] run function dafi:class/sculk/main
+execute as @a[tag=siao] run function dafi:class/siao/main
 ## OTHER FUNCTIONS
 function dafi:class/shade/cast
 function dafi:class/sting/grenade

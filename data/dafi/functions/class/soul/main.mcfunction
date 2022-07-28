@@ -8,7 +8,7 @@ execute if score @s reaver matches 1.. run scoreboard players reset @s reaver
 
 ## DASH
 execute if score @s dropReaver matches 1 at @s run function dafi:class/soul/drop
-execute if score @s dropReaver matches 1 run title @s actionbar {"text":"WOOSH","bold":true,"color":"#ffd814"}
+execute if score @s dropReaver matches 1 run title @s actionbar {"text":"r/WOOSH","bold":true,"color":"#ffd814"}
 #execute if score @s dropReaver matches 3 run effect clear @s levitation
 execute if score @s dropReaver matches 10 run title @s actionbar {"text":"","bold":true,"color":"yellow"}
 execute if score @s dropReaver matches 1.. run scoreboard players add @s dropReaver 1

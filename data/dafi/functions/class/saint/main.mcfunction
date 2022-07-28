@@ -1,7 +1,9 @@
 ## UPDRAFT
 execute if score @s dropFeather matches 1 at @s run playsound minecraft:item.trident.riptide_3 master @a ~ ~ ~ 1 1.5
 execute if score @s dropFeather matches 1 at @s run playsound minecraft:entity.parrot.fly master @a ~ ~ ~ 1 1
-execute if score @s dropFeather matches 1 at @s run function dafi:class/saint/raycast/blue/fire
+execute if score @s[team=red] dropFeather matches 1 at @s run function dafi:class/saint/raycast/red/fire
+execute if score @s[team=blue] dropFeather matches 1 at @s run function dafi:class/saint/raycast/blue/fire
+execute if score @s dropFeather matches 1 run tag @s remove this
 #execute if score @s feather matches 20 run item replace entity @s armor.chest with elytra{Unbreakable:1,HideFlags:4} 1
 #execute if score @s feather matches 62.. run clear @s minecraft:elytra
 execute if score @s dropFeather matches 120 run item replace entity @s hotbar.1 with feather{display:{Name:'[{"text":"Wings","italic":false,"bold":true,"color":"white"}]'},Enchantments:[{id:"unbreaking",lvl:1}],Unbreakable:1,HideFlags:1} 1
