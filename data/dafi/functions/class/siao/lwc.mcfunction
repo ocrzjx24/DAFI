@@ -1,3 +1,5 @@
+scoreboard players remove @s lwcCharges 1
+
 #effect give @s[nbt={OnGround:0b}] slow_falling 1 0 true
 playsound minecraft:entity.arrow.shoot master @a ~ ~ ~ 1 1.5
 #playsound minecraft:item.trident.return master @a ~ ~ ~ 1 1

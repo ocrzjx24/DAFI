@@ -2,8 +2,8 @@ execute at @s[tag=plungeOK] unless block ~ ~-1 ~ #dafi:air unless block ~ ~-2 ~ 
 tag @s[tag=eyeProcessed,tag=!plungeOK] remove eyeProcessed
 execute at @s[tag=!plungeOK] if block ~ ~-1 ~ #dafi:air if block ~ ~-2 ~ #dafi:air if block ~ ~-3 ~ #dafi:air run tag @s add plungeOK
 clear @s[tag=!plungeOK] ender_eye
-execute unless data entity @s Inventory[{Slot:-106b}].tag.spear run item replace entity @s[tag=plungeOK,tag=!eyeProcessed] weapon.offhand with ender_eye{plunge:1}
-execute unless data entity @s Inventory[{Slot:-106b}].tag.spear run tag @s[tag=plungeOK,tag=!eyeProcessed] add eyeProcessed
+execute unless data entity @s Inventory[{Slot:-106b}].tag.mainhand run item replace entity @s[tag=plungeOK,tag=!eyeProcessed] weapon.offhand with ender_eye{plunge:1}
+execute unless data entity @s Inventory[{Slot:-106b}].tag.mainhand run tag @s[tag=plungeOK,tag=!eyeProcessed] add eyeProcessed
 
 execute as @s[tag=isPlunging] run function dafi:class/siao/plunge_delta
 
@@ -23,6 +23,10 @@ execute if score @s lwcLife matches 1.. at @s[team=red] run effect give @e[dista
 execute if score @s lwcLife matches 1.. at @s run particle glow_squid_ink ~ ~1 ~ 0 0 0 0 1
 execute if score @s lwcLife matches 1.. run scoreboard players add @s lwcLife 1
 
+execute if score @s lwcCharges matches ..2 run scoreboard players add @s lwcCD 1
+execute if score @s lwcCD matches 60.. run scoreboard players add @s lwcCharges 1
+execute if score @s lwcCD matches 60.. run scoreboard players reset @s lwcCD
 
+execute if score @s baneOfAllEvil matches 220 run tellraw @s ["",{"text":"[⚔] ","color":"dark_green"},{"text":"DROP ready!","color":"green"}]
 execute if score @s baneOfAllEvil matches 220.. run scoreboard players reset @s baneOfAllEvil
 execute if score @s baneOfAllEvil matches 1.. run scoreboard players add @s baneOfAllEvil 1
