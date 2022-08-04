@@ -4,3 +4,4 @@ scoreboard objectives add baneOfAllEvil dummy
 scoreboard objectives add fallHeight minecraft.custom:minecraft.fall_one_cm
 scoreboard objectives add lwcCharges dummy
 scoreboard objectives add lwcCD dummy
+scoreboard objectives add lwcLife dummy
