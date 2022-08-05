@@ -1,4 +1,4 @@
-execute at @s[tag=plungeOK] unless block ~ ~-1 ~ #dafi:air unless block ~ ~-2 ~ #dafi:air unless block ~ ~-3 ~ #dafi:air run tag @s[] remove plungeOK
+tag @s[] remove plungeOK
 tag @s[tag=eyeProcessed,tag=!plungeOK] remove eyeProcessed
 execute at @s[tag=!plungeOK] if block ~ ~-1 ~ #dafi:air if block ~ ~-2 ~ #dafi:air if block ~ ~-3 ~ #dafi:air run tag @s add plungeOK
 clear @s[tag=!plungeOK] ender_eye
@@ -24,6 +24,7 @@ execute if score @s lwcLife matches 1.. at @s run particle glow_squid_ink ~ ~1 ~
 execute if score @s lwcLife matches 1.. run scoreboard players add @s lwcLife 1
 
 execute if score @s lwcCharges matches ..2 run scoreboard players add @s lwcCD 1
+execute if score @s lwcCD matches 60.. run playsound minecraft:block.note_block.hat master @s ~ ~100 ~ 1000 1
 execute if score @s lwcCD matches 60.. run scoreboard players add @s lwcCharges 1
 execute if score @s lwcCD matches 60.. run scoreboard players reset @s lwcCD
 
