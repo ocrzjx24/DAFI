@@ -5,7 +5,7 @@
       }
     },
     "rewards": {
-      "function": "dafi:mechanics/inventory/changed"
+      "function": "dafi:internal/mechanics/inventory/changed"
     }
   }
   

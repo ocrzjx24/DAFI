@@ -5,7 +5,7 @@
       }
     },
     "rewards": {
-      "function": "dafi:mechanics/regeneration/hurt"
+      "function": "dafi:internal/mechanics/regeneration/hurt"
     }
   }
   

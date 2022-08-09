@@ -1,6 +1,0 @@
-execute if score @s offhandReady matches 1 if score @s crossbowMainhand matches 0 run item replace entity @s[tag=!offhandProcessed,team=red] weapon.offhand with trident{display:{Name:'[{"text":"Tidecaller","italic":false,"bold":true,"color":"aqua"}]'},tred:1,Unbreakable:1,HideFlags:1} 1
-execute if score @s offhandReady matches 1 if score @s crossbowMainhand matches 0 run item replace entity @s[tag=!offhandProcessed,team=blue] weapon.offhand with trident{display:{Name:'[{"text":"Tidecaller","italic":false,"bold":true,"color":"aqua"}]'},tblue:1,Unbreakable:1,HideFlags:1} 1
-execute if score @s offhandReady matches 1 if score @s crossbowMainhand matches 0 run tag @s[tag=!offhandProcessed] add offhandProcessed
-
-execute if score @s crossbowMainhand matches 1 run clear @s[tag=offhandProcessed] trident{display:{Name:'[{"text":"Tidecaller","italic":false,"bold":true,"color":"aqua"}]'},Unbreakable:1,HideFlags:1} 1
-execute if score @s crossbowMainhand matches 1 run tag @s[tag=offhandProcessed] remove offhandProcessed

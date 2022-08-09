@@ -5,7 +5,7 @@
       }
     },
     "rewards": {
-      "function": "dafi:mechanics/arrow/reload"
+      "function": "dafi:internal/mechanics/arrow/reload"
     }
   }
   

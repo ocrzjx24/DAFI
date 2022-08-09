@@ -1,2 +1,0 @@
-scoreboard objectives add killcheck playerKillCount
-scoreboard objectives add killstreak playerKillCount

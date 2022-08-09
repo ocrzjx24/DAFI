@@ -1,0 +1,11 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:entity_killed_player",
+        "conditions": {}
+      }
+    },
+    "rewards": {
+      "function": "dafi:internal/mechanics/deaths/death"
+    }
+  }

@@ -1,0 +1,19 @@
+scoreboard players enable @a dafi.antidrop
+scoreboard players enable @a dafi.arrowdelay
+scoreboard players enable @a dafi.arrownogravity
+scoreboard players enable @a dafi.autospectate
+scoreboard players enable @a dafi.class
+scoreboard players enable @a dafi.defusal
+scoreboard players enable @a dafi.display
+scoreboard players enable @a dafi.dropclock
+scoreboard players enable @a dafi.dropcompass
+scoreboard players enable @a dafi.dropdye
+scoreboard players enable @a dafi.dash
+scoreboard players enable @a dafi.firework
+scoreboard players enable @a dafi.hat
+scoreboard players enable @a dafi.pistonboost
+scoreboard players enable @a dafi.recommended
+scoreboard players enable @a dafi.regeneration
+scoreboard players enable @a dafi.rocketjump
+scoreboard players enable @a dafi.sprint
+

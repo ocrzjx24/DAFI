@@ -5,7 +5,7 @@
       }
     },
     "rewards": {
-      "function": "dafi:class/storm/groundcheck"
+      "function": "dafi:internal/class/storm/groundcheck"
     }
   }
   

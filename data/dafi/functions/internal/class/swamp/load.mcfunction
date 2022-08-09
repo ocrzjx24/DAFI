@@ -1,0 +1,12 @@
+scoreboard objectives add dafi.swamp.dropNetheriteAxe minecraft.dropped:minecraft.netherite_axe
+scoreboard objectives add dafi.swamp.TPLife dummy
+scoreboard objectives add dafi.swamp.useEnderPearl minecraft.used:minecraft.ender_pearl
+scoreboard objectives add dafi.swamp.TPTrigger dummy
+scoreboard objectives add dafi.swamp.random dummy
+scoreboard objectives add dafi.swamp.roarLife dummy
+scoreboard objectives add dafi.swamp.x1 dummy
+scoreboard objectives add dafi.swamp.y1 dummy
+scoreboard objectives add dafi.swamp.z1 dummy
+scoreboard objectives add dafi.swamp.x2 dummy
+scoreboard objectives add dafi.swamp.y2 dummy
+scoreboard objectives add dafi.swamp.z2 dummy

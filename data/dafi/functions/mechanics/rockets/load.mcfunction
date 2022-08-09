@@ -1,1 +1,0 @@
-scoreboard objectives add CD minecraft.used:minecraft.crossbow

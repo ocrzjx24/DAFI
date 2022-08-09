@@ -1,12 +1,11 @@
-## LOAD FUNCTIONS
-# CLASSES
-function dafi:class/load
+##> dafi:load
+# 
 
-# GAME
-function dafi:game/load
+# API
+function dafi:api/load
 
-# MECHANICS
-function dafi:mechanics/load
+# INTERNAL
+function dafi:internal/load
 
-## TELLRAW
+# TELLRAW
 tellraw @a {"text": "DAFI PACK LOADED!","color": "#fcd319"}

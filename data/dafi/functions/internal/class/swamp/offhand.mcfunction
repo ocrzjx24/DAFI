@@ -1,0 +1,5 @@
+execute if score @s dafi.offhandReady matches 1 if score @s dafi.crossbowMainhand matches 0 run item replace entity @s[tag=!dafi.offhandProcessed] weapon.offhand with ender_pearl{display:{Name:'[{"text":"Mire","italic":false,"bold":true,"color":"dark_red"}]'},Enchantments:[{id:"minecraft:unbreaking",lvl:10}],HideFlags:1} 1
+execute if score @s dafi.offhandReady matches 1 if score @s dafi.crossbowMainhand matches 0 run tag @s[tag=!dafi.offhandProcessed] add dafi.offhandProcessed
+
+execute if score @s dafi.crossbowMainhand matches 1 run clear @s[tag=dafi.offhandProcessed] ender_pearl{display:{Name:'[{"text":"Mire","italic":false,"bold":true,"color":"dark_red"}]'},Enchantments:[{id:"minecraft:unbreaking",lvl:10}],HideFlags:1} 1
+execute if score @s dafi.crossbowMainhand matches 1 run tag @s[tag=dafi.offhandProcessed] remove dafi.offhandProcessed 

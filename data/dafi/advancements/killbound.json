@@ -15,7 +15,7 @@
         },
         "entity": {
           "type": "minecraft:player",
-          "nbt": "{Tags:[\"bound\"]}"
+          "nbt": "{Tags:[\"dafi.bound\"]}"
         }
       }
     }

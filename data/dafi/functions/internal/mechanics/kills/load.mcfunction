@@ -1,0 +1,2 @@
+scoreboard objectives add dafi.killcheck playerKillCount
+scoreboard objectives add dafi.killstreak playerKillCount

@@ -1,0 +1,1 @@
+particle totem_of_undying ~ ~ ~ 0 0 0 0 1 force

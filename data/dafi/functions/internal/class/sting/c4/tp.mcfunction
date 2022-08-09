@@ -1,0 +1,1 @@
+tp @e[tag=dafi.sting.C4] ^ ^ ^-0.5

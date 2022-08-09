@@ -1,1 +1,0 @@
-execute as @a[tag=delta.addition.to_launch] run function dafi:mechanics/bigpapi_delta/addition/launch
