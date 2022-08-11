@@ -11,7 +11,7 @@
       }
     },
     "rewards": {
-      "function": "dafi:internal/mechanics/bigpapi_delta/internal/post_explosion_subtick"
+      "function": "dafi:delta/internal/post_explosion_subtick"
     }
   }
   

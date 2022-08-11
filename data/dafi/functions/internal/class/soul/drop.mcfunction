@@ -3,4 +3,4 @@ playsound entity.blaze.shoot master @a[distance=..10] ~ ~ ~ 1 1.4 0.5
 execute at @s run function dafi:internal/class/soul/particle
 
 scoreboard players set @s delta.addition.magnitude 12500
-execute at @s run function dafi:internal/mechanics/bigpapi_delta/addition/add_motion
+execute at @s run function dafi:internal/mechanics/addition/add_motion

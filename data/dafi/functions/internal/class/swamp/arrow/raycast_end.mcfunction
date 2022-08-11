@@ -9,7 +9,7 @@ execute store result entity @e[tag=dafi.arrow.processing,limit=1] Owner int 1 ru
 
 data modify entity @e[tag=dafi.arrow.processing,limit=1] crit set value 1
 data modify entity @e[tag=dafi.arrow.processing,limit=1] pickup set value 0
-data modify entity @e[tag=dafi.arrow.processing,limit=1] damage set value 8
+data modify entity @e[tag=dafi.arrow.processing,limit=1] damage set value 20
 #data modify entity @e[tag=dafi.arrow.swamp.tunnel,limit=1] PierceLevel set value 5
 execute if score #universal dafi.arrownogravity matches 1 run data modify entity @e[tag=dafi.arrow.processing,limit=1] NoGravity set value 1
 

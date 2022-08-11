@@ -44,7 +44,7 @@ function dafi:internal/mechanics/wallrun/main
 execute as @a[tag=!DoNotRemove_UUIDstore] run function dafi:internal/mechanics/uuid/main
 
 ## MOTION VECTOR ADDITION (SHOULD BE NEAR LAST)
-function dafi:internal/mechanics/bigpapi_delta/addition/main
+function dafi:internal/mechanics/addition/main
 
 ## THIS NEEDS TO BE LAST
 execute as @a[advancements={dafi:shield=true}] run advancement revoke @s only dafi:shield

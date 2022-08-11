@@ -14,10 +14,10 @@ execute at @e[tag=dafi.steel.wallCast,tag=dafi.steel.redWall] as @e[distance=..1
 # execute as @e[tag=dafi.steel.wallCast,tag=dafi.steel.redWall] at @s as @a[distance=..1,team=!red] at @s run scoreboard players reset $strength delta.api.launch
 
 execute as @e[tag=dafi.steel.wallCast,tag=dafi.steel.blueWall] at @s run scoreboard players set @a[distance=..1,team=!blue] delta.addition.magnitude 3000
-execute as @e[tag=dafi.steel.wallCast,tag=dafi.steel.blueWall] at @s as @a[distance=..1,team=!blue] at @s rotated as @e[limit=1,tag=dafi.steel.wallCast] run function dafi:internal/mechanics/bigpapi_delta/addition/add_motion
+execute as @e[tag=dafi.steel.wallCast,tag=dafi.steel.blueWall] at @s as @a[distance=..1,team=!blue] at @s rotated as @e[limit=1,tag=dafi.steel.wallCast] run function dafi:internal/mechanics/addition/add_motion
 
 execute as @e[tag=dafi.steel.wallCast,tag=dafi.steel.redWall] at @s run scoreboard players set @a[distance=..1,team=!red] delta.addition.magnitude 3000
-execute as @e[tag=dafi.steel.wallCast,tag=dafi.steel.redWall] at @s as @a[distance=..1,team=!red] at @s rotated as @e[limit=1,tag=dafi.steel.wallCast] run function dafi:internal/mechanics/bigpapi_delta/addition/add_motion
+execute as @e[tag=dafi.steel.wallCast,tag=dafi.steel.redWall] at @s as @a[distance=..1,team=!red] at @s rotated as @e[limit=1,tag=dafi.steel.wallCast] run function dafi:internal/mechanics/addition/add_motion
 
 execute as @e[tag=dafi.steel.wallCast] at @s if block ^ ^ ^0.4 #dafi:air run tp @s ^ ^ ^0.4
 execute as @e[tag=dafi.steel.wallCast] at @s unless block ^ ^ ^0.4 #dafi:air run playsound entity.generic.swim master @a ~ ~ ~ 0.1 1

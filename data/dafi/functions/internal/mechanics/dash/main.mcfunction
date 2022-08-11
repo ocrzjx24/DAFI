@@ -47,15 +47,15 @@ xp set @a[scores={dafi.dash.CD=0}] 0 points
 xp set @a[scores={dafi.dash.CD=0}] 1 levels
 
 ## real code
-execute as @a[scores={dafi.dash.onGroundCheck=1..}] run scoreboard players set @s dafi.dash.onGroundCheck 0
+execute as @a[scores={dafi.dash.onGroundCheck=1..}] run scoreboard players reset @s dafi.dash.onGroundCheck
 
-execute as @a[scores={dafi.dash.onGroundCheck=0}] run scoreboard players set @s[nbt={OnGround:1b}] dafi.dash.onGroundCheck 1
+execute as @a unless score @s dafi.dash.onGroundCheck matches 1 run scoreboard players set @s[nbt={OnGround:1b}] dafi.dash.onGroundCheck 1
 execute as @a[scores={dafi.dash.onGroundCheck=1}] run clear @s[tag=dafi.dash.elytraProcessed] elytra 
 execute as @a[scores={dafi.dash.onGroundCheck=1}] run tag @s[tag=dafi.dash.elytraProcessed] remove dafi.dash.elytraProcessed
 
-execute as @a[scores={dafi.dash.onGroundCheck=0}] run item replace entity @s[scores={dafi.dash.CD=0}] armor.chest with elytra
-execute as @a[scores={dafi.dash.onGroundCheck=0}] run stopsound @s[scores={dafi.dash.CD=0}] * item.armor.equip_elytra
-execute as @a[scores={dafi.dash.onGroundCheck=0}] run tag @s[tag=!dafi.dash.elytraProcessed] add dafi.dash.elytraProcessed
+execute as @a unless score @s dafi.dash.onGroundCheck matches 1 run item replace entity @s[scores={dafi.dash.CD=0}] armor.chest with elytra
+execute as @a unless score @s dafi.dash.onGroundCheck matches 1 run stopsound @s[scores={dafi.dash.CD=0}] * item.armor.equip_elytra
+execute as @a unless score @s dafi.dash.onGroundCheck matches 1 run tag @s[tag=!dafi.dash.elytraProcessed] add dafi.dash.elytraProcessed
 
 execute as @a run scoreboard players set @a[nbt={FallFlying:1b}] dafi.dash.time 0 
 execute as @a[scores={dafi.dash.time=0}] run scoreboard players set @s dafi.dash.CD 40
@@ -75,36 +75,36 @@ execute as @a[scores={dafi.dash.time=0}] at @s run function dafi:internal/mechan
 # execute as @a[scores={doubleJumpTime=0},tag=saint] at @s if predicate dafi:is_sneaking run scoreboard players set @s sneakbullshit 1
 
 # execute as @a[scores={doubleJumpTime=0}] unless score @s sneakbullshit matches 1 run scoreboard players set $strength delta.api.launch 5000
-# execute as @a[scores={doubleJumpTime=0}] unless score @s sneakbullshit matches 1 at @s run function dafi:mechanics/bigpapi_delta/api/launch_looking
+# execute as @a[scores={doubleJumpTime=0}] unless score @s sneakbullshit matches 1 at @s run function dafi:mechanics/api/launch_looking
 # execute as @a[scores={doubleJumpTime=0}] unless score @s sneakbullshit matches 1 run scoreboard players reset $strength delta.api.launch
 
 # execute as @a[scores={doubleJumpTime=0},tag=saint] if score @s sneakbullshit matches 1 run scoreboard players set $strength delta.api.launch 3000
-# execute as @a[scores={doubleJumpTime=0},tag=saint] if score @s sneakbullshit matches 1 at @s run function dafi:mechanics/bigpapi_delta/api/launch_looking
+# execute as @a[scores={doubleJumpTime=0},tag=saint] if score @s sneakbullshit matches 1 at @s run function dafi:mechanics/api/launch_looking
 # execute as @a[scores={doubleJumpTime=0},tag=saint] if score @s sneakbullshit matches 1 run scoreboard players reset $strength delta.api.launch
 
 # execute as @a[scores={doubleJumpTime=1},tag=saint] if score @s sneakbullshit matches 1 run scoreboard players set $y delta.api.launch 7500
-# execute as @a[scores={doubleJumpTime=1},tag=saint] if score @s sneakbullshit matches 1 at @s run function dafi:mechanics/bigpapi_delta/api/launch_xyz
+# execute as @a[scores={doubleJumpTime=1},tag=saint] if score @s sneakbullshit matches 1 at @s run function dafi:mechanics/api/launch_xyz
 # execute as @a[scores={doubleJumpTime=1},tag=saint] if score @s sneakbullshit matches 1 run scoreboard players reset $y delta.api.launch
 
 execute as @a[scores={dafi.dash.time=0},tag=!dafi.saint] run scoreboard players set @s delta.addition.magnitude 6000
-execute as @a[scores={dafi.dash.time=0},tag=!dafi.saint] at @s rotated ~ 0 run function dafi:internal/mechanics/bigpapi_delta/addition/add_motion
+execute as @a[scores={dafi.dash.time=0},tag=!dafi.saint] at @s rotated ~ 0 run function dafi:internal/mechanics/addition/add_motion
 execute as @a[scores={dafi.dash.time=0},tag=!dafi.saint] store result score @s dafi.dash.y run data get entity @s Motion[1] -10000
 execute as @a[scores={dafi.dash.time=0},tag=!dafi.saint] run scoreboard players set @s delta.addition.magnitude 7000
 execute as @a[scores={dafi.dash.time=0},tag=!dafi.saint] run scoreboard players operation @s delta.addition.magnitude += @s dafi.dash.y
-execute as @a[scores={dafi.dash.time=0},tag=!dafi.saint] at @s rotated 0 -90 run function dafi:internal/mechanics/bigpapi_delta/addition/add_motion
+execute as @a[scores={dafi.dash.time=0},tag=!dafi.saint] at @s rotated 0 -90 run function dafi:internal/mechanics/addition/add_motion
 
 execute as @a[scores={dafi.dash.time=0},tag=dafi.saint] if predicate dafi:is_not_sneaking run scoreboard players set @s delta.addition.magnitude 6000
-execute as @a[scores={dafi.dash.time=0},tag=dafi.saint] if predicate dafi:is_not_sneaking at @s rotated ~ 0 run function dafi:internal/mechanics/bigpapi_delta/addition/add_motion
+execute as @a[scores={dafi.dash.time=0},tag=dafi.saint] if predicate dafi:is_not_sneaking at @s rotated ~ 0 run function dafi:internal/mechanics/addition/add_motion
 execute as @a[scores={dafi.dash.time=0},tag=dafi.saint] if predicate dafi:is_not_sneaking store result score @s dafi.dash.y run data get entity @s Motion[1] -10000
 execute as @a[scores={dafi.dash.time=0},tag=dafi.saint] if predicate dafi:is_not_sneaking run scoreboard players set @s delta.addition.magnitude 7000
 execute as @a[scores={dafi.dash.time=0},tag=dafi.saint] if predicate dafi:is_not_sneaking run scoreboard players operation @s delta.addition.magnitude += @s dafi.dash.y
-execute as @a[scores={dafi.dash.time=0},tag=dafi.saint] if predicate dafi:is_not_sneaking at @s rotated 0 -90 run function dafi:internal/mechanics/bigpapi_delta/addition/add_motion
-# execute as @a[scores={doubleJumpTime=0},tag=saint] if predicate dafi:is_not_sneaking at @s run function dafi:mechanics/bigpapi_delta/addition/add_motion
+execute as @a[scores={dafi.dash.time=0},tag=dafi.saint] if predicate dafi:is_not_sneaking at @s rotated 0 -90 run function dafi:internal/mechanics/addition/add_motion
+# execute as @a[scores={doubleJumpTime=0},tag=saint] if predicate dafi:is_not_sneaking at @s run function dafi:mechanics/addition/add_motion
 
 execute as @a[scores={dafi.dash.time=0},tag=dafi.saint] if predicate dafi:is_sneaking run scoreboard players set @s delta.addition.magnitude 3000
-execute as @a[scores={dafi.dash.time=0},tag=dafi.saint] if predicate dafi:is_sneaking at @s rotated ~ 0 run function dafi:internal/mechanics/bigpapi_delta/addition/add_motion
+execute as @a[scores={dafi.dash.time=0},tag=dafi.saint] if predicate dafi:is_sneaking at @s rotated ~ 0 run function dafi:internal/mechanics/addition/add_motion
 execute as @a[scores={dafi.dash.time=0},tag=dafi.saint] if predicate dafi:is_sneaking run scoreboard players set @s delta.addition.magnitude 7500
-execute as @a[scores={dafi.dash.time=0},tag=dafi.saint] if predicate dafi:is_sneaking at @s rotated 0 -90 run function dafi:internal/mechanics/bigpapi_delta/addition/add_motion
+execute as @a[scores={dafi.dash.time=0},tag=dafi.saint] if predicate dafi:is_sneaking at @s rotated 0 -90 run function dafi:internal/mechanics/addition/add_motion
 
 # execute as @a[scores={doubleJumpTime=1}] run scoreboard players reset @s sneakbullshit
 

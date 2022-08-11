@@ -10,11 +10,8 @@ function dafi:internal/mechanics/cw_hp_control/init
 ## DEATHS
 function dafi:internal/mechanics/deaths/load
 
-## DELTA
-function dafi:internal/mechanics/bigpapi_delta/internal/load
-
 ## DELTA ADDITION
-function dafi:internal/mechanics/bigpapi_delta/addition/load
+function dafi:internal/mechanics/addition/load
 
 ## DOUBLE JUMP
 function dafi:internal/mechanics/dash/load
