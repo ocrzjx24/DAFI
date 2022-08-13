@@ -1,3 +1,3 @@
-#execute as @s[tag=!arrowFeetHit] run say "Hit Feet Far"
-tag @s add dafi.arrow.FeetHit
+#execute as @s[tag=!arrowfeetHit] run say "Hit Feet Far"
+tag @s add dafi.arrow.feetHit
 tag @s add dafi.arrow.farDamage

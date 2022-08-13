@@ -1,3 +1,3 @@
-#execute as @s[tag=!arrowEyesHit] run say "Hit Eyes Close"
-tag @s add dafi.arrow.EyesHit
+#execute as @s[tag=!arroweyesHit] run say "Hit Eyes Close"
+tag @s add dafi.arrow.eyesHit
 tag @s add dafi.arrow.closeDamage

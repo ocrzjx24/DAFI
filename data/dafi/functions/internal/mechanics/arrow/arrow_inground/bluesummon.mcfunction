@@ -10,8 +10,8 @@ execute as @s[tag=!dafi.arrow.closeDamage] as @e[type=marker,tag=dafi.arrow.line
 execute as @s[tag=!dafi.arrow.closeDamage] as @e[type=marker,tag=dafi.arrow.lineOfSightCheck,limit=1] run function dafi:internal/mechanics/arrowaoe/blue/far/feet/fire
 effect give @s[tag=dafi.arrow.closeDamage] instant_damage 1 1 false
 effect give @s[tag=dafi.arrow.farDamage] instant_damage 1 0 false
-tag @s[tag=dafi.arrow.EyesHit] remove dafi.arrow.EyesHit
-tag @s[tag=dafi.arrow.FeetHit] remove dafi.arrow.FeetHit
+tag @s[tag=dafi.arrow.eyesHit] remove dafi.arrow.eyesHit
+tag @s[tag=dafi.arrow.feetHit] remove dafi.arrow.feetHit
 tag @s[tag=dafi.arrow.closeDamage] remove dafi.arrow.closeDamage
 tag @s[tag=dafi.arrow.farDamage] remove dafi.arrow.farDamage
 execute if score @s dafi.arrow.SID = @e[type=marker,tag=dafi.arrow.lineOfSightCheck,tag=dafi.arrow.init,limit=1] dafi.arrow.SID as @e[type=marker,tag=dafi.arrow.lineOfSightCheck,tag=dafi.arrow.init,limit=1] run kill @s

@@ -86,25 +86,12 @@ execute as @a[scores={dafi.dash.time=0}] at @s run function dafi:internal/mechan
 # execute as @a[scores={doubleJumpTime=1},tag=saint] if score @s sneakbullshit matches 1 at @s run function dafi:mechanics/api/launch_xyz
 # execute as @a[scores={doubleJumpTime=1},tag=saint] if score @s sneakbullshit matches 1 run scoreboard players reset $y delta.api.launch
 
-execute as @a[scores={dafi.dash.time=0},tag=!dafi.saint] run scoreboard players set @s delta.addition.magnitude 6000
-execute as @a[scores={dafi.dash.time=0},tag=!dafi.saint] at @s rotated ~ 0 run function dafi:internal/mechanics/addition/add_motion
-execute as @a[scores={dafi.dash.time=0},tag=!dafi.saint] store result score @s dafi.dash.y run data get entity @s Motion[1] -10000
-execute as @a[scores={dafi.dash.time=0},tag=!dafi.saint] run scoreboard players set @s delta.addition.magnitude 7000
-execute as @a[scores={dafi.dash.time=0},tag=!dafi.saint] run scoreboard players operation @s delta.addition.magnitude += @s dafi.dash.y
-execute as @a[scores={dafi.dash.time=0},tag=!dafi.saint] at @s rotated 0 -90 run function dafi:internal/mechanics/addition/add_motion
-
-execute as @a[scores={dafi.dash.time=0},tag=dafi.saint] if predicate dafi:is_not_sneaking run scoreboard players set @s delta.addition.magnitude 6000
-execute as @a[scores={dafi.dash.time=0},tag=dafi.saint] if predicate dafi:is_not_sneaking at @s rotated ~ 0 run function dafi:internal/mechanics/addition/add_motion
-execute as @a[scores={dafi.dash.time=0},tag=dafi.saint] if predicate dafi:is_not_sneaking store result score @s dafi.dash.y run data get entity @s Motion[1] -10000
-execute as @a[scores={dafi.dash.time=0},tag=dafi.saint] if predicate dafi:is_not_sneaking run scoreboard players set @s delta.addition.magnitude 7000
-execute as @a[scores={dafi.dash.time=0},tag=dafi.saint] if predicate dafi:is_not_sneaking run scoreboard players operation @s delta.addition.magnitude += @s dafi.dash.y
-execute as @a[scores={dafi.dash.time=0},tag=dafi.saint] if predicate dafi:is_not_sneaking at @s rotated 0 -90 run function dafi:internal/mechanics/addition/add_motion
-# execute as @a[scores={doubleJumpTime=0},tag=saint] if predicate dafi:is_not_sneaking at @s run function dafi:mechanics/addition/add_motion
-
-execute as @a[scores={dafi.dash.time=0},tag=dafi.saint] if predicate dafi:is_sneaking run scoreboard players set @s delta.addition.magnitude 3000
-execute as @a[scores={dafi.dash.time=0},tag=dafi.saint] if predicate dafi:is_sneaking at @s rotated ~ 0 run function dafi:internal/mechanics/addition/add_motion
-execute as @a[scores={dafi.dash.time=0},tag=dafi.saint] if predicate dafi:is_sneaking run scoreboard players set @s delta.addition.magnitude 7500
-execute as @a[scores={dafi.dash.time=0},tag=dafi.saint] if predicate dafi:is_sneaking at @s rotated 0 -90 run function dafi:internal/mechanics/addition/add_motion
+execute as @a[scores={dafi.dash.time=0}] run scoreboard players set @s delta.addition.magnitude 6000
+execute as @a[scores={dafi.dash.time=0}] at @s rotated ~ 0 run function dafi:internal/mechanics/addition/add_motion
+# execute as @a[scores={dafi.dash.time=0},tag=!dafi.saint] store result score @s dafi.dash.y run data get entity @s Motion[1] -10000
+execute as @a[scores={dafi.dash.time=0}] run scoreboard players set @s delta.addition.magnitude 7000
+# execute as @a[scores={dafi.dash.time=0}] run scoreboard players operation @s delta.addition.magnitude += @s dafi.dash.y
+execute as @a[scores={dafi.dash.time=0}] at @s rotated 0 -90 run function dafi:internal/mechanics/addition/add_motion
 
 # execute as @a[scores={doubleJumpTime=1}] run scoreboard players reset @s sneakbullshit
 

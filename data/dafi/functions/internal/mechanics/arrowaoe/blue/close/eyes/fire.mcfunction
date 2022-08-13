@@ -1,7 +1,7 @@
-summon marker ~ ~ ~ {Tags:["dafi.arrow.raycaster","dafi.arrow.CloseEyes"]}
+summon marker ~ ~ ~ {Tags:["dafi.arrow.raycaster","dafi.arrow.closeEyes"]}
 
 ## distance = #itt * step_size = 80 * 0.25 = 20 blocks
-scoreboard players set .itt dafi.arrow.raycast 30
+scoreboard players set .itt dafi.raycast 30
 
 ## temporary tag to remember who fired the raycast
 tag @s add dafi.arrow.this

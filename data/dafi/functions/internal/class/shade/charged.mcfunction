@@ -63,8 +63,8 @@ execute if score @s dafi.shade.charge matches -20 run tag @s remove dafi.mechani
 
 ## CHARGE ALT END
 execute if score @s dafi.shade.charge matches -61 run title @s actionbar ["",{"text":"[RMB] ","bold":true,"color":"gold"},{"text":"READY","color":"green"}]
-execute if score @s dafi.shade.charge matches -61 run scoreboard players set @s dafi.mechanics.offhandReady 1
-execute if score @s dafi.shade.charge matches -61 run tag @s remove dafi.mechanics.offhandProcessed
+execute if score @s dafi.shade.charge matches -61 run scoreboard players set @s dafi.offhandReady 1
+execute if score @s dafi.shade.charge matches -61 run tag @s remove dafi.offhandProcessed
 execute if score @s dafi.shade.charge matches -61 at @s run playsound minecraft:item.armor.equip_elytra master @s ~ ~ ~ 0.6 1
 execute if score @s dafi.shade.charge matches -61 at @s run playsound minecraft:block.chorus_flower.grow master @s ~ ~ ~ 1 1.3
 
