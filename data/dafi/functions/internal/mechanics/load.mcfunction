@@ -43,6 +43,9 @@ function dafi:internal/mechanics/regeneration/load
 ## ROCKETS
 function dafi:internal/mechanics/rockets/load
 
+## SLIDE
+function dafi:internal/mechanics/slide/load
+
 ## SLOWNESS
 function dafi:internal/mechanics/slowness/load
 

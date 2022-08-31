@@ -86,12 +86,20 @@ execute as @a[scores={dafi.dash.time=0}] at @s run function dafi:internal/mechan
 # execute as @a[scores={doubleJumpTime=1},tag=saint] if score @s sneakbullshit matches 1 at @s run function dafi:mechanics/api/launch_xyz
 # execute as @a[scores={doubleJumpTime=1},tag=saint] if score @s sneakbullshit matches 1 run scoreboard players reset $y delta.api.launch
 
-execute as @a[scores={dafi.dash.time=0}] run scoreboard players set @s delta.addition.magnitude 6000
-execute as @a[scores={dafi.dash.time=0}] at @s rotated ~ 0 run function dafi:internal/mechanics/addition/add_motion
+execute as @a[scores={dafi.dash.time=0},tag=dafi.crouched] run scoreboard players set @s delta.addition.magnitude 12500
+execute as @a[scores={dafi.dash.time=0},tag=dafi.crouched] at @s rotated ~ 0 run function dafi:internal/mechanics/addition/add_motion
 # execute as @a[scores={dafi.dash.time=0},tag=!dafi.saint] store result score @s dafi.dash.y run data get entity @s Motion[1] -10000
-execute as @a[scores={dafi.dash.time=0}] run scoreboard players set @s delta.addition.magnitude 7000
+execute as @a[scores={dafi.dash.time=0},tag=dafi.crouched] run scoreboard players set @s delta.addition.magnitude 4000
 # execute as @a[scores={dafi.dash.time=0}] run scoreboard players operation @s delta.addition.magnitude += @s dafi.dash.y
-execute as @a[scores={dafi.dash.time=0}] at @s rotated 0 -90 run function dafi:internal/mechanics/addition/add_motion
+execute as @a[scores={dafi.dash.time=0},tag=dafi.crouched] at @s rotated 0 -90 run function dafi:internal/mechanics/addition/add_motion
+execute as @a[scores={dafi.dash.time=0},tag=dafi.crouched] run tag @s add dafi.slide.exempt
+
+execute as @a[scores={dafi.dash.time=0},tag=!dafi.slide.exempt] run scoreboard players set @s delta.addition.magnitude 6000
+execute as @a[scores={dafi.dash.time=0},tag=!dafi.slide.exempt] at @s rotated ~ 0 run function dafi:internal/mechanics/addition/add_motion
+# execute as @a[scores={dafi.dash.time=0},tag=!dafi.saint] store result score @s dafi.dash.y run data get entity @s Motion[1] -10000
+execute as @a[scores={dafi.dash.time=0},tag=!dafi.slide.exempt] run scoreboard players set @s delta.addition.magnitude 4000
+# execute as @a[scores={dafi.dash.time=0}] run scoreboard players operation @s delta.addition.magnitude += @s dafi.dash.y
+execute as @a[scores={dafi.dash.time=0},tag=!dafi.slide.exempt] at @s rotated 0 -90 run function dafi:internal/mechanics/addition/add_motion
 
 # execute as @a[scores={doubleJumpTime=1}] run scoreboard players reset @s sneakbullshit
 
@@ -99,3 +107,5 @@ execute as @a[scores={dafi.dash.time=0}] run tag @s add dafi.dash.elytraProcesse
 execute as @a[scores={dafi.dash.time=0}] run clear @s elytra
 execute as @a[scores={dafi.dash.time=1..}] run scoreboard players reset @s dafi.dash.time
 execute as @a[scores={dafi.dash.time=0..}] run scoreboard players add @s dafi.dash.time 1
+
+tag @a remove dafi.slide.exempt

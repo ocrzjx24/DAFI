@@ -31,6 +31,9 @@ function dafi:internal/mechanics/regeneration/main
 ## ROCKETS
 execute if score #universal dafi.rocketjump matches 1 run function dafi:internal/mechanics/rockets/main
 
+## SLIDE
+function dafi:internal/mechanics/slide/main
+
 ## SLOWNESS
 function dafi:internal/mechanics/slowness/main
 
