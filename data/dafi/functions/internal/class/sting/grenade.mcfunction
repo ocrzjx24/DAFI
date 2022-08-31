@@ -75,9 +75,9 @@ execute as @e[tag=dafi.sting.trackerBlue2] at @s unless entity @e[type=minecraft
 execute at @e[tag=dafi.sting.redMolotov,scores={dafi.sting.spectral=1..}] run effect give @e[distance=..1.5, team=!red] instant_damage 1 0 true
 execute at @e[tag=dafi.sting.redMolotov,scores={dafi.sting.spectral=1..}] run scoreboard players set @a[distance=..1.5, team=blue] dafi.slow.check 1
 # execute at @e[tag=dafi.sting.redMolotov,scores={dafi.sting.spectral=1..}] run scoreboard players set @a[distance=..1.5] hp_dmg 1
-execute at @e[tag=dafi.sting.redMolotov,scores={dafi.sting.spectral=1..}] run particle dust 1 0.22 0.098 2 ~ ~ ~ 0.5 0.1 0.5 0.2 1 force
+execute at @e[tag=dafi.sting.redMolotov,scores={dafi.sting.spectral=1..}] run particle dust 1 0.22 0.098 1.5 ~ ~ ~ 0.5 0.1 0.5 0.2 1 force
 # execute at @e[tag=dafi.sting.redMolotov,scores={dafi.sting.spectral=1..}] run particle smoke ~ ~ ~ 0.4 0 0.4 0.1 1 force
-execute at @e[tag=dafi.sting.redMolotov,scores={dafi.sting.spectral=1..}] run particle dust 1 0.557 0.141 2 ~ ~ ~ 0.7 0.2 0.7 0.5 1 force
+execute at @e[tag=dafi.sting.redMolotov,scores={dafi.sting.spectral=1..}] run particle dust 1 0.557 0.141 1 ~ ~ ~ 0.7 0.2 0.7 0.5 1 force
 # execute at @e[tag=dafi.sting.redMolotov,scores={dafi.sting.spectral=1..}] run particle small_flame ~ ~ ~ 0.4 0 0.4 0.1 1 force
 execute at @e[tag=dafi.sting.redMolotov,tag=dafi.sting.centerMolotov,scores={dafi.sting.spectral=1}] run playsound minecraft:block.fire.extinguish master @a[distance=..15] ~ ~ ~ 1 2 1
 execute at @e[tag=dafi.sting.redMolotov,tag=dafi.sting.centerMolotov,scores={dafi.sting.spectral=6}] run function dafi:internal/class/sting/molotov/redspread1 
@@ -86,9 +86,9 @@ execute as @e[tag=dafi.sting.redMolotov,type=armor_stand, nbt={OnGround:1b}] run
 
 execute at @e[tag=dafi.sting.blueMolotov,scores={dafi.sting.spectral=1..}] run effect give @e[distance=..1.5, team=!blue] instant_damage 1 0 true
 execute at @e[tag=dafi.sting.blueMolotov,scores={dafi.sting.spectral=1..}] run scoreboard players set @a[distance=..1.5, team=red] dafi.slow.check 1
-execute at @e[tag=dafi.sting.blueMolotov,scores={dafi.sting.spectral=1..}] run particle dust 0.145 0.588 0.929 2 ~ ~ ~ 0.5 0.1 0.5 0.2 1 force
+execute at @e[tag=dafi.sting.blueMolotov,scores={dafi.sting.spectral=1..}] run particle dust 0.145 0.588 0.929 1.5 ~ ~ ~ 0.5 0.1 0.5 0.2 1 force
 # execute at @e[tag=dafi.sting.blueMolotov,scores={dafi.sting.spectral=1..}] run particle smoke ~ ~ ~ 0.4 0 0.4 0.2 1 force
-execute at @e[tag=dafi.sting.blueMolotov,scores={dafi.sting.spectral=1..}] run particle dust 0.396 1 0.898 2 ~ ~ ~ 0.7 0.2 0.7 0.5 1 force
+execute at @e[tag=dafi.sting.blueMolotov,scores={dafi.sting.spectral=1..}] run particle dust 0.396 1 0.898 1 ~ ~ ~ 0.7 0.2 0.7 0.5 1 force
 # execute at @e[tag=dafi.sting.blueMolotov,scores={dafi.sting.spectral=1..}] run particle small_flame ~ ~ ~ 0.4 0 0.4 0.1 1 force
 execute at @e[tag=dafi.sting.blueMolotov,tag=dafi.sting.centerMolotov,scores={dafi.sting.spectral=1}] run playsound minecraft:block.fire.extinguish master @a[distance=..15] ~ ~ ~ 1 2 1
 execute at @e[tag=dafi.sting.blueMolotov,tag=dafi.sting.centerMolotov,scores={dafi.sting.spectral=6}] run function dafi:internal/class/sting/molotov/bluespread1

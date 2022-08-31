@@ -48,6 +48,16 @@ execute if entity @s[tag=dafi.shade] as @e[tag=dafi.arrow.processing] at @s run 
 execute if entity @s[tag=dafi.swamp] as @e[tag=dafi.arrow.processing] at @s run function dafi:internal/class/swamp/arrow/arrow_initialize
 #execute if score #universal dafi.arrownogravity matches 1 run tag @e[tag=dafi.arrow.processing] add dafi.arrow.nogravity
 
+# player assignment
+scoreboard players add .global dafi.sbsid 1
+scoreboard players operation .temp dafi.sbsid = @s dafi.sbsid 
+scoreboard players operation @s dafi.sbsid = .global dafi.sbsid 
+execute as @e if score @s dafi.sbsid = .temp dafi.sbsid run scoreboard players operation @s dafi.sbsid = .global dafi.sbsid
+scoreboard players operation @e[tag=dafi.arrow.processing] dafi.sbsid = .global dafi.sbsid
+
+
+
+
 # if it should explode
 execute unless score @s dafi.siege.mode matches 1 run tag @e[tag=dafi.arrow.processing] add dafi.arrow.explode
 
