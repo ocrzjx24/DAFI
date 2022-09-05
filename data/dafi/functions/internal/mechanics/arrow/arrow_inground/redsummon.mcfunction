@@ -8,8 +8,10 @@ execute as @e[type=marker,tag=dafi.arrow.lineOfSightCheck,limit=1] run function 
 execute as @e[type=marker,tag=dafi.arrow.lineOfSightCheck,limit=1] run function dafi:internal/mechanics/arrowaoe/red/close/feet/fire
 execute as @s[tag=!dafi.arrow.closeDamage] as @e[type=marker,tag=dafi.arrow.lineOfSightCheck,limit=1] run function dafi:internal/mechanics/arrowaoe/red/far/eyes/fire
 execute as @s[tag=!dafi.arrow.closeDamage] as @e[type=marker,tag=dafi.arrow.lineOfSightCheck,limit=1] run function dafi:internal/mechanics/arrowaoe/red/far/feet/fire
-effect give @s[tag=dafi.arrow.closeDamage] instant_damage 1 1 false
-effect give @s[tag=dafi.arrow.farDamage] instant_damage 1 0 false
+effect give @s[tag=dafi.arrow.closeDamage,tag=!dafi.balling] instant_damage 1 1 false
+effect give @s[tag=dafi.arrow.farDamage,tag=!dafi.balling] instant_damage 1 0 false
+effect give @s[tag=dafi.arrow.closeDamage,tag=dafi.balling] instant_damage 1 2 false
+effect give @s[tag=dafi.arrow.farDamage,tag=dafi.balling] instant_damage 1 1 false
 tag @s[tag=dafi.arrow.eyesHit] remove dafi.arrow.eyesHit
 tag @s[tag=dafi.arrow.feetHit] remove dafi.arrow.feetHit
 tag @s[tag=dafi.arrow.closeDamage] remove dafi.arrow.closeDamage

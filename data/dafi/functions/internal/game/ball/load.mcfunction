@@ -19,3 +19,4 @@ bossbar add dafi.ball.possession ""
 
 ## DEATH
 scoreboard objectives add dafi.ball.death deathCount
+data modify storage death Pos set value [0.0d,0.0d,0.0d]
