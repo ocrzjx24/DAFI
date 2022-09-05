@@ -1,0 +1,11 @@
+execute as @s[tag=saint] run function dafi:internal/class/saint/select
+execute as @s[tag=sculk] run function dafi:internal/class/sculk/select
+execute as @s[tag=shade] run function dafi:internal/class/shade/select
+execute as @s[tag=siao] run function dafi:internal/class/siao/select
+execute as @s[tag=siege] run function dafi:internal/class/siege/select
+execute as @s[tag=slay] run function dafi:internal/class/slay/select
+execute as @s[tag=soul] run function dafi:internal/class/soul/select
+execute as @s[tag=steel] run function dafi:internal/class/steel/select
+execute as @s[tag=sting] run function dafi:internal/class/sting/select
+execute as @s[tag=storm] run function dafi:internal/class/storm/select
+execute as @s[tag=swamp] run function dafi:internal/class/swamp/select

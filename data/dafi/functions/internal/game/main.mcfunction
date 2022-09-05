@@ -1,3 +1,6 @@
+## BALL
+function dafi:internal/game/ball/main
+
 ## DEFUSAL
 # function dafi:game/defusal/main
 

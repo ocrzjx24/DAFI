@@ -16,6 +16,9 @@
 # DEFUSAL
 # function dafi:internal/game/defusal/load
 
+## BALL
+function dafi:internal/game/ball/load
+
 # SELECT
 function dafi:internal/game/select/load
 
