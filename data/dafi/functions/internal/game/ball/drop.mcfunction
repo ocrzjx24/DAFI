@@ -1,5 +1,6 @@
 tag @s remove dafi.balling
-
+scoreboard players set @s dafi.ball.grabCD 20
+ 
 
 execute as @s run bossbar set dafi.ball.possession color white
 execute as @s run bossbar set dafi.ball.possession value 100
