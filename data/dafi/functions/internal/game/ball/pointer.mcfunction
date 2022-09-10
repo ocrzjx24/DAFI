@@ -1,0 +1,1 @@
+execute at @s positioned ~ ~1 ~ unless entity @e[tag=dafi.ball,distance=..3] facing entity @e[tag=dafi.ball] feet run particle crit ^ ^0.5 ^3 0 0 0 0 1 force @s

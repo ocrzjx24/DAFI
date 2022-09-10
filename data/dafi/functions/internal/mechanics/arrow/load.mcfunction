@@ -8,3 +8,5 @@ scoreboard objectives add dafi.arrow.z dummy
 scoreboard objectives add dafi.arrow.temp dummy
 
 scoreboard objectives add dafi.arrow.lifetime dummy
+
+scoreboard objectives add dafi.arrow.temp dummy

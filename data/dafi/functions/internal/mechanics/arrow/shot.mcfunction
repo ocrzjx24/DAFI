@@ -34,6 +34,7 @@ execute if score #universal dafi.arrownogravity matches 1 run data modify entity
 
 execute if entity @s[team=red] run tag @e[tag=dafi.arrow.processing] add dafi.arrow.red
 execute if entity @s[team=blue] run tag @e[tag=dafi.arrow.processing] add dafi.arrow.blue
+execute if entity @s[team=ffa] run tag @e[tag=dafi.arrow.processing] add dafi.arrow.ffa
 
 # class assignment
 execute if entity @s[tag=dafi.siege,scores={dafi.siege.mode=0}] as @e[tag=dafi.arrow.processing] at @s run function dafi:internal/class/siege/arrow/arrow_initialize
