@@ -6,6 +6,11 @@
 #execute at @e[type=arrow] run particle firework ~ ~ ~ 0 0 0 0 1 force
 execute if entity @s[tag=dafi.arrow.blue,tag=dafi.arrow.explode] as @a[team=!blue,distance=..6.83,advancements={dafi:shield=false}] run function dafi:internal/mechanics/arrow/arrow_inground/bluesummon
 execute if entity @s[tag=dafi.arrow.red,tag=dafi.arrow.explode] as @a[team=!red,distance=..6.83,advancements={dafi:shield=false}] run function dafi:internal/mechanics/arrow/arrow_inground/redsummon
+scoreboard players operation #test dafi.arrow.temp = @s dafi.sbsid
+execute if entity @s[tag=dafi.arrow.ffa,tag=dafi.arrow.explode] as @a[distance=..6.83,advancements={dafi:shield=false}] unless score @s dafi.sbsid = #test dafi.arrow.temp run function dafi:internal/mechanics/arrow/arrow_inground/ffasummon
+scoreboard players reset #test dafi.arrow.temp
+
+
 execute if entity @s[tag=dafi.arrow.explode] run particle minecraft:firework ~ ~ ~ 0 0 0 0.3 100 force
 execute if entity @s[tag=dafi.arrow.explode] run playsound entity.firework_rocket.large_blast master @a ~ ~ ~ 1 1.4
 
