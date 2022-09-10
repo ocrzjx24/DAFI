@@ -1,4 +1,5 @@
 scoreboard objectives add dafi.ball.dropNoteBlock minecraft.dropped:minecraft.note_block
+scoreboard objectives add dafi.ball.grabCD dummy
 
 scoreboard objectives add dafi.ball.x1 dummy
 scoreboard objectives add dafi.ball.y1 dummy

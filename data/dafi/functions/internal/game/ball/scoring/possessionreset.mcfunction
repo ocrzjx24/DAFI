@@ -1,0 +1,2 @@
+execute as @s run bossbar set dafi.ball.possession value 100
+execute as @s run bossbar set dafi.ball.possession name ["",{"text":"\u25c0 ","color":"white"},{"selector":"@s","color":"white"},{"text":" is now in possession \u25b6","color":"white"}]
