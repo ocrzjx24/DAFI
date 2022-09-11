@@ -18,7 +18,7 @@ gamerule mobGriefing false
 gamerule randomTickSpeed 0
 
 scoreboard players set #universal dafi.antidrop 1
-scoreboard players set #universal dafi.arrowdelay 30
+scoreboard players set #universal dafi.arrowdelay 20
 scoreboard players set #universal dafi.arrownogravity 1
 scoreboard players set #universal dafi.autospectate 0
 scoreboard players set #universal dafi.dropdye 0

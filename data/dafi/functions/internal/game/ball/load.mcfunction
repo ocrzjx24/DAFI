@@ -11,6 +11,9 @@ scoreboard objectives add dafi.ball.x3 dummy
 scoreboard objectives add dafi.ball.y3 dummy
 scoreboard objectives add dafi.ball.z3 dummy
 
+scoreboard objectives add dafi.ball.orgate dummy
+scoreboard objectives add dafi.ball.temp dummy
+
 ## SCORES AND SCORING
 scoreboard objectives add dafi.ball.board dummy
 scoreboard objectives modify dafi.ball.board displayname ["",{"text":"\u1405 SCO","bold":true,"color":"white"},{"text":"R","bold":true,"color":"gold"},{"text":"E \u140a","bold":true,"color":"yellow"}]

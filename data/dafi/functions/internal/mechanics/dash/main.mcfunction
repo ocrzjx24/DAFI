@@ -70,10 +70,8 @@ execute as @a[scores={dafi.dash.CD=1..}] run scoreboard players remove @s dafi.d
 ## flap
 
 execute as @a[scores={dafi.dash.time=0}] at @s run playsound minecraft:entity.ender_dragon.flap master @s ~ ~1000 ~ 1000 1.5
-execute as @a[scores={dafi.dash.time=0}] at @s run function dafi:internal/mechanics/dash/particle1
-
+# execute as @a[scores={dafi.dash.time=0}] at @s run function dafi:internal/mechanics/dash/particle1
 # execute as @a[scores={doubleJumpTime=0},tag=saint] at @s if predicate dafi:is_sneaking run scoreboard players set @s sneakbullshit 1
-
 # execute as @a[scores={doubleJumpTime=0}] unless score @s sneakbullshit matches 1 run scoreboard players set $strength delta.api.launch 5000
 # execute as @a[scores={doubleJumpTime=0}] unless score @s sneakbullshit matches 1 at @s run function dafi:mechanics/api/launch_looking
 # execute as @a[scores={doubleJumpTime=0}] unless score @s sneakbullshit matches 1 run scoreboard players reset $strength delta.api.launch
@@ -86,7 +84,10 @@ execute as @a[scores={dafi.dash.time=0}] at @s run function dafi:internal/mechan
 # execute as @a[scores={doubleJumpTime=1},tag=saint] if score @s sneakbullshit matches 1 at @s run function dafi:mechanics/api/launch_xyz
 # execute as @a[scores={doubleJumpTime=1},tag=saint] if score @s sneakbullshit matches 1 run scoreboard players reset $y delta.api.launch
 
-execute as @a[scores={dafi.dash.time=0},tag=dafi.crouched] run scoreboard players set @s delta.addition.magnitude 12500
+execute as @a[scores={dafi.dash.time=0},tag=dafi.crouched] at @s rotated ~ 0 positioned ~ ~1 ~ run function dafi:internal/mechanics/dash/particle1
+#execute as @a[scores={dafi.dash.time=0},tag=dafi.crouched] at @s rotated ~ 0 positioned ~ ~1 ~ run function dafi:internal/mechanics/dash/particle2
+#execute as @a[scores={dafi.dash.time=0},tag=dafi.crouched] at @s rotated ~ 0 positioned ~ ~1 ~ run function dafi:internal/mechanics/dash/particle3
+execute as @a[scores={dafi.dash.time=0},tag=dafi.crouched] run scoreboard players set @s delta.addition.magnitude 10000
 execute as @a[scores={dafi.dash.time=0},tag=dafi.crouched] at @s rotated ~ 0 run function dafi:internal/mechanics/addition/add_motion
 # execute as @a[scores={dafi.dash.time=0},tag=!dafi.saint] store result score @s dafi.dash.y run data get entity @s Motion[1] -10000
 execute as @a[scores={dafi.dash.time=0},tag=dafi.crouched] run scoreboard players set @s delta.addition.magnitude 4000
@@ -94,6 +95,9 @@ execute as @a[scores={dafi.dash.time=0},tag=dafi.crouched] run scoreboard player
 execute as @a[scores={dafi.dash.time=0},tag=dafi.crouched] at @s rotated 0 -90 run function dafi:internal/mechanics/addition/add_motion
 execute as @a[scores={dafi.dash.time=0},tag=dafi.crouched] run tag @s add dafi.slide.exempt
 
+execute as @a[scores={dafi.dash.time=0},tag=!dafi.slide.exempt] at @s rotated ~ -20 positioned ~ ~1 ~ run function dafi:internal/mechanics/dash/particle1
+#execute as @a[scores={dafi.dash.time=0},tag=!dafi.slide.exempt] at @s rotated ~ -20 positioned ~ ~1 ~ run function dafi:internal/mechanics/dash/particle2
+#execute as @a[scores={dafi.dash.time=0},tag=!dafi.slide.exempt] at @s rotated ~ -20 positioned ~ ~1 ~ run function dafi:internal/mechanics/dash/particle3
 execute as @a[scores={dafi.dash.time=0},tag=!dafi.slide.exempt] run scoreboard players set @s delta.addition.magnitude 6000
 execute as @a[scores={dafi.dash.time=0},tag=!dafi.slide.exempt] at @s rotated ~ 0 run function dafi:internal/mechanics/addition/add_motion
 # execute as @a[scores={dafi.dash.time=0},tag=!dafi.saint] store result score @s dafi.dash.y run data get entity @s Motion[1] -10000

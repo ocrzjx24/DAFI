@@ -9,6 +9,9 @@ execute if score @s dafi.saint.dropFeather matches 1 at @s run playsound minecra
 execute if score @s dafi.saint.dropFeather matches 1 at @s run playsound minecraft:entity.parrot.fly master @a ~ ~ ~ 1 1
 execute if score @s[team=red] dafi.saint.dropFeather matches 1 at @s run function dafi:internal/class/saint/raycast/red/fire
 execute if score @s[team=blue] dafi.saint.dropFeather matches 1 at @s run function dafi:internal/class/saint/raycast/blue/fire
+scoreboard players operation #test dafi.temp = @s dafi.sbsid
+execute if score @s[team=ffa] dafi.saint.dropFeather matches 1 at @s run function dafi:internal/class/saint/raycast/ffa/fire
+scoreboard players reset #test dafi.temp
 execute if score @s dafi.saint.dropFeather matches 1 run tag @s remove dafi.saint.this
 #execute if score @s feather matches 20 run item replace entity @s armor.chest with elytra{Unbreakable:1,HideFlags:4} 1
 #execute if score @s feather matches 62.. run clear @s minecraft:elytra

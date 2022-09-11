@@ -1,0 +1,8 @@
+[
+    {
+      "function": "minecraft:set_nbt",
+      "name": "faggotron",
+      "tag": "{LodestoneTracked:0}"
+    }
+  ]
+  

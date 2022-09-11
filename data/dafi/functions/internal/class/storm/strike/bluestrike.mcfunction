@@ -6,4 +6,4 @@ particle minecraft:sonic_boom ~ ~ ~ 1 1 1 1000 20 force
 
 execute at @s run function dafi:internal/class/storm/strike/rocketjumpwaltz
 
-execute at @s run tag @a[team=blue,tag=strike,distance=..5] add dafi.storm.garden
+execute at @s run tag @a[team=blue,tag=dafi.storm.strike,distance=..5] add dafi.storm.garden

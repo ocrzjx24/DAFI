@@ -1,19 +1,13 @@
-#execute at @e[type=arrow,nbt={inGround:1b}] run summon firework_rocket ~ ~ ~ {LifeTime:0,FireworksItem:{id:"minecraft:firework_rocket",Count:1b,tag:{Fireworks:{Flight:2,Explosions:[{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]},{Type:4,Flicker:0,Trail:0,Colors:[I;11743532]}]},HideFlags:63}}}
-#execute at @e[type=arrow,nbt={inGround:1b}] run execute at @e[type=arrow] run effect give @e[distance=..5] instant_damage 1 1 true
-#execute at @e[type=arrow,nbt={inGround:1b}] run tag @e[type=!arrow,type=!marker,distance=..3] add arrowInit
-#execute at @e[type=arrow,nbt={inGround:1b,Color:16711680}] as @e[type=!marker,type=!arrow,team=!red,distance=..4.83] run function dafi:mechanics/arrow_inground/summon
+tag @s add dafi.arrow.inground
+scoreboard players operation #temp dafi.sbsid = @s dafi.sbsid
 
-#execute at @e[type=arrow] run particle firework ~ ~ ~ 0 0 0 0 1 force
-execute if entity @s[tag=dafi.arrow.blue,tag=dafi.arrow.explode] as @a[team=!blue,distance=..6.83,advancements={dafi:shield=false}] run function dafi:internal/mechanics/arrow/arrow_inground/bluesummon
-execute if entity @s[tag=dafi.arrow.red,tag=dafi.arrow.explode] as @a[team=!red,distance=..6.83,advancements={dafi:shield=false}] run function dafi:internal/mechanics/arrow/arrow_inground/redsummon
-scoreboard players operation #test dafi.arrow.temp = @s dafi.sbsid
-execute if entity @s[tag=dafi.arrow.ffa,tag=dafi.arrow.explode] as @a[distance=..6.83,advancements={dafi:shield=false}] unless score @s dafi.sbsid = #test dafi.arrow.temp run function dafi:internal/mechanics/arrow/arrow_inground/ffasummon
-scoreboard players reset #test dafi.arrow.temp
-
+execute if entity @s[tag=dafi.arrow.blue,tag=dafi.arrow.explode] as @a[team=!blue,distance=..8.83,advancements={dafi:shield=false}] run function dafi:internal/mechanics/arrow/arrow_aoe/summon
+execute if entity @s[tag=dafi.arrow.red,tag=dafi.arrow.explode] as @a[team=!red,distance=..8.83,advancements={dafi:shield=false}] run function dafi:internal/mechanics/arrow/arrow_aoe/summon
+#execute if entity @s[tag=dafi.arrow.ffa,tag=dafi.arrow.explode] as @a[distance=..8.83,advancements={dafi:shield=false}] unless score @s dafi.sbsid = #temp dafi.sbsid run function dafi:internal/mechanics/arrow/arrow_aoe/summon
+execute if entity @s[tag=dafi.arrow.ffa,tag=dafi.arrow.explode] as @a[distance=..8.83,advancements={dafi:shield=false}] unless score @s dafi.sbsid = #temp dafi.sbsid run function dafi:internal/mechanics/arrow/arrow_aoe/summon
 
 execute if entity @s[tag=dafi.arrow.explode] run particle minecraft:firework ~ ~ ~ 0 0 0 0.3 100 force
 execute if entity @s[tag=dafi.arrow.explode] run playsound entity.firework_rocket.large_blast master @a ~ ~ ~ 1 1.4
-
 execute if entity @s[tag=dafi.arrow.explode] if score #universal dafi.rocketjump matches 1 run function dafi:internal/mechanics/arrow/rocketjump/main
 
 execute if entity @s[tag=dafi.arrow.siege] run function dafi:internal/class/siege/arrow/arrow_inground
@@ -29,4 +23,7 @@ execute if entity @s[tag=dafi.arrow.swamp,tag=!dafi.arrow.swamp.tunnel] run func
 
 #function dafi:internal/mechanics/arrow/redirect
 
+scoreboard players reset #temp dafi.sbsid
+
+tag @s remove dafi.arrow.inground
 kill @e[type=arrow,tag=!dafi.arrow.donotkill,nbt={inGround:1b}]

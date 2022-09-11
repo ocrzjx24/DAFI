@@ -5,6 +5,7 @@ execute if score @s dafi.steel.dropStoneAxe matches 1 unless predicate dafi:is_s
 execute if score @s dafi.steel.dropStoneAxe matches 1 if predicate dafi:is_sneaking at @s run playsound minecraft:entity.iron_golem.damage master @a ~ ~ ~ 1 1
 execute if score @s[team=blue] dafi.steel.dropStoneAxe matches 1 if predicate dafi:is_sneaking at @s anchored eyes positioned ^-3 ^-3 ^1 run function dafi:internal/class/steel/summon2/bluesummon2
 execute if score @s[team=red] dafi.steel.dropStoneAxe matches 1 if predicate dafi:is_sneaking at @s anchored eyes positioned ^-3 ^-3 ^1 run function dafi:internal/class/steel/summon2/redsummon2 
+execute if score @s[team=ffa] dafi.steel.dropStoneAxe matches 1 if predicate dafi:is_sneaking at @s anchored eyes positioned ^-3 ^-3 ^1 run function dafi:internal/class/steel/summon2/ffasummon2 
 
 #execute as @s[predicate=dafi:is_sneaking] at @s anchored eyes run function dafi:class/steel/reposition
 # execute at @e[type=shulker,tag=dafi.steel.blockRockets] run function dafi:internal/class/steel/blockrockets

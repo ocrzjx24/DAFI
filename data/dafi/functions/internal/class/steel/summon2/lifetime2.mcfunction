@@ -1,7 +1,10 @@
 #execute at @e[tag=dafi.steel.wallCast,tag=w23] positioned ^ ^ ^ run function dafi:class/steel/particle/particle3
 execute at @e[tag=dafi.steel.wallCast] positioned ^ ^ ^ run function dafi:internal/class/steel/particle/particle4
-execute at @e[tag=dafi.steel.wallCast,tag=dafi.steel.blueWall] as @e[distance=..1,type=arrow,nbt={Color:16711680}] run data modify entity @s Motion set value 0
-execute at @e[tag=dafi.steel.wallCast,tag=dafi.steel.redWall] as @e[distance=..1,type=arrow,nbt={Color:255}] run data modify entity @s Motion set value 0
+
+scoreboard players operation #temp dafi.sbsid = @s dafi.sbsid
+execute at @e[tag=dafi.steel.wallCast,tag=dafi.steel.blueWall] as @e[distance=..1,type=arrow,tag=dafi.arrow.red] run data modify entity @s Lifetime set value 0
+execute at @e[tag=dafi.steel.wallCast,tag=dafi.steel.redWall] as @e[distance=..1,type=arrow,tag=dafi.arrow.blue] run data modify entity @s Lifetime set value 0
+execute at @e[tag=dafi.steel.wallCast,tag=dafi.steel.ffaWall] as @e[distance=..1,type=arrow] unless score @s dafi.sbsid = #temp dafi.sbsid run data modify entity @s Lifetime set value 0
 
 # execute at @e[tag=dafi.steel.wallCast,tag=dafi.steel.blueWall] as @a[distance=..1,team=!blue] run effect give @s poison 5 100 true
 # execute at @e[tag=dafi.steel.wallCast,tag=dafi.steel.redWall] as @a[distance=..1,team=!red] run effect give @s poison 5 100 true
@@ -18,6 +21,11 @@ execute as @e[tag=dafi.steel.wallCast,tag=dafi.steel.blueWall] at @s as @a[dista
 
 execute as @e[tag=dafi.steel.wallCast,tag=dafi.steel.redWall] at @s run scoreboard players set @a[distance=..1,team=!red] delta.addition.magnitude 3000
 execute as @e[tag=dafi.steel.wallCast,tag=dafi.steel.redWall] at @s as @a[distance=..1,team=!red] at @s rotated as @e[limit=1,tag=dafi.steel.wallCast] run function dafi:internal/mechanics/addition/add_motion
+
+execute as @e[tag=dafi.steel.wallCast,tag=dafi.steel.ffaWall] at @s as @a[distance=..1] unless score @s dafi.sbsid = #temp dafi.sbsid run scoreboard players set @s delta.addition.magnitude 3000
+execute as @e[tag=dafi.steel.wallCast,tag=dafi.steel.ffaWall] at @s as @a[distance=..1] unless score @s dafi.sbsid = #temp dafi.sbsid at @s rotated as @e[limit=1,tag=dafi.steel.wallCast] run function dafi:internal/mechanics/addition/add_motion
+
+scoreboard players reset #temp dafi.sbsid
 
 execute as @e[tag=dafi.steel.wallCast] at @s if block ^ ^ ^0.4 #dafi:air run tp @s ^ ^ ^0.4
 execute as @e[tag=dafi.steel.wallCast] at @s unless block ^ ^ ^0.4 #dafi:air run playsound entity.generic.swim master @a ~ ~ ~ 0.1 1

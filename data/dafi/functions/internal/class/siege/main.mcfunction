@@ -16,10 +16,16 @@ execute at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=d
 execute if predicate dafi:is_not_sneaking at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] run scoreboard players set @s delta.addition.magnitude 15000
 execute if predicate dafi:is_not_sneaking at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] facing entity @e[type=marker,tag=dafi.siege.targetmarker,limit=1] feet run function dafi:internal/mechanics/addition/add_motion
 
+scoreboard players operation #temp dafi.sbsid = @s dafi.sbsid
 execute if predicate dafi:is_sneaking at @s[team=red,tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] as @e[type=marker,tag=dafi.siege.targetmarker] at @s run scoreboard players set @a[distance=..5,team=!red] delta.addition.magnitude 15000
 execute if predicate dafi:is_sneaking at @s[team=blue,tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] as @e[type=marker,tag=dafi.siege.targetmarker] at @s run scoreboard players set @a[distance=..5,team=!blue] delta.addition.magnitude 15000
+execute if predicate dafi:is_sneaking at @s[team=ffa,tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] as @e[type=marker,tag=dafi.siege.targetmarker] at @s as @a[distance=..5] unless score @s dafi.sbsid = #temp dafi.sbsid run scoreboard players set @s delta.addition.magnitude 15000
+
 execute if predicate dafi:is_sneaking at @s[team=red,tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] as @e[type=marker,tag=dafi.siege.targetmarker] at @s as @a[distance=..5,team=!red] at @s facing entity @e[type=marker,tag=dafi.siege.targetmarker] eyes run function dafi:internal/mechanics/addition/add_motion
 execute if predicate dafi:is_sneaking at @s[team=blue,tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] as @e[type=marker,tag=dafi.siege.targetmarker] at @s as @a[distance=..5,team=!blue] at @s facing entity @e[type=marker,tag=dafi.siege.targetmarker] eyes run function dafi:internal/mechanics/addition/add_motion
+execute if predicate dafi:is_sneaking at @s[team=ffa,tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] as @e[type=marker,tag=dafi.siege.targetmarker] at @s as @a[distance=..5] unless score @s dafi.sbsid = #temp dafi.sbsid at @s facing entity @e[type=marker,tag=dafi.siege.targetmarker] eyes run function dafi:internal/mechanics/addition/add_motion
+scoreboard players reset #temp dafi.sbsid
+
 execute if predicate dafi:is_sneaking at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] at @s run scoreboard players set @a[distance=..5] dafi.mechanics.slow 20
 
 execute if predicate dafi:is_sneaking at @s[tag=dafi.siege.fishing] unless entity @e[type=fishing_bobber,tag=dafi.siege.bobberinrange,distance=..30] as @e[type=fishing_bobber,tag=dafi.siege.bobberinrange] at @s run playsound minecraft:block.chain.break master @a[distance=..5,team=!red] ~ ~ ~ 1 0.75

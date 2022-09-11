@@ -6,7 +6,7 @@
 
 ## INITIAL INSTANCE
 effect give @s[scores={dafi.shade.castTagged=1}] blindness 1 0 true
-tag @s[scores={dafi.shade.castTagged=1}] add dafi.mechanics.glow
+tag @s[scores={dafi.shade.castTagged=1}] add dafi.glow
 
 #effect give @s[scores={dafi.shade.castTagged=1}] glowing 1 0 true
 

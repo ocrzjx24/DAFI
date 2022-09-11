@@ -1,1 +1,1 @@
-tag @s add dafi.arrow.sting.stuck
+# tag @s add dafi.arrow.sting.stuck
