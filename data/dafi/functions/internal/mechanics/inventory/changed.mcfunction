@@ -6,5 +6,5 @@
 
 execute if entity @s[tag=dafi.sting] unless entity @s[nbt={Inventory:[{id:"minecraft:crossbow"}]}] run function dafi:internal/class/sting/dropcrossbow
 execute if entity @s[tag=dafi.siege] unless entity @s[nbt={Inventory:[{id:"minecraft:crossbow"}]}] run function dafi:internal/class/siege/dropcrossbow
-#function dafi:internal/game/ball/grabball
-execute if entity @s[tag=siao] run function dafi:class/siao/swap
+execute if entity @s[tag=dafi.swamp] if entity @s run function dafi:internal/class/swamp/swap
+execute if entity @s[tag=siao] run function dafi:internal/class/siao/swap

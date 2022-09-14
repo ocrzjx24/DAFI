@@ -20,6 +20,8 @@ function dafi:internal/class/steel/summon2/lifetime2
 execute as @e[type=magma_cube,tag=dafi.sting.C4] at @s run function dafi:internal/class/sting/c4/c4lifetime
 execute as @e[tag=dafi.sculk.wardenLife] at @s run function dafi:internal/class/sculk/lifetime
 execute at @e[type=trident] run function dafi:internal/class/storm/particle/particle5
+execute as @e[type=trident,nbt={inGround:1b}] run function dafi:internal/class/storm/strike
+execute as @e[type=trident,nbt={DealtDamage:1b}] run function dafi:internal/class/storm/strike
 execute as @e[type=fishing_bobber,tag=!dafi.siege.processed] run function dafi:internal/class/siege/bobber/bobberprocess
 execute as @e[type=fishing_bobber,tag=dafi.siege.processed] run function dafi:internal/class/siege/bobber/bobber
 execute as @e[type=marker,tag=dafi.siege.bobbercheck] run function dafi:internal/class/siege/bobber/bobbercheck

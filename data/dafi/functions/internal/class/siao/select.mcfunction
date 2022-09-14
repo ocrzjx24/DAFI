@@ -20,3 +20,6 @@ title @s reset
 
 ## SCOREBOARD
 # scoreboard players reset @a[scores={magenta=1..}] magenta
+
+## advancements
+advancement revoke @s only dafi:inventory_changed

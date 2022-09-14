@@ -18,7 +18,7 @@ tag @s remove dafi.swamp
 tag @s remove dafi.wallrunP
 
 ## EXTRANEOUS TINGS
-execute as @e[type=armor_stand,tag=swampTP] if score @s sbsid = @a[scores={class=1},limit=1] sbsid run kill @s
+execute as @e[type=armor_stand,tag=swampTP] if score @s dafi.sbsid = @a[scores={dafi.class=1},limit=1] dafi.sbsid run kill @s
 
 ## SCOREBOARDS (incomplete)
 scoreboard players reset @s dafi.siege.mode

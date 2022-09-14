@@ -31,3 +31,6 @@ execute at @s run playsound minecraft:item.armor.equip_netherite master @s ~ ~ ~
 
 # title
 title @s reset
+
+## advancements
+advancement revoke @s only dafi:inventory_changed

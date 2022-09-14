@@ -28,3 +28,6 @@ title @s reset
 scoreboard players set @s dafi.sting.rotate 1
 scoreboard players set @s dafi.sting.gCD 0
 # scoreboard players reset @a[scores={orange=1..}] orange
+
+## advancements
+advancement revoke @s only dafi:inventory_changed

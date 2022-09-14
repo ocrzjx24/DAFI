@@ -7,6 +7,7 @@ summon marker ~ ~ ~ {Tags:["dafi.arrow.saint.helper"]}
 #tp @e[tag=dafi.arrow.saint.helper] ~ ~ ~ facing entity @a[sort=nearest,limit=1] eyes 
 execute if entity @s[tag=dafi.arrow.red] run tp @e[tag=dafi.arrow.saint.helper] ~ ~ ~ facing entity @a[team=!red,sort=nearest,limit=1] eyes 
 execute if entity @s[tag=dafi.arrow.blue] run tp @e[tag=dafi.arrow.saint.helper] ~ ~ ~ facing entity @a[team=!blue,sort=nearest,limit=1] eyes 
+#execute if entity @s[tag=dafi.arrow.ffa] run tp @e[tag=dafi.arrow.saint.helper] ~ ~ ~ facing entity @a[sort=nearest,limit=1] eyes 
 
 
 summon marker 0.0 0.0 0.0 {Tags:["dafi.arrow.saint.origin"]}

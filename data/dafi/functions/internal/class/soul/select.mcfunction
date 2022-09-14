@@ -23,3 +23,6 @@ title @s reset
 
 ## SCOREBOARD
 # scoreboard players reset @a[scores={yellow=1..}] yellow
+
+## advancements
+advancement revoke @s only dafi:inventory_changed

@@ -26,3 +26,6 @@ scoreboard players set @s dafi.siege.shotgunShots 30
 scoreboard players reset @s dafi.siege.mode
 scoreboard players reset @s dafi.siege.shotgunCD 
 # scoreboard players reset @a[scores={gray=1..}] gray
+
+## advancements
+advancement revoke @s only dafi:inventory_changed

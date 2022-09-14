@@ -60,8 +60,8 @@ execute as @a unless score @s dafi.dash.onGroundCheck matches 1 run tag @s[tag=!
 execute as @a run scoreboard players set @a[nbt={FallFlying:1b}] dafi.dash.time 0 
 execute as @a[scores={dafi.dash.time=0}] run scoreboard players set @s dafi.dash.CD 40
 
-title @a[scores={dafi.dash.CD=40}] actionbar ["",{"text":">>>","bold":true,"color":"gold"},{"text":" DASH","bold":true,"color":"green"},{"text":" <<<","bold":true,"color":"gold"}]
-title @a[scores={dafi.dash.CD=1}] actionbar ["",{"text":">>>","bold":true,"color":"gray"},{"text":" DASH READY","bold":true},{"text":" <<<","bold":true,"color":"gray"}]
+#title @a[scores={dafi.dash.CD=40}] actionbar ["",{"text":">>>","bold":true,"color":"gold"},{"text":" DASH","bold":true,"color":"green"},{"text":" <<<","bold":true,"color":"gold"}]
+#title @a[scores={dafi.dash.CD=1}] actionbar ["",{"text":">>>","bold":true,"color":"gray"},{"text":" DASH READY","bold":true},{"text":" <<<","bold":true,"color":"gray"}]
 
 # scoreboard players reset @a[scores={dashCD=0}] dashCD
 

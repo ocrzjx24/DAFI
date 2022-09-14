@@ -23,3 +23,6 @@ title @s reset
 ## SCOREBOARD
 scoreboard players set @s dafi.slay.CD 0
 # scoreboard players reset @a[scores={red=1..}] red
+
+## advancements
+advancement revoke @s only dafi:inventory_changed

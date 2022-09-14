@@ -21,3 +21,6 @@ title @s reset
 
 ## SCOREBOARD
 # scoreboard players reset @a[scores={lime=1..}] lime
+
+## advancements
+advancement revoke @s only dafi:inventory_changed
