@@ -1,0 +1,2 @@
+execute unless entity @e[type=marker,tag=dafi.math.cos.helper] run function dafi:internal/mechanics/math/trigonometry/rotational/summon
+execute as @e[tag=dafi.math.cos.helper,limit=1] at @s run function dafi:internal/mechanics/math/trigonometry/rotational/cos_calculate
