@@ -6,4 +6,5 @@
 execute at @s run summon marker ~ ~ ~ {Tags:["dafi.storm.helper"]}
 execute at @e[tag=dafi.storm.helper] as @a[distance=..7.5] run function dafi:internal/class/storm/strike/get_launch
 execute at @e[tag=dafi.storm.helper] as @a[distance=..7.5] at @e[tag=dafi.storm.helper] facing entity @s feet run function dafi:internal/mechanics/addition/add_motion
+execute at @e[tag=dafi.storm.helper] as @a[distance=..7.5] run scoreboard players operation @s delta.addition.y /= #constant.2 dafi.math
 kill @e[tag=dafi.storm.helper]
