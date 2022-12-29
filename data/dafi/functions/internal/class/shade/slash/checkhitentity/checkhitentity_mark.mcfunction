@@ -1,0 +1,3 @@
+#execute positioned ~-0.4 ~-0.4 ~-0.4 if entity @s[dx=0] positioned ~0.4 ~0.4 ~0.4 at @s run particle minecraft:witch ~ ~ ~ 0.1 0.1 0.1 2 3 force
+#execute positioned ~-0.4 ~-0.4 ~-0.4 if entity @s[dx=0] positioned ~0.4 ~0.4 ~0.4 at @s run particle minecraft:enchanted_hit ~ ~1 ~ 0.1 0.1 0.1 0.5 2
+execute positioned ~-0.4 ~-0.4 ~-0.4 if entity @s[dx=0,tag=!dafi.shade.hit.marked] positioned ~0.4 ~0.4 ~0.4 run tag @s add dafi.shade.hit.marked

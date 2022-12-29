@@ -4,5 +4,5 @@ execute at @s run function dafi:internal/class/soul/particle1
 #execute at @s run function dafi:internal/class/soul/particle2 
 #execute at @s run function dafi:internal/class/soul/particle3
 
-scoreboard players set @s delta.addition.magnitude 12500
+scoreboard players set @s delta.addition.magnitude 10000
 execute at @s run function dafi:internal/mechanics/addition/add_motion

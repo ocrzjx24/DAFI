@@ -25,4 +25,7 @@ execute as @e[type=trident,nbt={DealtDamage:1b}] run function dafi:internal/clas
 execute as @e[type=fishing_bobber,tag=!dafi.siege.processed] run function dafi:internal/class/siege/bobber/bobberprocess
 execute as @e[type=fishing_bobber,tag=dafi.siege.processed] run function dafi:internal/class/siege/bobber/bobber
 execute as @e[type=marker,tag=dafi.siege.bobbercheck] run function dafi:internal/class/siege/bobber/bobbercheck
+scoreboard players add @e[tag=dafi.shade.slashpos] dafi.shade.slashTime 1
+function dafi:internal/class/shade/slash/lifetime
+function dafi:internal/class/shade/marked/marked
 # function dafi:class/siege/lifetime

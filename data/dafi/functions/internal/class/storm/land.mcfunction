@@ -6,7 +6,7 @@ scoreboard players operation #temp dafi.sbsid = @s dafi.sbsid
 
 clear @s diamond_shovel
 execute at @s run kill @e[type=item,nbt={Item:{id:"minecraft:diamond_shovel"}},sort=nearest,limit=1]
-item replace entity @s hotbar.1 with diamond_shovel{display:{Name:'[{"text":"Wavebreaker","italic":false,"bold":true,"color":"aqua"}]'},Unbreakable:1,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Amount:8.0,Operation:0,UUID:[I;1028214595,1066950744,1016402789,1603413261]},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Slot:"mainhand",Amount:-0.4,Operation:2,UUID:[I;1028214595,1066950744,1016402789,1603413261]}],HideFlags:7} 1
+item replace entity @s hotbar.1 with diamond_shovel{mainhand:1,display:{Name:'[{"text":"Wavebreaker","italic":false,"bold":true,"color":"aqua"}]'},Unbreakable:1,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Amount:8.0,Operation:0,UUID:[I;1028214595,1066950744,1016402789,1603413261]},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Slot:"mainhand",Amount:-0.4,Operation:2,UUID:[I;1028214595,1066950744,1016402789,1603413261]}],HideFlags:7} 1
 
 execute at @s run function dafi:internal/class/storm/particle/particle6
 execute if predicate dafi:is_sneaking at @s run function dafi:internal/class/storm/particle/particle7

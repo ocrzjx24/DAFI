@@ -1,14 +1,14 @@
 ## kaboom
 execute if predicate dafi:is_sneaking if score @s dafi.sting.dropBlazeRod matches 1 run scoreboard players set @s dafi.sting.c4CD 1
 execute if score @s dafi.sting.c4CD matches 1 at @s run function dafi:internal/class/sting/c4/summonc4
-execute if score @s dafi.sting.c4CD matches 1 run item replace entity @s hotbar.1 with stick{display:{Name:'[{"text":"Wizard\'s","italic":false,"color":"#ff9900","bold":true},{"text":" ","color":"gold"},{"text":"Wand","color":"#ffcc00"}]',Lore:['[{"text":"please change this later","italic":false,"color":"dark_gray"}]']},Enchantments:[{id:fire_aspect,lvl:5}]} 1
+execute if score @s dafi.sting.c4CD matches 1 run item replace entity @s hotbar.1 with stick{mainhand:1,display:{Name:'[{"text":"Wizard\'s","italic":false,"color":"#ff9900","bold":true},{"text":" ","color":"gold"},{"text":"Wand","color":"#ffcc00"}]',Lore:['[{"text":"please change this later","italic":false,"color":"dark_gray"}]']},Enchantments:[{id:fire_aspect,lvl:5}]} 1
 execute if score @s dafi.sting.c4CD matches 60.. run clear @s stick{Enchantments:[{id:fire_aspect,lvl:5}]} 1
-execute if score @s dafi.sting.c4CD matches 60.. run item replace entity @s hotbar.1 with blaze_rod{display:{Name:'[{"text":"Wizard\'s","italic":false,"color":"#ff9900","bold":true},{"text":" ","color":"gold"},{"text":"Wand","color":"#ffcc00"}]',Lore:['[{"text":"please change this later","italic":false,"color":"dark_gray"}]']},Enchantments:[{id:fire_aspect,lvl:5}]} 1
+execute if score @s dafi.sting.c4CD matches 60.. run item replace entity @s hotbar.1 with blaze_rod{mainhand:1,display:{Name:'[{"text":"Wizard\'s","italic":false,"color":"#ff9900","bold":true},{"text":" ","color":"gold"},{"text":"Wand","color":"#ffcc00"}]',Lore:['[{"text":"please change this later","italic":false,"color":"dark_gray"}]']},Enchantments:[{id:fire_aspect,lvl:5}]} 1
 execute if score @s dafi.sting.c4CD matches 60.. run scoreboard players reset @s dafi.sting.c4CD
 execute if score @s dafi.sting.c4CD matches 1.. run scoreboard players add @s dafi.sting.c4CD 1
 
 ## dafi.sting.rotate GRENADES
-execute unless predicate dafi:is_sneaking if score @s dafi.sting.dropBlazeRod matches 1 run item replace entity @s hotbar.1 with blaze_rod{display:{Name:'[{"text":"Wizard\'s","italic":false,"color":"#ff9900","bold":true},{"text":" ","color":"gold"},{"text":"Wand","color":"#ffcc00"}]',Lore:['[{"text":"please change this later","italic":false,"color":"dark_gray"}]']},Enchantments:[{id:fire_aspect,lvl:5}]} 1
+execute unless predicate dafi:is_sneaking if score @s dafi.sting.dropBlazeRod matches 1 run item replace entity @s hotbar.1 with blaze_rod{mainhand:1,display:{Name:'[{"text":"Wizard\'s","italic":false,"color":"#ff9900","bold":true},{"text":" ","color":"gold"},{"text":"Wand","color":"#ffcc00"}]',Lore:['[{"text":"please change this later","italic":false,"color":"dark_gray"}]']},Enchantments:[{id:fire_aspect,lvl:5}]} 1
 execute unless predicate dafi:is_sneaking if score @s dafi.sting.dropBlazeRod matches 1 run scoreboard players add @s dafi.sting.gType 1
 execute unless predicate dafi:is_sneaking if score @s dafi.sting.dropBlazeRod matches 1 run tag @s remove dafi.offhandProcessed
 execute unless predicate dafi:is_sneaking if score @s dafi.sting.dropBlazeRod matches 1 at @s run playsound minecraft:item.bottle.fill_dragonbreath master @s ~ ~ ~ 1 1 1

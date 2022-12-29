@@ -15,7 +15,7 @@ scoreboard players reset #temp dafi.sbsid
 execute if score @s dafi.saint.dropFeather matches 1 run tag @s remove dafi.saint.this
 #execute if score @s feather matches 20 run item replace entity @s armor.chest with elytra{Unbreakable:1,HideFlags:4} 1
 #execute if score @s feather matches 62.. run clear @s minecraft:elytra
-execute if score @s dafi.saint.dropFeather matches 100 run item replace entity @s hotbar.1 with feather{display:{Name:'[{"text":"Wings","italic":false,"bold":true,"color":"white"}]'},Enchantments:[{id:"unbreaking",lvl:1}],Unbreakable:1,HideFlags:1} 1
+execute if score @s dafi.saint.dropFeather matches 100 run item replace entity @s hotbar.1 with feather{mainhand:1,display:{Name:'[{"text":"Wings","italic":false,"bold":true,"color":"white"}]'},Enchantments:[{id:"unbreaking",lvl:1}],Unbreakable:1,HideFlags:1} 1
 #execute if score @s dafi.saint.dropFeather matches 1..25 at @s positioned ~ ~2.2 ~ run function dafi:internal/class/saint/particle2
 #execute if score @s feather matches 100.. run clear @s minecraft:elytra
 
