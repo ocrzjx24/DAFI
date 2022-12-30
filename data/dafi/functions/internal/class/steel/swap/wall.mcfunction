@@ -17,7 +17,7 @@
 
 tag @s add dafi.steel.init
 
-execute at @s anchored eyes positioned ~ ~-1 ~ positioned ^ ^ ^4 rotated ~ 90 run function dafi:internal/class/steel/summon1
+execute at @s anchored eyes positioned ~ ~-1 ~ positioned ^ ^ ^4 run function dafi:internal/class/steel/summon1
 
 scoreboard players add .global dafi.sbsid 1
 scoreboard players operation @e[type=armor_stand,tag=dafi.steel.shulkerLife,limit=25,tag=dafi.steel.init] dafi.sbsid = .global dafi.sbsid
