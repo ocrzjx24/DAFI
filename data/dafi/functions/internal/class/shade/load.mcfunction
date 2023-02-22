@@ -1,6 +1,7 @@
 scoreboard objectives add dafi.shade.dropNetheriteSword minecraft.dropped:minecraft.netherite_sword
-scoreboard objectives add dafi.shade.dropNetheriteSword.attackPattern dummy
-scoreboard objectives add dafi.shade.dropNetheriteSword.attackReset dummy
+scoreboard objectives add dafi.shade.drop.cooldown dummy
+scoreboard objectives add dafi.shade.attackPattern dummy
+scoreboard objectives add dafi.shade.attackReset dummy
 scoreboard objectives add dafi.shade.slashTime dummy
 scoreboard objectives add dafi.shade.charge dummy
 scoreboard objectives add dafi.shade.chargeCheck dummy
@@ -9,3 +10,4 @@ scoreboard objectives add dafi.shade.marked.stackCount dummy
 scoreboard objectives add dafi.shade.marked.stackReset dummy
 scoreboard objectives add dafi.shade.swordLife dummy
 scoreboard objectives add dafi.shade.swap.cooldown dummy
+scoreboard objectives add dafi.shade.useWarpedFungusOnAStick minecraft.used:minecraft.warped_fungus_on_a_stick

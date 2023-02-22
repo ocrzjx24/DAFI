@@ -27,6 +27,7 @@ execute unless data entity @s[tag=dafi.slay] Inventory[{Slot:-106b}].tag.mainhan
 ##SOUL
 execute if data entity @s[tag=dafi.soul] Inventory[{Slot:-106b}].tag.mainhand run function dafi:internal/class/soul/swap/swapstart
 execute unless data entity @s[tag=dafi.soul] Inventory[{Slot:-106b}].tag.mainhand if data entity @s SelectedItem.tag.offhand run function dafi:internal/class/soul/swap/swapstart
+
 ##STEEL
 execute if data entity @s[tag=dafi.steel] Inventory[{Slot:-106b}].tag.mainhand run function dafi:internal/class/steel/swap/swapstart
 execute unless data entity @s[tag=dafi.steel] Inventory[{Slot:-106b}].tag.mainhand if data entity @s SelectedItem.tag.offhand run function dafi:internal/class/steel/swap/swapstart
@@ -41,9 +42,9 @@ execute if data entity @s[tag=dafi.storm] Inventory[{Slot:-106b}].tag.mainhand r
 execute unless data entity @s[tag=dafi.storm] Inventory[{Slot:-106b}].tag.mainhand if data entity @s SelectedItem.tag.offhand run function dafi:internal/class/storm/swap/swapstart
 
 ##SWAMP
-execute if entity @s[tag=dafi.swamp] if entity @s run function dafi:internal/class/swamp/swap
 execute if data entity @s[tag=dafi.swamp] Inventory[{Slot:-106b}].tag.mainhand run function dafi:internal/class/swamp/swap/swapstart
 execute unless data entity @s[tag=dafi.swamp] Inventory[{Slot:-106b}].tag.mainhand if data entity @s SelectedItem.tag.offhand run function dafi:internal/class/swamp/swap/swapstart
 
-
+execute if data entity @s Inventory[{Slot:-106b}].tag.mainhand run function dafi:internal/mechanics/inventory/swap
+execute unless data entity @s Inventory[{Slot:-106b}].tag.mainhand if data entity @s SelectedItem.tag.offhand run function dafi:internal/mechanics/inventory/swap
 advancement revoke @s only dafi:inventory_changed

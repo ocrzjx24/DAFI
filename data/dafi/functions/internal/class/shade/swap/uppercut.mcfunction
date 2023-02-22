@@ -5,12 +5,14 @@
 # > dafi:internal/class/shade/swap/swapstart
 
 scoreboard players set @s dafi.shade.swap.cooldown 120
+effect give @s speed 3 4
 execute at @s run playsound entity.player.attack.sweep master @a ~ ~ ~ 1 0.9
 execute at @s run playsound item.trident.riptide_1 master @a ~ ~ ~ 1 1.5
 execute at @s rotated ~ 0 positioned ~ ~1 ~ run function dafi:internal/class/shade/slash/slashtype/slash7
 #execute store result score @s delta.addition.magnitude run data get entity @s Motion[1] -10000
 #execute at @s rotated ~ -90 run function dafi:internal/mechanics/addition/add_motion
-scoreboard players set @s delta.addition.magnitude 4000
+scoreboard players set @s delta.addition.magnitude 2000
 execute at @s rotated ~ -90 run function dafi:internal/mechanics/addition/add_motion
-scoreboard players set @s delta.addition.magnitude 4000
+scoreboard players set @s delta.addition.magnitude 6000
 execute at @s rotated ~ 0 run function dafi:internal/mechanics/addition/add_motion
+

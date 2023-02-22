@@ -24,9 +24,9 @@ scoreboard players remove .itt dafi.raycast 1
 
 execute if score .itt dafi.raycast matches 1.. positioned ^ ^ ^0.3 run function dafi:internal/class/shade/slash/raycast
 
-execute if entity @s[tag=dafi.shade.raycaster.mark.blue] positioned ~ ~ ~ as @e[type=#dafi:entities_raycast,tag=!dafi.shade.this,team=!blue,dx=0] run function dafi:internal/class/shade/slash/checkhitentity/checkhitentity_mark
-execute if entity @s[tag=dafi.shade.raycaster.mark.red] positioned ~ ~ ~ as @e[type=#dafi:entities_raycast,tag=!dafi.shade.this,team=!red,dx=0] run function dafi:internal/class/shade/slash/checkhitentity/checkhitentity_mark
-execute if entity @s[tag=dafi.shade.raycaster.mark.ffa] positioned ~ ~ ~ as @e[type=#dafi:entities_raycast,tag=!dafi.shade.this,dx=0] run function dafi:internal/class/shade/slash/checkhitentity/checkhitentity_mark
-execute if entity @s[tag=dafi.shade.raycaster.damage.blue] positioned ~ ~ ~ as @e[type=#dafi:entities_raycast,tag=!dafi.shade.this,team=!blue,dx=0] run function dafi:internal/class/shade/slash/checkhitentity/checkhitentity_damage
-execute if entity @s[tag=dafi.shade.raycaster.damage.red] positioned ~ ~ ~ as @e[type=#dafi:entities_raycast,tag=!dafi.shade.this,team=!red,dx=0] run function dafi:internal/class/shade/slash/checkhitentity/checkhitentity_damage
-execute if entity @s[tag=dafi.shade.raycaster.damage.ffa] positioned ~ ~ ~ as @e[type=#dafi:entities_raycast,tag=!dafi.shade.this,dx=0] run function dafi:internal/class/shade/slash/checkhitentity/checkhitentity_damage
+execute if entity @s[tag=dafi.shade.raycaster.mark.blue] positioned ~ ~ ~ as @e[type=#dafi:entities_raycast,tag=!dafi.shade.this,team=!blue] run function dafi:internal/class/shade/slash/checkhitentity/checkhitentity_mark
+execute if entity @s[tag=dafi.shade.raycaster.mark.red] positioned ~ ~ ~ as @e[type=#dafi:entities_raycast,tag=!dafi.shade.this,team=!red] run function dafi:internal/class/shade/slash/checkhitentity/checkhitentity_mark
+execute if entity @s[tag=dafi.shade.raycaster.mark.ffa] positioned ~ ~ ~ as @e[type=#dafi:entities_raycast,tag=!dafi.shade.this] run function dafi:internal/class/shade/slash/checkhitentity/checkhitentity_mark
+execute if entity @s[tag=dafi.shade.raycaster.damage.blue] positioned ~ ~ ~ as @e[type=#dafi:entities_raycast,tag=!dafi.shade.this,team=!blue] run function dafi:internal/class/shade/slash/checkhitentity/checkhitentity_damage
+execute if entity @s[tag=dafi.shade.raycaster.damage.red] positioned ~ ~ ~ as @e[type=#dafi:entities_raycast,tag=!dafi.shade.this,team=!red] run function dafi:internal/class/shade/slash/checkhitentity/checkhitentity_damage
+execute if entity @s[tag=dafi.shade.raycaster.damage.ffa] positioned ~ ~ ~ as @e[type=#dafi:entities_raycast,tag=!dafi.shade.this] run function dafi:internal/class/shade/slash/checkhitentity/checkhitentity_damage

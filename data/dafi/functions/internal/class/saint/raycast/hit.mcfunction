@@ -1,0 +1,1 @@
+tag @e[tag=dafi.saint.hit] remove dafi.saint.hit

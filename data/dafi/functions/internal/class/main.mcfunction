@@ -28,4 +28,8 @@ execute as @e[type=marker,tag=dafi.siege.bobbercheck] run function dafi:internal
 scoreboard players add @e[tag=dafi.shade.slashpos] dafi.shade.slashTime 1
 function dafi:internal/class/shade/slash/lifetime
 function dafi:internal/class/shade/marked/marked
+
+function dafi:internal/class/saint/summon/lifetime
+function dafi:internal/class/saint/raycast/hit
+
 # function dafi:class/siege/lifetime
