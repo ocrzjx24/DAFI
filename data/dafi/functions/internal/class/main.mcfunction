@@ -26,6 +26,9 @@ execute as @e[type=fishing_bobber,tag=!dafi.siege.processed] run function dafi:i
 execute as @e[type=fishing_bobber,tag=dafi.siege.processed] run function dafi:internal/class/siege/bobber/bobber
 execute as @e[type=marker,tag=dafi.siege.bobbercheck] run function dafi:internal/class/siege/bobber/bobbercheck
 scoreboard players add @e[tag=dafi.shade.slashpos] dafi.shade.slashTime 1
+
+execute as @e[tag=dafi.soul.swap.soul_circle] at @s run function dafi:internal/class/soul/swap/lifetime
+
 function dafi:internal/class/shade/slash/lifetime
 function dafi:internal/class/shade/marked/marked
 

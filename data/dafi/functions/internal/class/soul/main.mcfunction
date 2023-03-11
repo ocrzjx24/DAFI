@@ -7,6 +7,9 @@ execute if score @s dafi.soul.health matches 8..11 run effect give @s speed 1 5 
 execute if score @s dafi.soul.health matches 4..7 run effect give @s speed 1 6 false
 execute if score @s dafi.soul.health matches 0..3 run effect give @s speed 1 7 false
 
+execute if data entity @s[tag=dafi.soul.swap.primed] {OnGround:1b} at @s run function dafi:internal/class/soul/swap/summon 
+execute if data entity @s[tag=dafi.soul.swap.primed] {OnGround:1b} run tag @s remove dafi.soul.swap.primed
+
 
 ## dafi.soul.cd HIT
 execute if score @s dafi.soul.cd matches 1 at @s run playsound minecraft:entity.blaze.ambient master @s[scores={dafi.soul.cd=1}] ~ ~ ~ 100000 2 1

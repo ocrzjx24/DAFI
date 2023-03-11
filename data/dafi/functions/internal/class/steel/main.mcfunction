@@ -1,9 +1,9 @@
 ## SHIELD CHECK
 function dafi:internal/class/steel/shieldcheck
 ## EMPODIO
-execute if score @s dafi.steel.dropStoneAxe matches 1 at @s run function dafi:internal/class/steel/drop
-execute if score @s dafi.steel.dropStoneAxe matches 1 at @s run playsound minecraft:entity.zombie.break_wooden_door master @a ~ ~1000 ~ 100 1.1
-execute if score @s dafi.steel.dropStoneAxe matches 1 at @s run particle block dirt ~ ~ ~ 4 0 4 1 100 normal
+execute if data entity @s[tag=dafi.steel.drop.primed] {OnGround:1b} run function dafi:internal/class/steel/drop/groundpound
+execute if score @s dafi.steel.dropStoneAxe matches 1 at @s run function dafi:internal/class/steel/drop/drop
+execute if score @s dafi.steel.dropStoneAxe matches 1 at @s run particle cloud ~ ~ ~ 4 0 4 0.5 3 normal
 
 #execute as @s[predicate=dafi:is_sneaking] at @s anchored eyes run function dafi:class/steel/reposition
 # execute at @e[type=shulker,tag=dafi.steel.blockRockets] run function dafi:internal/class/steel/blockrockets

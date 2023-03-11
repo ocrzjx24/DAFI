@@ -1,3 +1,9 @@
+playsound entity.player.attack.sweep master @a ~ ~ ~ 1 1.2
+execute anchored eyes run particle minecraft:sweep_attack ^ ^-0.25 ^1 0 0 0 1 3 normal
+playsound minecraft:block.soul_sand.place master @a ~ ~ ~ 1 1.5
+playsound minecraft:entity.sheep.shear master @a ~ ~ ~ 1 1
+playsound item.trident.riptide_1 master @a ~ ~ ~ 1 1.5
+
 execute as @s[team=red] at @s run summon minecraft:marker ~ ~ ~ {Tags:["dafi.shade.redSword","dafi.shade.sword1","dafi.shade.swordCast","this"]}
 execute as @s[team=red] at @s run summon minecraft:marker ~ ~ ~ {Tags:["dafi.shade.redSword","dafi.shade.sword2","dafi.shade.swordCast","this"]}
 execute as @s[team=red] at @s run summon minecraft:marker ~ ~ ~ {Tags:["dafi.shade.redSword","dafi.shade.sword3","dafi.shade.swordCast","this"]}
