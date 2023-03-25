@@ -58,8 +58,8 @@ execute if score @s dafi.slay.dropIronShovel matches 1.. if score @s dafi.mechan
 #execute at @s[team=blue,scores={dropMCTNT=18}] run effect give @a[team=red,distance=..25] minecraft:glowing 2
 
 ## PARTICLES
-execute if score @s dafi.slay.CD matches 1 at @s anchored eyes run particle minecraft:dust 10 0 0.3 0.7 ^-0.7 ^-1 ^ 0.1 0.1 0.1 0.000001 5 normal
-execute if score @s dafi.slay.CD matches 1 at @s anchored eyes run particle minecraft:dust 10 0 0.3 0.7 ^0.7 ^-1 ^ 0.1 0.1 0.1 0.000001 5 normal
+execute if score @s dafi.slay.CD matches 1 at @s anchored eyes rotated ~ 0 run particle minecraft:dust 10 0 0.3 0.7 ^-0.7 ^-1 ^ 0.1 0.1 0.1 0.000001 5 normal
+execute if score @s dafi.slay.CD matches 1 at @s anchored eyes rotated ~ 0 run particle minecraft:dust 10 0 0.3 0.7 ^0.7 ^-1 ^ 0.1 0.1 0.1 0.000001 5 normal
 
 ## RECON UPDATE
 execute if score @s dafi.slay.dropIronShovel matches 1..139 run scoreboard players add @s dafi.slay.dropIronShovel 1

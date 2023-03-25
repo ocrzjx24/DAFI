@@ -17,7 +17,7 @@ execute at @e[scores={dafi.shade.swordLife=1..},tag=dafi.shade.redSword] run tag
 
 # MARKED
 
-kill @e[scores={dafi.shade.swordLife=7..}]
+kill @e[scores={dafi.shade.swordLife=5..}]
 scoreboard players add @e[type=minecraft:marker,tag=dafi.shade.swordCast] dafi.shade.swordLife 1
 
 

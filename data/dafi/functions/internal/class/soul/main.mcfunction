@@ -6,8 +6,8 @@ execute if score @s dafi.soul.health matches 12..15 run effect give @s speed 1 4
 execute if score @s dafi.soul.health matches 8..11 run effect give @s speed 1 5 false
 execute if score @s dafi.soul.health matches 4..7 run effect give @s speed 1 6 false
 execute if score @s dafi.soul.health matches 0..3 run effect give @s speed 1 7 false
-
-execute if data entity @s[tag=dafi.soul.swap.primed] {OnGround:1b} at @s run function dafi:internal/class/soul/swap/summon 
+execute if data entity @s[tag=dafi.soul.swap.primed] {OnGround:1b} at @s rotated ~ 90 run function dafi:internal/class/soul/drop/particle2
+execute if data entity @s[tag=dafi.soul.swap.primed] {OnGround:1b} at @s run function dafi:internal/class/soul/drop/summon 
 execute if data entity @s[tag=dafi.soul.swap.primed] {OnGround:1b} run tag @s remove dafi.soul.swap.primed
 
 
@@ -22,10 +22,8 @@ execute if score @s dafi.soul.cd matches 1.. run scoreboard players reset @s daf
 ## DASH
 execute if score @s dafi.soul.dropgoldenhoe matches 1 unless score @s dafi.soul.drop.cooldown matches 1.. run scoreboard players set @s dafi.soul.drop.cooldown 1
 execute if score @s dafi.soul.dropgoldenhoe matches 1.. run scoreboard players reset @s dafi.soul.dropgoldenhoe
-execute if score @s dafi.soul.drop.cooldown matches 1 at @s run function dafi:internal/class/soul/drop
-execute if score @s dafi.soul.drop.cooldown matches 1 run title @s actionbar {"text":"r/WOOSH","bold":true,"color":"#ffd814"}
+execute if score @s dafi.soul.drop.cooldown matches 1 at @s run function dafi:internal/class/soul/drop/drop
 #execute if score @s dafi.soul.drop.cooldown matches 3 run effect clear @s levitation
-execute if score @s dafi.soul.drop.cooldown matches 10 run title @s actionbar {"text":"","bold":true,"color":"yellow"}
 execute if score @s dafi.soul.drop.cooldown matches 1.. run scoreboard players add @s dafi.soul.drop.cooldown 1
 execute if score @s dafi.soul.drop.cooldown matches 1..20 at @s run particle soul_fire_flame ~ ~ ~ 0 0 0 0.1 1 force
 execute if score @s dafi.soul.drop.cooldown matches 61 at @s run playsound entity.blaze.shoot master @s ~ ~ ~ 0.4 2 0.4
@@ -34,8 +32,11 @@ execute if score @s dafi.soul.drop.cooldown matches 61.. run scoreboard players 
 execute if score @s dafi.soul.drop.cooldown matches 1.. run scoreboard players add @s dafi.soul.drop.cooldown 1
 ## HEALTH TRADE
 
+## SPIRIT
+function dafi:internal/class/soul/swap/spin
+
 ## PARTICLES
-execute at @s run particle minecraft:soul ~ ~ ~ 0.2 0.3 0.2 0.001 1
+#execute at @s run particle minecraft:soul ~ ~ ~ 0.2 0.3 0.2 0.001 1
 
 ## dafi.mechanics.killcheck
 execute if score @s dafi.mechanics.killcheck matches 1 run effect give @s minecraft:speed 3 5 true

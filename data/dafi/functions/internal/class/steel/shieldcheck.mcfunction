@@ -1,5 +1,5 @@
 #scoreboard players set @s[advancements={dafi:shield=true}] shieldCheck 1
-execute at @s[advancements={dafi:shield=true}] positioned ~ ~1 ~ run function dafi:internal/class/steel/particle/particle1
+execute at @s[advancements={dafi:shield=true}] anchored eyes rotated ~ 90 run function dafi:internal/class/steel/particle/particle1
 
 
 # execute at @s[advancements={dafi:shield=true},team=blue] run effect give @a[team=!blue,distance=..5] poison 1 100 true

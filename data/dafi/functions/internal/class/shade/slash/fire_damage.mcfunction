@@ -4,11 +4,11 @@
 # callers:
 # > dafi:internal/class/saint/main
 
-execute as @s[team=blue] run summon marker ~ ~ ~ {Tags:["dafi.shade.raycaster.damage.blue","dafi.shade.raycaster.kill"]}
-execute as @s[team=red] run summon marker ~ ~ ~ {Tags:["dafi.shade.raycaster.damage.red","dafi.shade.raycaster.kill"]}
-execute as @s[team=ffa] run summon marker ~ ~ ~ {Tags:["dafi.shade.raycaster.damage.ffa","dafi.shade.raycaster.kill"]}
+execute as @s[tag=dafi.blue] run summon marker ~ ~ ~ {Tags:["dafi.shade.raycaster.damage.blue","dafi.shade.raycaster.kill"]}
+execute as @s[tag=dafi.red] run summon marker ~ ~ ~ {Tags:["dafi.shade.raycaster.damage.red","dafi.shade.raycaster.kill"]}
+execute as @s[tag=dafi.ffa] run summon marker ~ ~ ~ {Tags:["dafi.shade.raycaster.damage.ffa","dafi.shade.raycaster.kill"]}
 ## distance = #itt * step_size = 80 * 0.25 = 20 blocks
-scoreboard players set .itt dafi.raycast 18
+scoreboard players set .itt dafi.raycast 24
 
 ## temporary tag to remember who fired the raycast
 tag @s add dafi.shade.this

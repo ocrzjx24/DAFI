@@ -7,6 +7,7 @@ tag @s add dafi.sting
 ## ITEM
 item replace entity @s hotbar.0 with crossbow{mainhand:1,display:{Name:'[{"text":"JSN ","italic":false,"color":"yellow","bold":true},{"text":"X13","italic":false,"bold":true,"color":"gold"}]',Lore:['[{"text":"death.attack.firework.item","italic":false,"color":"dark_green"}]']},Enchantments:[{id:"quick_charge",lvl:5},{id:"knockback",lvl:1}],Unbreakable:1,ChargedProjectiles:[{id:"arrow",Count:1b}],Charged:1b,Unbreakable:1,HideFlags:36} 1
 item replace entity @s armor.feet with leather_boots{Enchantments:[{id:"depth_strider",lvl:3},{id:"binding_curse",lvl:1}],Unbreakable:1,HideFlags:1,display:{color:16351261}} 1
+item replace entity @s armor.legs with leather_leggings{Unbreakable:1,display:{Name:'[{"text":"Standard Issue Leather Pants","italic":false,"color":"white","bold":true}]'},Enchantments:[{id:swift_sneak,lvl:3}]} 1
 # item replace entity @s hotbar.1 with honeycomb{display:{Name:'[{"text":"Rotate Cylinder","italic":false,"bold":true,"color":"gold"}]'},Enchantments:[{id:"unbreaking",lvl:1}],Unbreakable:1,HideFlags:1} 1
 item replace entity @s[team=red] weapon.offhand with minecraft:snowball{offhand:1,red:1,display:{Name:'[{"text":"Sticky Bomb","italic":false,"color":"yellow"}]'}}
 item replace entity @s[team=blue] weapon.offhand with minecraft:snowball{offhand:1,blue:1,display:{Name:'[{"text":"Sticky Bomb","italic":false,"color":"yellow"}]'}}

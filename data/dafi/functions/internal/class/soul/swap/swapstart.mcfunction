@@ -7,7 +7,8 @@
 #tellraw @s [{"text":"[","color":"dark_red"},{"text":"!","color":"red"},{"text":"] > "},{"text":"Ability is still on cooldown! ","color":"#ff0066"},{"text":"(","color":"red"},{"text":"Swap","color":"white"},{"text":")","color":"red"}]
 #tellraw @s [{"text":"[","color":"gold"},{"text":"!","color":"yellow"},{"text":"] > "},{"text":"Ability refreshed","color":"#ffcc00"},{"text":" ","color":"dark_green"},{"text":"(","color":"yellow"},{"text":"Swap","color":"white"},{"text":")","color":"yellow"}]
 
-tag @s add dafi.soul.swap.primed
+execute at @s run summon marker ~ ~ ~ {Tags:["dafi.soul.spin.clockwise"]}
+execute at @s run summon marker ~ ~ ~ {Tags:["dafi.soul.spin.counter_clockwise"]}
 
 #execute store result score @s dafi.soul.health run data get entity @s Health
 #execute if score @s dafi.soul.health matches 20 run scoreboard players set @s hp_dmg 10
