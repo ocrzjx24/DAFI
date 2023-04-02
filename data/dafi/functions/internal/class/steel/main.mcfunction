@@ -2,8 +2,8 @@
 function dafi:internal/class/steel/shieldcheck
 ## EMPODIO
 execute if data entity @s[tag=dafi.steel.drop.primed] {OnGround:1b} run function dafi:internal/class/steel/drop/groundpound
-execute if data entity @s[tag=dafi.steel.drop.primed2] {OnGround:0b} run tag @s add dafi.steel.drop.primed3
-execute if data entity @s[tag=dafi.steel.drop.primed3] {OnGround:1b} run function dafi:internal/class/steel/drop/groundpound
+#execute if data entity @s[tag=dafi.steel.drop.primed2] {OnGround:0b} run tag @s add dafi.steel.drop.primed3
+#execute if data entity @s[tag=dafi.steel.drop.primed3] {OnGround:1b} run function dafi:internal/class/steel/drop/groundpound
 execute if score @s dafi.steel.dropStoneAxe matches 1 unless score @s dafi.steel.drop.cooldown matches 1.. run scoreboard players set @s dafi.steel.drop.cooldown 60
 execute if score @s dafi.steel.dropStoneAxe matches 1 run kill @e[type=item,nbt={Item:{id:"minecraft:stone_axe"}}]
 execute if score @s dafi.steel.dropStoneAxe matches 1 run item replace entity @s hotbar.1 with minecraft:stone_axe{mainhand:1,Unbreakable:1,display:{Name:'[{"text":"Labrys","color":"green","bold":true,"italic":false},{"text":"","color":"green","bold":false}]'},Enchantments:[{id:"minecraft:sharpness",lvl:5}],AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Amount:10,Operation:0,UUID:[I;1028214595,1066950744,1016402789,1603413261]},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Slot:"mainhand",Amount:-0.4,Operation:2,UUID:[I;1028214595,1066950744,1016402789,1603413261]}],HideFlags:3} 1

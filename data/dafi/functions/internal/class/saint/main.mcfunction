@@ -12,6 +12,8 @@ execute if score @s dafi.saint.drop.cooldown matches 1..10 at @s anchored eyes r
 execute if score @s dafi.saint.drop.cooldown matches 10 at @s run playsound minecraft:item.trident.riptide_1 master @a ~ ~ ~ 1 1.2
 execute if score @s dafi.saint.drop.cooldown matches 10 at @s run playsound minecraft:entity.illusioner.mirror_move master @a ~ ~ ~ 1 1.5
 execute if score @s dafi.saint.drop.cooldown matches 10 run tag @s add dafi.saint.summon.this
+execute if score @s dafi.saint.drop.cooldown matches 10 as @s at @s anchored eyes positioned ^ ^ ^1 run function dafi:internal/class/saint/particle2
+execute if score @s dafi.saint.drop.cooldown matches 10 as @s at @s anchored eyes positioned ^ ^ ^1 run function dafi:internal/class/saint/particle3
 execute if score @s dafi.saint.drop.cooldown matches 10 at @s run function dafi:internal/class/saint/raycast/fire
 execute if score @s dafi.saint.drop.cooldown matches 10 run tag @s remove dafi.saint.summon.this
 execute if score @s dafi.saint.drop.cooldown matches 10 run tag @s remove dafi.saint.this

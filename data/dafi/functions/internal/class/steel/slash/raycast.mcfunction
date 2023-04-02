@@ -6,9 +6,9 @@
 # > dafi:internal/class/saint/raycast/red/raycast
 
 #execute if score .itt dafi.raycast <= .itt.particle1.max dafi.raycast if score .itt dafi.raycast >= .itt.particle1.min dafi.raycast run particle witch ~ ~ ~ 0 0 0 0 1
-execute if score .itt dafi.raycast <= .itt.particle1.max dafi.raycast if score .itt dafi.raycast >= .itt.particle1.min dafi.raycast run particle dust 0 1 0.216 1.8 ~ ~ ~ 0 0 0 0 1 force
-execute if score .itt dafi.raycast <= .itt.particle2.max dafi.raycast if score .itt dafi.raycast >= .itt.particle2.min dafi.raycast run particle dust 0.302 0.808 0.071 1.6 ~ ~ ~ 0 0 0 0 1 force
-execute if score .itt dafi.raycast <= .itt.particle3.max dafi.raycast if score .itt dafi.raycast >= .itt.particle3.min dafi.raycast run particle dust 0.18 0.361 0.012 1.4 ~ ~ ~ 0 0 0 0 1 force
+execute if score .itt dafi.raycast <= .itt.particle1.max dafi.raycast if score .itt dafi.raycast >= .itt.particle1.min dafi.raycast run particle dust 0.631 0.784 0.404 2.0 ~ ~ ~ 0 0 0 0 1 force
+execute if score .itt dafi.raycast <= .itt.particle2.max dafi.raycast if score .itt dafi.raycast >= .itt.particle2.min dafi.raycast run particle dust 0.486 0.604 0.22 2.2 ~ ~ ~ 0 0 0 0 1 force
+execute if score .itt dafi.raycast <= .itt.particle3.max dafi.raycast if score .itt dafi.raycast >= .itt.particle3.min dafi.raycast run particle dust 0.2 0.271 0.047 2.4 ~ ~ ~ 0 0 0 0 1 force
 
 execute if score .itt dafi.raycast <= .itt.particle4.max dafi.raycast if score .itt dafi.raycast >= .itt.particle4.min dafi.raycast run particle dust 0 0.851 1 2.0 ~ ~ ~ 0 0 0 0 1 force
 execute if score .itt dafi.raycast <= .itt.particle5.max dafi.raycast if score .itt dafi.raycast >= .itt.particle5.min dafi.raycast run particle dust 0.098 0.294 0.427 1.8 ~ ~ ~ 0 0 0 0 1 force

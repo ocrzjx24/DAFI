@@ -11,7 +11,6 @@ execute at @s[team=blue] positioned ^ ^ ^ run summon marker ~ ~ ~ {Tags:["dafi.s
 execute at @s[team=red] positioned ^ ^ ^ run summon marker ~ ~ ~ {Tags:["dafi.shade.slash","dafi.shade.slash.3","dafi.red","dafi.this"]}
 execute at @s[team=ffa] positioned ^ ^ ^ run summon marker ~ ~ ~ {Tags:["dafi.shade.slash","dafi.slash.3","dafi.ffa","dafi.this"]}
 tp @e[tag=dafi.this] @s
-tp @e[tag=dafi.this] ~ ~1.6 ~
 tag @e[tag=dafi.this] remove dafi.this
 
 #execute store result score @s delta.addition.magnitude run data get entity @s Motion[1] -10000
@@ -22,7 +21,7 @@ tag @e[tag=dafi.this] remove dafi.this
 #kill @e[tag=dafi.this,type=armor_stand,sort=nearest,limit=1]
 #scoreboard players set @s delta.addition.magnitude 2000
 #execute at @s rotated ~ -90 run function dafi:internal/mechanics/addition/add_motion
-scoreboard players set @s delta.addition.magnitude 6000
+scoreboard players set @s delta.addition.magnitude 4000
 execute at @s rotated ~ -90 run function dafi:internal/mechanics/addition/add_motion
 
 tag @s add dafi.shade.primed

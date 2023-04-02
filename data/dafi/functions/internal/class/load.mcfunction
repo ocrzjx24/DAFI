@@ -10,3 +10,5 @@ function dafi:internal/class/shade/load
 function dafi:internal/class/swamp/load
 function dafi:internal/class/sculk/load
 function dafi:internal/class/siao/load
+
+scoreboard objectives add dafi.offhandReady dummy

@@ -1,5 +1,5 @@
-scoreboard players set @s delta.addition.magnitude 20000
-execute at @s rotated ~ -10 run function dafi:internal/mechanics/addition/add_motion
+#scoreboard players set @s delta.addition.magnitude 20000
+#execute at @s rotated ~ -10 run function dafi:internal/mechanics/addition/add_motion
 
 execute if entity @s[team=red] run playsound minecraft:entity.zombie_villager.cure master @a[team=red] ~ ~100 ~ 10 2
 execute if entity @s[team=blue] run playsound minecraft:entity.zombie_villager.cure master @a[team=blue] ~ ~100 ~ 10 2

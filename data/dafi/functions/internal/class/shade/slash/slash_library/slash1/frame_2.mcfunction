@@ -17,8 +17,8 @@ scoreboard players set .itt.particle1.max dafi.raycast 1
 scoreboard players set .itt.particle1.min dafi.raycast 1
 scoreboard players set .itt.particle2.max dafi.raycast 3
 scoreboard players set .itt.particle2.min dafi.raycast 2
-scoreboard players set .itt.particle3.max dafi.raycast 0
-scoreboard players set .itt.particle3.min dafi.raycast 0
+scoreboard players set .itt.particle3.max dafi.raycast 4
+scoreboard players set .itt.particle3.min dafi.raycast 4
 execute facing ^0.906 ^-0.2265 ^0.422 run function dafi:internal/class/shade/slash/fire_mark
 execute facing ^0.866 ^-0.2165 ^0.5 run function dafi:internal/class/shade/slash/fire_mark
 execute facing ^0.819 ^-0.20475 ^0.573 run function dafi:internal/class/shade/slash/fire_mark

@@ -8,7 +8,7 @@
 #execute if score .itt dafi.raycast <= .itt.particle1.max dafi.raycast if score .itt dafi.raycast >= .itt.particle1.min dafi.raycast run particle witch ~ ~ ~ 0 0 0 0 1
 particle snowflake ~ ~ ~ 0 0 0 0 1 force
 particle cloud ~ ~ ~ 0 0 0 0 1 force
-
+particle end_rod ~ ~ ~ 0 0 0 0.05 1 force
 
 #execute if score .itt dafi.raycast matches ..1 run particle dust 1 1 1 1 ~ ~ ~ 0 0 0 0 1 force
 
@@ -17,7 +17,7 @@ execute if block ~ ~ ~ #dafi:partial run function dafi:internal/mechanics/raycas
 
 scoreboard players remove .itt dafi.raycast 1
 
-execute if score .itt dafi.raycast matches 1.. positioned ^ ^ ^0.5 run function dafi:internal/class/saint/raycast/raycast
+execute if score .itt dafi.raycast matches 1.. positioned ^ ^ ^1 run function dafi:internal/class/saint/raycast/raycast
 
 execute if entity @s[tag=dafi.saint.raycaster.blue] positioned ~ ~ ~ as @e[type=#dafi:entities_raycast,tag=!dafi.saint.this,team=!blue] run function dafi:internal/class/saint/raycast/checkhitentity
 execute if entity @s[tag=dafi.saint.raycaster.blue] positioned ~ ~ ~ as @e[tag=dafi.saint.vortex,tag=!dafi.saint.this] run function dafi:internal/class/saint/raycast/checkhitentity

@@ -8,7 +8,7 @@ execute as @s[team=blue] run summon marker ~ ~ ~ {Tags:["dafi.saint.raycaster.bl
 execute as @s[team=red] run summon marker ~ ~ ~ {Tags:["dafi.saint.raycaster.red","dafi.saint.raycaster.kill"]}
 execute as @s[team=ffa] run summon marker ~ ~ ~ {Tags:["dafi.saint.raycaster.ffa","dafi.saint.raycaster.kill"]}
 ## distance = #itt * step_size = 80 * 0.25 = 20 blocks
-scoreboard players set .itt dafi.raycast 60
+scoreboard players set .itt dafi.raycast 30
 
 ## temporary tag to remember who fired the raycast
 tag @s add dafi.saint.this
