@@ -30,3 +30,4 @@ scoreboard players set #universal dafi.pistonboost 1
 scoreboard players set #universal dafi.regeneration 60
 scoreboard players set #universal dafi.rocketjump 60
 scoreboard players set #universal dafi.sprint 0
+scoreboard players set #universal dafi.slide.stamina 2
