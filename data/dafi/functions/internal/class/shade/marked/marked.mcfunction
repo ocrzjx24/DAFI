@@ -11,6 +11,7 @@
 
 #scoreboard players reset @a[scores={dafi.deathcheck=1}] dafi.shade.marked.stackCount
 #scoreboard players reset @e[tag=dafi.shade.hit.damage] dafi.shade.marked.stackCount
-effect give @e[tag=dafi.shade.hit.ranged] wither 2 3 false
+scoreboard players add @e[tag=dafi.shade.hit.ranged] dafi.slow.duration 60
+effect give @e[type=!player,tag=dafi.shade.hit.ranged] slowness 3 4
 tag @e[tag=dafi.shade.hit.ranged] remove dafi.shade.hit.ranged
 tag @e[tag=dafi.shade.hit] remove dafi.shade.hit

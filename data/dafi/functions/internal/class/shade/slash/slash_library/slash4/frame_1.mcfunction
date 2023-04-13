@@ -19,18 +19,18 @@ scoreboard players set .itt.particle5.max dafi.raycast 4
 scoreboard players set .itt.particle5.min dafi.raycast 2
 scoreboard players set .itt.particle6.max dafi.raycast 6
 scoreboard players set .itt.particle6.min dafi.raycast 5
-execute facing ^ ^-1 ^0.0 run function dafi:internal/class/shade/slash/fire_damage
-execute facing ^ ^-0.996 ^0.087 run function dafi:internal/class/shade/slash/fire_damage
-execute facing ^ ^-0.984 ^0.173 run function dafi:internal/class/shade/slash/fire_damage
-execute facing ^ ^-0.965 ^0.258 run function dafi:internal/class/shade/slash/fire_damage
-execute facing ^ ^-0.939 ^0.342 run function dafi:internal/class/shade/slash/fire_damage
-execute facing ^ ^-0.906 ^0.422 run function dafi:internal/class/shade/slash/fire_damage
-execute facing ^ ^-0.866 ^0.5 run function dafi:internal/class/shade/slash/fire_damage
-execute facing ^ ^-0.819 ^0.573 run function dafi:internal/class/shade/slash/fire_damage
-execute facing ^ ^-0.766 ^0.642 run function dafi:internal/class/shade/slash/fire_damage
-execute facing ^ ^-0.707 ^0.707 run function dafi:internal/class/shade/slash/fire_damage
-execute facing ^ ^-0.642 ^0.766 run function dafi:internal/class/shade/slash/fire_damage
-execute facing ^ ^-0.573 ^0.819 run function dafi:internal/class/shade/slash/fire_damage
+execute facing ^-1 ^ ^0.0 run function dafi:internal/class/shade/slash/fire_damage
+execute facing ^-0.996 ^ ^0.087 run function dafi:internal/class/shade/slash/fire_damage
+execute facing ^-0.984 ^ ^0.173 run function dafi:internal/class/shade/slash/fire_damage
+execute facing ^-0.965 ^ ^0.258 run function dafi:internal/class/shade/slash/fire_damage
+execute facing ^-0.939 ^ ^0.342 run function dafi:internal/class/shade/slash/fire_damage
+execute facing ^-0.906 ^ ^0.422 run function dafi:internal/class/shade/slash/fire_damage
+execute facing ^-0.866 ^ ^0.5 run function dafi:internal/class/shade/slash/fire_damage
+execute facing ^-0.819 ^ ^0.573 run function dafi:internal/class/shade/slash/fire_damage
+execute facing ^-0.766 ^ ^0.642 run function dafi:internal/class/shade/slash/fire_damage
+execute facing ^-0.707 ^ ^0.707 run function dafi:internal/class/shade/slash/fire_damage
+execute facing ^-0.642 ^ ^0.766 run function dafi:internal/class/shade/slash/fire_damage
+execute facing ^-0.573 ^ ^0.819 run function dafi:internal/class/shade/slash/fire_damage
 #execute facing ^-0.5 ^ ^0.866 run function dafi:internal/class/shade/slash/fire_damage
 #execute facing ^-0.422 ^ ^0.906 run function dafi:internal/class/shade/slash/fire_damage
 #execute facing ^-0.342 ^ ^0.939 run function dafi:internal/class/shade/slash/fire_damage

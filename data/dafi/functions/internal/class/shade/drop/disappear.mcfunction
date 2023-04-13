@@ -6,8 +6,8 @@
 ##############################################################################
 
 # Gives invisibility and speed
-effect give @s invisibility 5 0 true
-effect give @s speed 5 6 true
+effect give @s invisibility 10 0 true
+effect give @s speed 10 6 true
 
 # Clears player of items
 scoreboard players set @s dafi.offhandReady 0
@@ -15,9 +15,9 @@ clear @s
 
 # Applies motion UP (2 m/s) and BACK (10 m/s)
 scoreboard players set @s delta.addition.magnitude 2000
-execute rotated ~ -90 run function dafi:internal/mechanics/addition/add_motion
+execute if entity @s rotated ~ -90 run function dafi:internal/mechanics/addition/add_motion
 scoreboard players set @s delta.addition.magnitude 10000
-execute rotated ~ 180 run function dafi:internal/mechanics/addition/add_motion
+execute if entity @s rotated ~ 180 run function dafi:internal/mechanics/addition/add_motion
 
 # VFX and SFX
 tellraw @s [{"text":"[","color":"#3399cc"},{"text":"!","color":"#33ffff"},{"text":"] > "},{"text":"Ability cast! ","color":"#00cccc"},{"text":"(","color":"#33ffff"},{"text":"Drop","color":"white"},{"text":")","color":"#33ffff"}]
