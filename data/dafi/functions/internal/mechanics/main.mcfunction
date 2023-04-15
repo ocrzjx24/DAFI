@@ -13,9 +13,6 @@ function dafi:internal/mechanics/cw_hp_control/main
 ## DEATHS
 function dafi:internal/mechanics/deaths/main
 
-## DOUBLE JUMP
-execute if score #universal dafi.dash matches 1 run function dafi:internal/mechanics/dash/main
-
 ## GLOWING
 function dafi:internal/mechanics/glowing/main
 
@@ -33,6 +30,10 @@ execute if score #universal dafi.rocketjump matches 1 run function dafi:internal
 
 ## SLIDE
 function dafi:internal/mechanics/slide/main
+
+## DOUBLE JUMP
+execute if score #universal dafi.dash matches 1 as @s run function dafi:internal/mechanics/dash/main
+
 
 ## SLOWNESS
 function dafi:internal/mechanics/slowness/main
