@@ -6,7 +6,7 @@ execute if entity @s[tag=dafi.arrow.red,tag=dafi.arrow.explode] as @a[team=!red,
 #execute if entity @s[tag=dafi.arrow.ffa,tag=dafi.arrow.explode] as @a[distance=..8.83,advancements={dafi:shield=false}] unless score @s dafi.sbsid = #temp dafi.sbsid run function dafi:internal/mechanics/arrow/arrow_aoe/summon
 execute if entity @s[tag=dafi.arrow.ffa,tag=dafi.arrow.explode] as @a[distance=..8.83,advancements={dafi:shield=false}] unless score @s dafi.sbsid = #temp dafi.sbsid run function dafi:internal/mechanics/arrow/arrow_aoe/summon
 
-execute if entity @s[tag=dafi.arrow.explode] run particle minecraft:firework ~ ~ ~ 0 0 0 0.3 100 force
+#execute if entity @s[tag=dafi.arrow.explode] run particle minecraft:firework ~ ~ ~ 0 0 0 0.3 100 force
 execute if entity @s[tag=dafi.arrow.explode] run playsound entity.firework_rocket.large_blast master @a ~ ~ ~ 1 1.4
 execute if entity @s[tag=dafi.arrow.explode] if score #universal dafi.rocketjump matches 1 run function dafi:internal/mechanics/arrow/rocketjump/main
 
@@ -26,4 +26,4 @@ execute if entity @s[tag=dafi.arrow.swamp,tag=!dafi.arrow.swamp.tunnel] run func
 scoreboard players reset #temp dafi.sbsid
 
 tag @s remove dafi.arrow.inground
-kill @e[type=arrow,tag=!dafi.arrow.donotkill,nbt={inGround:1b}]
+kill @s[type=arrow,tag=!dafi.arrow.donotkill]

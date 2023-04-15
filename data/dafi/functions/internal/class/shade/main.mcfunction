@@ -11,6 +11,10 @@ function dafi:internal/class/shade/offhand/use_offhand
 ## SWAP ()
 execute if score @s dafi.shade.swap.cooldown matches 1 run playsound minecraft:block.ender_chest.open master @s ~ ~100 ~ 1000 1.2
 execute if score @s dafi.shade.swap.cooldown matches 1 run tellraw @s [{"text":"[","color":"gold"},{"text":"!","color":"yellow"},{"text":"] > "},{"text":"Ability refreshed","color":"#ffcc00"},{"text":" ","color":"dark_green"},{"text":"(","color":"yellow"},{"text":"Swap","color":"white"},{"text":")","color":"yellow"}]
+#execute if score @s dafi.shade.swap.cooldown matches 75.. run scoreboard players set @s delta.addition.magnitude 500
+#execute if score @s dafi.shade.swap.cooldown matches 75.. at @s rotated ~ -90 run function dafi:internal/mechanics/addition/add_motion
+execute if score @s dafi.shade.swap.cooldown matches 78.. run scoreboard players set @s delta.addition.magnitude 1600
+execute if score @s dafi.shade.swap.cooldown matches 78.. at @s rotated ~ 0 run function dafi:internal/mechanics/addition/add_motion
 execute if score @s dafi.shade.swap.cooldown matches 1.. run scoreboard players remove @s dafi.shade.swap.cooldown 1
 
 #> DROP ()

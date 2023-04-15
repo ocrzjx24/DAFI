@@ -18,16 +18,13 @@ tag @e[tag=dafi.this] remove dafi.this
 
 #execute store result score @s delta.addition.magnitude run data get entity @s Motion[1] -10000
 #execute at @s rotated ~ -90 run function dafi:internal/mechanics/addition/add_motion
-#execute at @s run summon armor_stand ~ ~-1 ~ {Tags:["dafi.this"]}
-#ride @s mount @e[type=minecraft:armor_stand,tag=dafi.this,sort=nearest,limit=1]
-#ride @s dismount
-#kill @e[tag=dafi.this,type=armor_stand,sort=nearest,limit=1]
-scoreboard players set @s[predicate=dafi:is_sneaking] delta.addition.magnitude 1000
-execute at @s[predicate=dafi:is_sneaking] rotated ~ -90 run function dafi:internal/mechanics/addition/add_motion
-scoreboard players set @s[predicate=dafi:is_sneaking] delta.addition.magnitude 8000
-execute at @s[predicate=dafi:is_sneaking] rotated ~ 0 run function dafi:internal/mechanics/addition/add_motion
-scoreboard players set @s[predicate=!dafi:is_sneaking] delta.addition.magnitude 5000
-execute at @s[predicate=!dafi:is_sneaking] rotated ~ -90 run function dafi:internal/mechanics/addition/add_motion
 
+execute rotated as @s run tp @s @s
+scoreboard players set @s[predicate=dafi:is_sneaking] delta.addition.magnitude 4000
+execute at @s[predicate=dafi:is_sneaking] rotated ~ -90 run function dafi:internal/mechanics/addition/add_motion
+scoreboard players set @s[predicate=dafi:is_sneaking] delta.addition.magnitude 16000
+execute at @s[predicate=dafi:is_sneaking] rotated ~ 0 run function dafi:internal/mechanics/addition/add_motion
+scoreboard players set @s[predicate=!dafi:is_sneaking] delta.addition.magnitude 7600
+execute at @s[predicate=!dafi:is_sneaking] rotated ~ -90 run function dafi:internal/mechanics/addition/add_motion
 tag @s add dafi.shade.primed
 

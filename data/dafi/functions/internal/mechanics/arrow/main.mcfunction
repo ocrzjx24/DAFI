@@ -14,11 +14,7 @@ execute as @a[tag=dafi.slay,nbt={Inventory:[{id:"minecraft:crossbow"}]}] if scor
 execute as @a if score @s dafi.arrow.CD = #universal dafi.arrowdelay unless score @s dafi.siege.mode matches 1 run scoreboard players reset @s dafi.arrow.CD
 execute as @a if score @s dafi.arrow.CD < #universal dafi.arrowdelay run scoreboard players add @s dafi.arrow.CD 1
 
-# arrow lifetime
-scoreboard players add @e[tag=dafi.arrow.processed] dafi.arrow.lifetime 1
-kill @e[tag=!dafi.arrow.sting.sticky,scores={dafi.arrow.lifetime=60..}]
-kill @e[tag=dafi.arrow.sting.sticky,scores={dafi.arrow.lifetime=300..}]
-#sting exception
+
 
 # class-specific arrows
 execute as @e[tag=dafi.arrow.siege] at @s run function dafi:internal/class/siege/arrow/arrow
@@ -34,3 +30,9 @@ execute as @e[tag=dafi.arrow.swamp] at @s run function dafi:internal/class/swamp
 #execute at @e[type=minecraft:arrow] run playsound minecraft:entity.firework_rocket.blast master @a ~ ~ ~ 1 1.7 0
 
 execute as @e[type=arrow,nbt={inGround:true}] at @s run function dafi:internal/mechanics/arrow/arrow_inground/main
+
+# arrow lifetime
+kill @e[tag=!dafi.arrow.sting.sticky,scores={dafi.arrow.lifetime=60..}]
+kill @e[tag=dafi.arrow.sting.sticky,scores={dafi.arrow.lifetime=300..}]
+scoreboard players add @e[tag=dafi.arrow.processed] dafi.arrow.lifetime 1
+#sting exception
