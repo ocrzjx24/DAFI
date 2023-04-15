@@ -32,7 +32,7 @@ execute if score #universal dafi.rocketjump matches 1 run function dafi:internal
 function dafi:internal/mechanics/slide/main
 
 ## DOUBLE JUMP
-execute if score #universal dafi.dash matches 1 as @s run function dafi:internal/mechanics/dash/main
+execute if score #universal dafi.dash matches 1 as @a run function dafi:internal/mechanics/dash/main
 
 
 ## SLOWNESS
