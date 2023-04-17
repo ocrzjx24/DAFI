@@ -11,10 +11,12 @@ execute if score @s dafi.slide.sprintTime matches 1.. unless score #universal da
 execute if score @s dafi.slide.sprintTime matches 1.. if score #universal dafi.slide.stamina matches 1 if score @s dafi.slide.stamina matches 20.. if data entity @s {OnGround:1b} if predicate dafi:is_sneaking at @s run function dafi:internal/mechanics/slide/slide
 execute if score @s dafi.slide.sprintTime matches 1.. if score #universal dafi.slide.stamina matches 2 if score @s dafi.slide.stamina matches 40.. if data entity @s {OnGround:1b} if predicate dafi:is_sneaking at @s run function dafi:internal/mechanics/slide/slide
 execute if score @s dafi.slide.slideTime matches 1.. run scoreboard players set @s delta.addition.magnitude 2500
+execute if score @s dafi.slide.slideTime matches 1.. if data entity @s {OnGround:1b} run effect give @s resistance infinite 255 false
 execute if score @s dafi.slide.slideTime matches 1.. if predicate dafi:is_sneaking at @s rotated ~ 0 run function dafi:internal/mechanics/addition/add_motion
 execute if score @s dafi.slide.slideTime matches 1.. if predicate dafi:is_sneaking at @s run particle electric_spark ~ ~0.5 ~ 0 0 0 0.75 5 normal
 #execute if score @s dafi.slide.slideTime matches 1.. if predicate dafi:is_sneaking at @s run function dafi:internal/mechanics/slide/particle1
 execute if score @s dafi.slide.slideTime matches 1.. run scoreboard players add @s dafi.slide.slideTime 1
+execute if score @s dafi.slide.slideTime matches 5.. run effect clear @s resistance
 execute if score @s dafi.slide.slideTime matches 5.. run effect clear @s levitation
 execute if score @s dafi.slide.slideTime matches 5.. run effect clear @s speed
 execute if score @s dafi.slide.slideTime matches 5.. run effect give @s speed 1 2 true

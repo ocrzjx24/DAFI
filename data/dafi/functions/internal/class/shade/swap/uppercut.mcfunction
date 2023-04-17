@@ -21,7 +21,7 @@ tag @e[tag=dafi.this] remove dafi.this
 
 
 tp @s @s
-scoreboard players set @s[predicate=dafi:is_sneaking] delta.addition.magnitude 4000
+scoreboard players set @s[predicate=dafi:is_sneaking] delta.addition.magnitude 2600
 execute at @s[predicate=dafi:is_sneaking] rotated ~ -90 run function dafi:internal/mechanics/addition/add_motion
 scoreboard players set @s[predicate=dafi:is_sneaking] delta.addition.magnitude 12000
 execute at @s[predicate=dafi:is_sneaking] rotated ~ 0 run function dafi:internal/mechanics/addition/add_motion
