@@ -5,8 +5,9 @@ execute at @s run function dafi:internal/class/soul/drop/particle1
 #execute at @s rotated ~ 90 run function dafi:internal/class/soul/particle2 
 execute at @s run function dafi:internal/class/soul/drop/particle3
 
-scoreboard players set @s delta.addition.magnitude 1000
+tp @s @s
+scoreboard players set @s delta.addition.magnitude 4200
 execute at @s rotated ~ -90 run function dafi:internal/mechanics/addition/add_motion
-scoreboard players set @s delta.addition.magnitude 14000
+scoreboard players set @s delta.addition.magnitude 10000
 execute at @s rotated ~ 0 run function dafi:internal/mechanics/addition/add_motion
 tag @s add dafi.soul.swap.primed

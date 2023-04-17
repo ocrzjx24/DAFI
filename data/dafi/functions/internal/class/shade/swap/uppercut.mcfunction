@@ -19,11 +19,13 @@ tag @e[tag=dafi.this] remove dafi.this
 #execute store result score @s delta.addition.magnitude run data get entity @s Motion[1] -10000
 #execute at @s rotated ~ -90 run function dafi:internal/mechanics/addition/add_motion
 
+
 tp @s @s
 scoreboard players set @s[predicate=dafi:is_sneaking] delta.addition.magnitude 4000
 execute at @s[predicate=dafi:is_sneaking] rotated ~ -90 run function dafi:internal/mechanics/addition/add_motion
-scoreboard players set @s[predicate=dafi:is_sneaking] delta.addition.magnitude 16000
+scoreboard players set @s[predicate=dafi:is_sneaking] delta.addition.magnitude 12000
 execute at @s[predicate=dafi:is_sneaking] rotated ~ 0 run function dafi:internal/mechanics/addition/add_motion
+
 scoreboard players set @s[predicate=!dafi:is_sneaking] delta.addition.magnitude 7600
 execute at @s[predicate=!dafi:is_sneaking] rotated ~ -90 run function dafi:internal/mechanics/addition/add_motion
 tag @s add dafi.shade.primed

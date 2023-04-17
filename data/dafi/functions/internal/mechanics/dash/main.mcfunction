@@ -87,7 +87,7 @@ execute as @s[scores={dafi.dash.time=0}] run tp @s @s
 execute as @s[scores={dafi.dash.time=0},predicate=dafi:is_sneaking] at @s rotated ~ 0 positioned ~ ~1 ~ run function dafi:internal/mechanics/dash/particle1
 #execute as @s[scores={dafi.dash.time=0},predicate=dafi:is_sneaking] at @s rotated ~ 0 positioned ~ ~1 ~ run function dafi:internal/mechanics/dash/particle2
 #execute as @s[scores={dafi.dash.time=0},predicate=dafi:is_sneaking] at @s rotated ~ 0 positioned ~ ~1 ~ run function dafi:internal/mechanics/dash/particle3
-execute as @s[scores={dafi.dash.time=0},predicate=dafi:is_sneaking] run scoreboard players set @s delta.addition.magnitude 16000
+execute as @s[scores={dafi.dash.time=0},predicate=dafi:is_sneaking] run scoreboard players set @s delta.addition.magnitude 12000
 execute as @s[scores={dafi.dash.time=0},predicate=dafi:is_sneaking] at @s rotated ~ 0 run function dafi:internal/mechanics/addition/add_motion
 # execute as @s[scores={dafi.dash.time=0},tag=!dafi.saint] store result score @s dafi.dash.y run data get entity @s Motion[1] -10000
 execute as @s[scores={dafi.dash.time=0},predicate=dafi:is_sneaking] run scoreboard players set @s delta.addition.magnitude 2600
@@ -95,7 +95,7 @@ execute as @s[scores={dafi.dash.time=0},predicate=dafi:is_sneaking] run scoreboa
 execute as @s[scores={dafi.dash.time=0},predicate=dafi:is_sneaking] at @s rotated 0 -90 run function dafi:internal/mechanics/addition/add_motion
 execute as @s[scores={dafi.dash.time=0},predicate=dafi:is_sneaking] run tag @s add dafi.slide.exempt
 
-execute as @s[scores={dafi.dash.time=0},tag=!dafi.slide.exempt] at @s rotated ~ -20 positioned ~ ~1 ~ run function dafi:internal/mechanics/dash/particle1
+execute as @s[scores={dafi.dash.time=0},tag=!dafi.slide.exempt] at @s rotated ~ -90 positioned ~ ~1 ~ run function dafi:internal/mechanics/dash/particle1
 #execute as @s[scores={dafi.dash.time=0},tag=!dafi.slide.exempt] at @s rotated ~ -20 positioned ~ ~1 ~ run function dafi:internal/mechanics/dash/particle2
 #execute as @s[scores={dafi.dash.time=0},tag=!dafi.slide.exempt] at @s rotated ~ -20 positioned ~ ~1 ~ run function dafi:internal/mechanics/dash/particle3
 execute as @s[scores={dafi.dash.time=0},tag=!dafi.slide.exempt] run scoreboard players set @s delta.addition.magnitude 6000
@@ -109,7 +109,7 @@ execute as @s[scores={dafi.dash.time=0},tag=!dafi.slide.exempt] at @s rotated 0 
 
 execute as @s[scores={dafi.dash.time=0}] run tag @s add dafi.dash.elytraProcessed
 execute as @s[scores={dafi.dash.time=0}] run clear @s elytra
-execute as @s[scores={dafi.dash.time=1..}] run scoreboard players reset @s dafi.dash.time
+execute as @s[scores={dafi.dash.time=0}] run scoreboard players reset @s dafi.dash.time
 execute as @s[scores={dafi.dash.time=0..}] run scoreboard players add @s dafi.dash.time 1
 
 tag @a remove dafi.slide.exempt

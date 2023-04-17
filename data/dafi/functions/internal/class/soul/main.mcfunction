@@ -24,6 +24,8 @@ execute if score @s dafi.soul.dropgoldenhoe matches 1 unless score @s dafi.soul.
 execute if score @s dafi.soul.dropgoldenhoe matches 1.. run scoreboard players reset @s dafi.soul.dropgoldenhoe
 execute if score @s dafi.soul.drop.cooldown matches 1 at @s run function dafi:internal/class/soul/drop/drop
 #execute if score @s dafi.soul.drop.cooldown matches 3 run effect clear @s levitation
+execute if entity @s[tag=dafi.soul.swap.primed] run scoreboard players set @s delta.addition.magnitude 1200
+execute if entity @s[tag=dafi.soul.swap.primed] at @s rotated ~ 0 run function dafi:internal/mechanics/addition/add_motion
 execute if score @s dafi.soul.drop.cooldown matches 1.. run scoreboard players add @s dafi.soul.drop.cooldown 1
 execute if score @s dafi.soul.drop.cooldown matches 1..20 at @s run particle soul_fire_flame ~ ~ ~ 0 0 0 0.1 1 force
 execute if score @s dafi.soul.drop.cooldown matches 61 at @s run playsound entity.blaze.shoot master @s ~ ~ ~ 0.4 2 0.4
