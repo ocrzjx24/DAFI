@@ -10,6 +10,7 @@ execute as @a[tag=dafi.shade] run function dafi:internal/class/shade/main
 execute as @a[tag=dafi.swamp] run function dafi:internal/class/swamp/main
 execute as @a[tag=dafi.sculk] run function dafi:internal/class/sculk/main
 execute as @a[tag=siao] run function dafi:internal/class/siao/main
+
 ## OTHER FUNCTIONS
 function dafi:internal/class/shade/cast
 function dafi:internal/class/sting/grenade

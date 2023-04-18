@@ -1,8 +1,8 @@
 execute at @s run tag @e[type=arrow,tag=!dafi.arrow.processed,sort=nearest,limit=1] add dafi.arrow.processing
 
-execute as @e[tag=dafi.arrow.processing] store result score @s dafi.arrow.x run data get entity @s Motion[0] 1000 
-execute as @e[tag=dafi.arrow.processing] store result score @s dafi.arrow.y run data get entity @s Motion[1] 1000 
-execute as @e[tag=dafi.arrow.processing] store result score @s dafi.arrow.z run data get entity @s Motion[2] 1000 
+execute as @e[tag=dafi.arrow.processing] store result score @s dafi.arrow.x run data get entity @s Motion[0] 1000
+execute as @e[tag=dafi.arrow.processing] store result score @s dafi.arrow.y run data get entity @s Motion[1] 1000
+execute as @e[tag=dafi.arrow.processing] store result score @s dafi.arrow.z run data get entity @s Motion[2] 1000
 
 # clone; create a copy of the original arrow which functions the same way (currently only copies motion)
 
@@ -22,7 +22,7 @@ execute as @e[tag=dafi.arrow.processing] store result score @s dafi.arrow.z run 
 
 # more data modify
 
-data modify entity @e[tag=dafi.arrow.processing,limit=1] crit set value 1
+data modify entity @e[tag=dafi.arrow.processing,limit=1] crit set value 0
 data modify entity @e[tag=dafi.arrow.processing,limit=1] pickup set value 0
 data modify entity @e[tag=dafi.arrow.processing,limit=1] damage set value 20
 
@@ -36,12 +36,12 @@ execute if entity @s[team=red] run tag @e[tag=dafi.arrow.processing] add dafi.ar
 execute if entity @s[team=blue] run tag @e[tag=dafi.arrow.processing] add dafi.arrow.blue
 execute if entity @s[team=ffa] run tag @e[tag=dafi.arrow.processing] add dafi.arrow.ffa
 
-# player assignment
+# player assignment (THIS MAY BREAK SOMETHING)
 scoreboard players add .global dafi.sbsid 1
-scoreboard players operation .temp dafi.sbsid = @s dafi.sbsid 
-scoreboard players operation @s dafi.sbsid = .global dafi.sbsid 
+scoreboard players operation .temp dafi.sbsid = @s dafi.sbsid
+scoreboard players operation @s dafi.sbsid = .global dafi.sbsid
 execute as @e if score @s dafi.sbsid = .temp dafi.sbsid run scoreboard players operation @s dafi.sbsid = .global dafi.sbsid
-scoreboard players operation @e[tag=dafi.arrow.processing] dafi.sbsid = .global dafi.sbsid
+scoreboard players operation @e[tag=dafi.arrow.processing,limit=1] dafi.sbsid = .global dafi.sbsid
 
 
 #execute if score #universal dafi.arrownogravity matches 1 run tag @e[tag=dafi.arrow.processing] add dafi.arrow.nogravity

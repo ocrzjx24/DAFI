@@ -1,0 +1,21 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:player_hurt_entity",
+        "conditions": {
+          "damage": {
+            "type": {
+              "direct_entity": {
+                "type": "minecraft:arrow",
+                "nbt": "{ShotFromCrossbow:1b}"
+              }
+            }
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "dafi:internal/mechanics/arrow/hit"
+    }
+  }
+  
