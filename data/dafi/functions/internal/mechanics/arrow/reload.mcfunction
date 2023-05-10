@@ -1,9 +1,21 @@
-execute unless score @s dafi.siege.mode matches 1 run scoreboard players set @s dafi.arrow.CD 1
-particle minecraft:lava ~ ~-0.5 ~ 0.5 0.5 0.5 0.0001 2
-#playsound minecraft:block.respawn_anchor.deplete master @s ~ ~100000000 ~ 100000000 2 1
-#playsound minecraft:entity.firework_rocket.blast master @a ~ ~ ~ 1 1.25
-#playsound minecraft:entity.firework_rocket.large_blast master @s ~ ~100000000 ~ 100000000 0.7 1
-advancement revoke @s only dafi:shotcrossbow
-function dafi:internal/mechanics/arrow/shot
-execute if entity @s[tag=dafi.siege,scores={dafi.siege.mode=1}] run function dafi:internal/class/siege/minigunshot
-# execute if entity @s[tag=siege,scores={siegeMode=2}] run function dafi:class/siege/gatling_shot
+execute if score @s[tag=dafi.saint] dafi.arrow.ammo < .saint dafi.arrow.ammo run function dafi:internal/mechanics/arrow/set_reload
+execute if score @s[tag=dafi.sculk] dafi.arrow.ammo < .sculk dafi.arrow.ammo run function dafi:internal/mechanics/arrow/set_reload
+execute if score @s[tag=dafi.shade] dafi.arrow.ammo < .shade dafi.arrow.ammo run function dafi:internal/mechanics/arrow/set_reload
+execute if score @s[tag=dafi.siao] dafi.arrow.ammo < .siao dafi.arrow.ammo run function dafi:internal/mechanics/arrow/set_reload
+execute if score @s[tag=dafi.slay] dafi.arrow.ammo < .slay dafi.arrow.ammo run function dafi:internal/mechanics/arrow/set_reload
+execute if score @s[tag=dafi.soul] dafi.arrow.ammo < .soul dafi.arrow.ammo run function dafi:internal/mechanics/arrow/set_reload
+execute if score @s[tag=dafi.steel] dafi.arrow.ammo < .steel dafi.arrow.ammo run function dafi:internal/mechanics/arrow/set_reload
+execute if score @s[tag=dafi.sting] dafi.arrow.ammo < .sting dafi.arrow.ammo run function dafi:internal/mechanics/arrow/set_reload
+execute if score @s[tag=dafi.storm] dafi.arrow.ammo < .storm dafi.arrow.ammo run function dafi:internal/mechanics/arrow/set_reload
+execute if score @s[tag=dafi.swamp] dafi.arrow.ammo < .swamp dafi.arrow.ammo run function dafi:internal/mechanics/arrow/set_reload
+
+execute if score @s[tag=dafi.saint] dafi.arrow.ammo >= .saint dafi.arrow.ammo run playsound entity.villager.no master @s ~ ~1000 ~ 100 2
+execute if score @s[tag=dafi.sculk] dafi.arrow.ammo >= .sculk dafi.arrow.ammo run playsound entity.villager.no master @s ~ ~1000 ~ 100 2
+execute if score @s[tag=dafi.shade] dafi.arrow.ammo >= .shade dafi.arrow.ammo run playsound entity.villager.no master @s ~ ~1000 ~ 100 2
+execute if score @s[tag=dafi.siao] dafi.arrow.ammo >= .siao dafi.arrow.ammo run playsound entity.villager.no master @s ~ ~1000 ~ 100 2
+execute if score @s[tag=dafi.slay] dafi.arrow.ammo >= .slay dafi.arrow.ammo run playsound entity.villager.no master @s ~ ~1000 ~ 100 2
+execute if score @s[tag=dafi.soul] dafi.arrow.ammo >= .soul dafi.arrow.ammo run playsound entity.villager.no master @s ~ ~1000 ~ 100 2
+execute if score @s[tag=dafi.steel] dafi.arrow.ammo >= .steel dafi.arrow.ammo run playsound entity.villager.no master @s ~ ~1000 ~ 100 2
+execute if score @s[tag=dafi.sting] dafi.arrow.ammo >= .sting dafi.arrow.ammo run playsound entity.villager.no master @s ~ ~1000 ~ 100 2
+execute if score @s[tag=dafi.storm] dafi.arrow.ammo >= .storm dafi.arrow.ammo run playsound entity.villager.no master @s ~ ~1000 ~ 100 2
+execute if score @s[tag=dafi.swamp] dafi.arrow.ammo >= .swamp dafi.arrow.ammo run playsound entity.villager.no master @s ~ ~1000 ~ 100 2

@@ -2,6 +2,4 @@ scoreboard objectives add dafi.dash.time dummy
 scoreboard objectives add dafi.dash.onGroundCheck dummy
 scoreboard objectives add dafi.dash.CD dummy
 scoreboard objectives add dafi.dash.y dummy
-# fix this 
-
-scoreboard players set @a dafi.dash.CD 0
+execute unless score #universal dafi.dash.CD matches 0.. run scoreboard players set #universal dafi.dash.CD 20

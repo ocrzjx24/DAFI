@@ -14,10 +14,11 @@ scoreboard players set @s dafi.offhandReady 0
 clear @s
 
 # Applies motion UP (2 m/s) and BACK (10 m/s)
-scoreboard players set @s delta.addition.magnitude 2000
-execute if entity @s rotated ~ -90 run function dafi:internal/mechanics/addition/add_motion
-scoreboard players set @s delta.addition.magnitude 10000
-execute if entity @s rotated ~ 180 run function dafi:internal/mechanics/addition/add_motion
+tp @s @s
+#scoreboard players set @s delta.addition.magnitude 2000
+#execute if entity @s rotated ~ -90 run function dafi:internal/mechanics/addition/add_motion
+scoreboard players set @s delta.addition.magnitude -8000
+execute if entity @s run function dafi:internal/mechanics/addition/add_motion
 
 # VFX and SFX
 tellraw @s [{"text":"[","color":"#3399cc"},{"text":"!","color":"#33ffff"},{"text":"] > "},{"text":"Ability cast! ","color":"#00cccc"},{"text":"(","color":"#33ffff"},{"text":"Drop","color":"white"},{"text":")","color":"#33ffff"}]

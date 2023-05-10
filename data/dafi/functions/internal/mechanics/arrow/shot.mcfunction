@@ -1,3 +1,14 @@
+function dafi:internal/mechanics/arrow/set_cooldown
+scoreboard players remove @s dafi.arrow.ammo 1
+tag @s remove dafi.arrow.is_loaded
+particle minecraft:lava ~ ~-0.5 ~ 0.5 0.5 0.5 0.0001 2
+execute if score @s dafi.arrow.ammo matches 0 run playsound minecraft:entity.zombie.attack_iron_door master @s ~ ~1000 ~ 100 2
+
+advancement revoke @s only dafi:shotcrossbow
+#function dafi:internal/mechanics/arrow/shot
+execute if entity @s[tag=dafi.siege,scores={dafi.siege.mode=1}] run function dafi:internal/class/siege/minigunshot
+
+###
 execute at @s run tag @e[type=arrow,tag=!dafi.arrow.processed,sort=nearest,limit=1] add dafi.arrow.processing
 
 execute as @e[tag=dafi.arrow.processing] store result score @s dafi.arrow.x run data get entity @s Motion[0] 1000
