@@ -1,4 +1,5 @@
 scoreboard objectives add dafi.swamp.dropNetheriteAxe minecraft.dropped:minecraft.netherite_axe
+    scoreboard objectives add dafi.swamp.drop.cooldown dummy
 scoreboard objectives add dafi.swamp.TPLife dummy
 scoreboard objectives add dafi.swamp.useEnderPearl minecraft.used:minecraft.ender_pearl
 scoreboard objectives add dafi.swamp.TPTrigger dummy

@@ -21,15 +21,16 @@ tag @e[tag=dafi.this] remove dafi.this
 
 
 tp @s @s
-tag @s add dafi.slide_exempt
-scoreboard players set @s[predicate=dafi:is_sneaking] delta.addition.magnitude 2600
+tag @s add dafi.slide.exempt
+tag @s add dafi.dash_reset.exempt
+scoreboard players set @s[predicate=dafi:is_sneaking] delta.addition.magnitude 2400
 execute at @s[predicate=dafi:is_sneaking] rotated ~ -90 run function dafi:internal/mechanics/addition/add_motion
-scoreboard players set @s[predicate=dafi:is_sneaking] delta.addition.magnitude 12000
+scoreboard players set @s[predicate=dafi:is_sneaking] delta.addition.magnitude 10000
 execute at @s[predicate=dafi:is_sneaking] rotated ~ 0 run function dafi:internal/mechanics/addition/add_motion
 
-scoreboard players set @s[predicate=!dafi:is_sneaking] delta.addition.magnitude 6000
+scoreboard players set @s[predicate=!dafi:is_sneaking] delta.addition.magnitude 4200
 execute at @s[predicate=!dafi:is_sneaking] rotated ~ 0 run function dafi:internal/mechanics/addition/add_motion
-scoreboard players set @s[predicate=!dafi:is_sneaking] delta.addition.magnitude 7600
+scoreboard players set @s[predicate=!dafi:is_sneaking] delta.addition.magnitude 6800
 execute at @s[predicate=!dafi:is_sneaking] rotated ~ -90 run function dafi:internal/mechanics/addition/add_motion
 tag @s add dafi.shade.primed
 

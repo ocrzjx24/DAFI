@@ -5,20 +5,26 @@
 # > dafi:internal/class/shade/main
 ##############################################################################
 
+# Necessary Tags
+tag @s add dafi.dash.exempt
+
 # Gives invisibility and speed
 effect give @s invisibility 10 0 true
-effect give @s speed 10 6 true
+effect give @s speed 10 4 true
 
 # Clears player of items
 scoreboard players set @s dafi.offhandReady 0
 clear @s
 
-# Applies motion UP (2 m/s) and BACK (10 m/s)
+# Applies motion 
 tp @s @s
-#scoreboard players set @s delta.addition.magnitude 2000
-#execute if entity @s rotated ~ -90 run function dafi:internal/mechanics/addition/add_motion
-scoreboard players set @s delta.addition.magnitude -8000
-execute if entity @s run function dafi:internal/mechanics/addition/add_motion
+tag @s add dafi.slide.exempt
+tag @s add dafi.dash_reset.exempt
+
+scoreboard players set @s delta.addition.magnitude 2600
+execute at @s rotated ~ -90 run function dafi:internal/mechanics/addition/add_motion
+scoreboard players set @s delta.addition.magnitude -12000
+execute at @s rotated ~ 0 run function dafi:internal/mechanics/addition/add_motion
 
 # VFX and SFX
 tellraw @s [{"text":"[","color":"#3399cc"},{"text":"!","color":"#33ffff"},{"text":"] > "},{"text":"Ability cast! ","color":"#00cccc"},{"text":"(","color":"#33ffff"},{"text":"Drop","color":"white"},{"text":")","color":"#33ffff"}]

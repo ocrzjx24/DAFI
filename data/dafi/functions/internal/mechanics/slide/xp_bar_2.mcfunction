@@ -1,6 +1,6 @@
 execute if score @s dafi.slide.stamina.recoveryTime matches 10 run scoreboard players remove @s dafi.slide.stamina 15
 execute if score @s dafi.slide.stamina.recoveryTime matches 9 run scoreboard players remove @s dafi.slide.stamina 5
-execute unless score @s dafi.slide.stamina matches 80.. unless score @s dafi.slide.stamina.recoveryTime matches 6..10 run scoreboard players add @s dafi.slide.stamina 1
+execute unless score @s dafi.slide.stamina matches 80.. unless score @s dafi.slide.stamina.recoveryTime matches 5..10 run scoreboard players add @s dafi.slide.stamina 1
 execute unless score @s dafi.slide.stamina matches 80.. unless score @s dafi.slide.stamina.recoveryTime matches 1.. run scoreboard players add @s dafi.slide.stamina 1
 
 execute if score @s dafi.slide.stamina.recoveryTime matches 1.. run scoreboard players remove @s dafi.slide.stamina.recoveryTime 1

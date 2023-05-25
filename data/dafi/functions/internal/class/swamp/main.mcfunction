@@ -1,9 +1,12 @@
+
+## OFFHAND READY
+function dafi:internal/class/swamp/offhand
+
 #place totem
-execute if score @s dafi.swamp.dropNetheriteAxe matches 1 at @s run function dafi:internal/class/swamp/drop
-execute if score @s dafi.swamp.dropNetheriteAxe matches 1 at @s run playsound minecraft:entity.ravager.step master @a ~ ~ ~ 1 1
+execute if score @s dafi.swamp.dropNetheriteAxe matches 1 at @s run function dafi:internal/class/swamp/drop/drop
 execute if score @s dafi.swamp.dropNetheriteAxe matches 30 at @s run playsound minecraft:entity.ravager.step master @a ~ ~ ~ 1 2
 execute if score @s dafi.swamp.dropNetheriteAxe matches 30.. run clear @s wooden_axe
-execute if score @s dafi.swamp.dropNetheriteAxe matches 30 run item replace entity @s hotbar.1 with netherite_axe{mainhand:1,display:{Name:'[{"text":"Maul","italic":false,"color":"dark_red","bold":true},{"text":" ","color":"#ffd814"},{"text":"| ","color":"gray"},{"text":"[Q]/[RMB]","color":"white","bold":false}]',Lore:['[{"text":"Thousands disappeared. None were ever found.","italic":false}]']},Unbreakable:1,HideFlags:3,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Amount:10,Operation:0,UUID:[I;1014886342,1084823496,1064780877,1393545524]},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Slot:"mainhand",Amount:-0.2,Operation:2,UUID:[I;1014886342,1084823496,1064780877,1393545524]}],swap:1} 1
+execute if score @s dafi.swamp.dropNetheriteAxe matches 30 run item replace entity @s hotbar.1 with netherite_axe{mainhand:1,swap_trigger:1,display:{Name:'[{"text":"Maul","italic":false,"color":"dark_red","bold":true},{"text":" ","color":"#ffd814"},{"text":"| ","color":"gray"},{"text":"[Q]/[RMB]","color":"white","bold":false}]',Lore:['[{"text":"Thousands disappeared. None were ever found.","italic":false}]']},Unbreakable:1,HideFlags:3,AttributeModifiers:[{AttributeName:"generic.attack_damage",Name:"generic.attack_damage",Slot:"mainhand",Amount:10,Operation:0,UUID:[I;1014886342,1084823496,1064780877,1393545524]},{AttributeName:"generic.attack_speed",Name:"generic.attack_speed",Slot:"mainhand",Amount:-0.2,Operation:2,UUID:[I;1014886342,1084823496,1064780877,1393545524]}],swap:1} 1
 execute if score @s dafi.swamp.dropNetheriteAxe matches 30.. run scoreboard players reset @s dafi.swamp.dropNetheriteAxe
 execute if score @s dafi.swamp.dropNetheriteAxe matches 1.. run scoreboard players add @s dafi.swamp.dropNetheriteAxe 1
 
@@ -51,9 +54,6 @@ execute if score @s dafi.swamp.TPTrigger matches 1.. run scoreboard players add 
 
 ## MIRE
 execute at @s[predicate=dafi:is_sneaking] run function dafi:internal/class/swamp/particles
-
-## OFFHAND READY
-function dafi:internal/class/swamp/offhand
 
 ## KILL 
 execute as @e[type=armor_stand,tag=dafi.swamp.TP] if score @s dafi.sbsid = @a[scores={dafi.deathcheck=1},limit=1] dafi.sbsid run kill @s

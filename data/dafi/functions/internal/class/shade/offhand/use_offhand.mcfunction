@@ -18,8 +18,8 @@ execute if entity @s[tag=dafi.shade.primed,tag=dafi.shade.slash.initiated] run t
 
 execute if entity @s[team=blue,tag=dafi.shade.slash.initiated] if score @s dafi.shade.attackPattern matches 1 at @s run summon marker ~ ~ ~ {Tags:["dafi.shade.slash","dafi.shade.slash.1","dafi.blue","dafi.this"]}
 execute if entity @s[team=red,tag=dafi.shade.slash.initiated] if score @s dafi.shade.attackPattern matches 1 at @s run summon marker ~ ~ ~ {Tags:["dafi.shade.slash","dafi.shade.slash.1","dafi.red","dafi.this"]}
-execute if entity @s[tag=dafi.shade.slash.initiated] if score @s dafi.shade.attackPattern matches 1 run scoreboard players set @s delta.addition.magnitude 1000
-execute if entity @s[tag=dafi.shade.slash.initiated] if score @s dafi.shade.attackPattern matches 1 at @s rotated ~ 180 run function dafi:internal/mechanics/addition/add_motion
+execute if entity @s[tag=dafi.shade.slash.initiated] if score @s dafi.shade.attackPattern matches 1 run scoreboard players set @s delta.addition.magnitude -500
+execute if entity @s[tag=dafi.shade.slash.initiated] if score @s dafi.shade.attackPattern matches 1 at @s run function dafi:internal/mechanics/addition/add_motion
 execute if entity @s[tag=dafi.shade.slash.initiated] if score @s dafi.shade.attackPattern matches 1 at @s run tp @e[tag=dafi.this] @s
 execute if entity @s[tag=dafi.shade.slash.initiated] if score @s dafi.shade.attackPattern matches 1 run tag @e[tag=dafi.this] remove dafi.this
 execute if entity @s[tag=dafi.shade.slash.initiated] if score @s dafi.shade.attackPattern matches 1 at @s run playsound entity.player.attack.sweep master @a ~ ~ ~ 1 1.2
@@ -28,17 +28,17 @@ execute if entity @s[tag=dafi.shade.slash.initiated] if score @s dafi.shade.atta
 
 execute if entity @s[team=blue,tag=dafi.shade.slash.initiated] if score @s dafi.shade.attackPattern matches 2 at @s run summon marker ~ ~ ~ {Tags:["dafi.shade.slash","dafi.shade.slash.2","dafi.blue","dafi.this"]}
 execute if entity @s[team=red,tag=dafi.shade.slash.initiated] if score @s dafi.shade.attackPattern matches 2 at @s run summon marker ~ ~ ~ {Tags:["dafi.shade.slash","dafi.shade.slash.2","dafi.red","dafi.this"]}
-execute if entity @s[tag=dafi.shade.slash.initiated] if score @s dafi.shade.attackPattern matches 2 run scoreboard players set @s delta.addition.magnitude 1000
-execute if entity @s[tag=dafi.shade.slash.initiated] if score @s dafi.shade.attackPattern matches 2 at @s rotated ~ 180 run function dafi:internal/mechanics/addition/add_motion
+execute if entity @s[tag=dafi.shade.slash.initiated] if score @s dafi.shade.attackPattern matches 2 run scoreboard players set @s delta.addition.magnitude -500
+execute if entity @s[tag=dafi.shade.slash.initiated] if score @s dafi.shade.attackPattern matches 2 at @s run function dafi:internal/mechanics/addition/add_motion
 execute if entity @s[tag=dafi.shade.slash.initiated] if score @s dafi.shade.attackPattern matches 2 at @s run tp @e[tag=dafi.this] @s
 execute if entity @s[tag=dafi.shade.slash.initiated] if score @s dafi.shade.attackPattern matches 2 run tag @e[tag=dafi.this] remove dafi.this
 execute if entity @s[tag=dafi.shade.slash.initiated] if score @s dafi.shade.attackPattern matches 2 at @s run playsound entity.player.attack.sweep master @a ~ ~ ~ 1 1
-execute if entity @s[tag=dafi.shade.slash.initiated] if score @s dafi.shade.attackPattern matches 2 run scoreboard players set @s dafi.shade.use.cooldown 10
+execute if entity @s[tag=dafi.shade.slash.initiated] if score @s dafi.shade.attackPattern matches 2 run scoreboard players set @s dafi.shade.use.cooldown 8
 
 execute if entity @s[team=blue,tag=dafi.shade.slash.initiated] if score @s dafi.shade.attackPattern matches 3 at @s run summon marker ~ ~ ~ {Tags:["dafi.shade.slash","dafi.shade.slash.5","dafi.blue","dafi.this"]}
 execute if entity @s[team=red,tag=dafi.shade.slash.initiated] if score @s dafi.shade.attackPattern matches 3 at @s run summon marker ~ ~ ~ {Tags:["dafi.shade.slash","dafi.shade.slash.5","dafi.red","dafi.this"]}
 execute if entity @s[tag=dafi.shade.slash.initiated] if score @s dafi.shade.attackPattern matches 3 run scoreboard players set @s delta.addition.magnitude 1000
-execute if entity @s[tag=dafi.shade.slash.initiated] if score @s dafi.shade.attackPattern matches 3 at @s rotated ~ 0 run function dafi:internal/mechanics/addition/add_motion
+execute if entity @s[tag=dafi.shade.slash.initiated] if score @s dafi.shade.attackPattern matches 3 at @s run function dafi:internal/mechanics/addition/add_motion
 execute if entity @s[tag=dafi.shade.slash.initiated] if score @s dafi.shade.attackPattern matches 3 at @s run tp @e[tag=dafi.this] @s
 execute if entity @s[tag=dafi.shade.slash.initiated] if score @s dafi.shade.attackPattern matches 3 at @s rotated ~ 0 run tp @e[tag=dafi.this] ^ ^ ^1
 execute if entity @s[tag=dafi.shade.slash.initiated] if score @s dafi.shade.attackPattern matches 3 run tag @e[tag=dafi.this] remove dafi.this

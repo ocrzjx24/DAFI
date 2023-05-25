@@ -60,6 +60,17 @@ scoreboard players operation @e[tag=dafi.arrow.processing,limit=1] dafi.sbsid = 
 # if it should explode
 execute unless score @s dafi.siege.mode matches 1 run tag @e[tag=dafi.arrow.processing] add dafi.arrow.explode
 
+#> RECOIL
+execute if entity @s[tag=dafi.saint] run scoreboard players set @s delta.addition.magnitude -1000
+execute if entity @s[tag=dafi.slay] run scoreboard players set @s delta.addition.magnitude -1000
+execute if entity @s[tag=dafi.sting] run scoreboard players set @s delta.addition.magnitude -1000
+execute if entity @s[tag=dafi.soul] run scoreboard players set @s delta.addition.magnitude -1000
+execute if entity @s[tag=dafi.steel] run scoreboard players set @s delta.addition.magnitude -1000
+execute if entity @s[tag=dafi.storm] run scoreboard players set @s delta.addition.magnitude -1000
+execute if entity @s[tag=dafi.shade] run scoreboard players set @s delta.addition.magnitude -1000
+execute if entity @s[tag=dafi.swamp] run scoreboard players set @s delta.addition.magnitude -1000
+function dafi:internal/mechanics/addition/add_motion
+
 # class assignment
 tag @s add dafi.player.shooter
 execute if entity @s[tag=dafi.siege,scores={dafi.siege.mode=0}] as @e[tag=dafi.arrow.processing] at @s run function dafi:internal/class/siege/arrow/arrow_initialize
