@@ -15,10 +15,11 @@ execute if score @s dafi.slide.sprintTime matches 1.. if score #universal dafi.s
 #execute if score @s dafi.slide.slideTime matches 1 run playsound minecraft:block.piston.contract master @s ~ ~1000 ~ 100 1.2
 
 
-
+execute if score @s dafi.slide.slideTime matches 1.. run tag @s add dafi.dash.exempt
 execute if score @s dafi.slide.slideTime matches 1.. if data entity @s {OnGround:1b} run effect give @s resistance infinite 255 false
 execute if score @s dafi.slide.slideTime matches 1 if data entity @s {OnGround:1b} run scoreboard players set @s delta.addition.magnitude 4800
-execute if score @s dafi.slide.slideTime matches 2.. if data entity @s {OnGround:1b} run scoreboard players set @s delta.addition.magnitude 3200
+execute if score @s dafi.slide.slideTime matches 1 run effect give @s jump_boost infinite 250 true
+execute if score @s dafi.slide.slideTime matches 3.. if data entity @s {OnGround:1b} run scoreboard players set @s delta.addition.magnitude 3200
 execute if score @s dafi.slide.slideTime matches 2.. if data entity @s {OnGround:0b} run scoreboard players set @s delta.addition.magnitude 1200
 
 execute if score @s dafi.slide.slideTime matches 1.. if predicate dafi:is_sneaking at @s rotated ~ 0 run function dafi:internal/mechanics/addition/add_motion
@@ -27,13 +28,14 @@ execute if score @s dafi.slide.slideTime matches 1.. if predicate dafi:is_sneaki
 execute if score @s dafi.slide.slideTime matches 1.. run scoreboard players add @s dafi.slide.slideTime 1
 execute if score @s dafi.slide.slideTime matches 5.. run effect clear @s resistance
 execute if score @s dafi.slide.slideTime matches 5.. run effect clear @s levitation
-execute if score @s dafi.slide.slideTime matches 6.. run effect clear @s speed
+execute if score @s dafi.slide.slideTime matches 6.. run effect clear @s jump_boost
     execute if score @s dafi.slide.slideTime matches 2 run effect clear @s levitation
-    execute if score @s dafi.slide.slideTime matches 3 run effect give @s[] levitation infinite 6 true
+    execute if score @s dafi.slide.slideTime matches 3 run effect give @s[] levitation infinite 8 true
     execute if score @s dafi.slide.slideTime matches 4 run effect clear @s levitation
-    execute if score @s dafi.slide.slideTime matches 5 run effect give @s[] levitation infinite 6 true
+    execute if score @s dafi.slide.slideTime matches 5 run effect give @s[] levitation infinite 8 true
 
-execute if score @s dafi.slide.slideTime matches 5.. run effect give @s speed 1 2 true
+#execute if score @s dafi.slide.slideTime matches 5.. run effect give @s jump_boost 1 2 true
+execute if score @s dafi.slide.slideTime matches 6.. run tag @s remove dafi.dash.exempt
 execute if score @s dafi.slide.slideTime matches 6.. run scoreboard players reset @s dafi.slide.slideTime
 
 
